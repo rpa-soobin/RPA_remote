@@ -1,0 +1,108 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "우편번호 일치여부_추가개발.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "우편번호 일치여부_수정.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bl팝업&Sequence_1",
+        "idx&Sequence_1",
+        "dt주소&Sequence_1",
+        "dt주소_가공&Sequence_1",
+        "str도로명주소&Sequence_1",
+        "str우편번호&Sequence_1",
+        "str파일첨부&Sequence_1",
+        "sstrpw&Sequence_1",
+        "strName&Sequence_1",
+        "CurrentRow&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Jobs/01. dt주소 필터링.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_dt주소"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Jobs/02. dt주소 추출_가공_저장.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str도로명주소&Sequence_1",
+        "str우편번호&Sequence_1",
+        "str도로명주소_추출&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt주소"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Jobs/04. 결과 메일로 발송.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str파일첨부&Sequence_1",
+        "sstrpw&Sequence_1",
+        "strName&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Jobs/00.  Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt주소&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Jobs/03. 데이터 검증.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "int불일치행개수&Sequence_1",
+        "dt불일치&Sequence_1",
+        "dt주소&Sequence_1",
+        "dt일치&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt주소"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

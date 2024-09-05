@@ -1,0 +1,52 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "우편번호 일치여부.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strName&Sequence_1",
+        "sstrpw&Sequence_1",
+        "str파일첨부&Sequence_1",
+        "dt주소_가공&Sequence_1",
+        "str우편번호&Sequence_1",
+        "str도로명주소&Sequence_1",
+        "dt주소&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "우편번호 일치여부_수정.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt주소&Sequence_1",
+        "str도로명주소&Sequence_1",
+        "str우편번호&Sequence_1",
+        "str파일첨부&Sequence_1",
+        "sstrpw&Sequence_1",
+        "strName&Sequence_1",
+        "CurrentRow&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

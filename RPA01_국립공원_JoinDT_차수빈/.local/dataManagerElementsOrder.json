@@ -1,0 +1,136 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt국립공원&Sequence_1",
+        "dt탐방코스&Sequence_1",
+        "dt결합&Sequence_1",
+        "list삭제할행&Sequence_1",
+        "bl_exists&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "인수활용연습/00. Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt결합&Sequence_1",
+        "dt탐방코스&Sequence_1",
+        "dt국립공원&Sequence_1",
+        "str경로&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "인수활용연습/01. CopyFile.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_str경로"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "인수활용연습/02. DT생성.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_dt결합",
+        "out_dt탐방코스",
+        "out_dt국립공원",
+        "in_str경로"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "인수활용연습/03. DT결합.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_dt결합",
+        "in_dt탐방코스",
+        "in_dt국립공원"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "인수활용연습/04. DT정렬.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt결합"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "인수활용연습/05. DT결과기록.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_str경로",
+        "in_dt결합"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "국립공원_JoinDT/Main_answer.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt국립공원&Sequence_1",
+        "dt탐방코스&Sequence_1",
+        "dt결합&Sequence_1",
+        "list삭제할행&Sequence_1",
+        "bl_exists&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "국립공원_JoinDT/Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt국립공원&Sequence_1",
+        "dt탐방코스&Sequence_1",
+        "dt결합&Sequence_1",
+        "list삭제할행&Sequence_1",
+        "bl_exists&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "국립공원_JoinDT/Main2.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt국립공원&Sequence_1",
+        "dt탐방코스&Sequence_1",
+        "dt결합&Sequence_1",
+        "dt결합_가공&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

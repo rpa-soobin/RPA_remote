@@ -1,0 +1,194 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "0. main_.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt개인별결과&Sequence_1",
+        "rowindex&Sequence_1",
+        "점수&Sequence_5",
+        "dt인풋&Sequence_1",
+        "dt기준&Sequence_1",
+        "dt아웃풋&Sequence_1",
+        "arr과목&Sequence_1",
+        "list기준점수&Sequence_1",
+        "valueB2&Sequence_1",
+        "valueC2&Sequence_1",
+        "valueD2&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "시험결과집계/00. main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt아웃풋_과목별&Sequence_1",
+        "dt아웃풋_개인별&Sequence_1",
+        "dt기준&Sequence_1",
+        "dt인풋&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "시험결과집계/01. DT 생성.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_dt인풋",
+        "out_dt아웃풋_과목별",
+        "out_dt아웃풋_개인별",
+        "out_dt기준"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "시험결과집계.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt아웃풋_과목별&Sequence_1",
+        "arr과목&Sequence_1",
+        "list기준점수&Sequence_1",
+        "dt인풋&Sequence_1",
+        "dt기준&Sequence_1",
+        "dt아웃풋_개인별&Sequence_1",
+        "valueB2&Sequence_1",
+        "valueC2&Sequence_1",
+        "valueD2&Sequence_1",
+        "rowindex&Sequence_1",
+        "dt개인별결과&Sequence_1",
+        "int국어응시인원&Sequence_1",
+        "int국어합격&Sequence_1",
+        "int영어응시인원&Sequence_1",
+        "int수학응시인원&Sequence_1",
+        "int수학합격&Sequence_1",
+        "int영어합격&Sequence_1",
+        "str국어합격률&Sequence_1",
+        "str영어합격률&Sequence_1",
+        "str수학합격률&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "시험결과집계/02. 개인별 결과 집계.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "rowindex&Sequence_1",
+        "valueD2&Sequence_1",
+        "valueC2&Sequence_1",
+        "valueB2&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt아웃풋_개인별",
+        "in_dt기준",
+        "in_dt인풋"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "시험결과집계/03. 과목별 합격률.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str수학합격률&Sequence_1",
+        "str영어합격률&Sequence_1",
+        "str국어합격률&Sequence_1",
+        "int수학합격&Sequence_1",
+        "int수학응시인원&Sequence_1",
+        "int영어합격&Sequence_1",
+        "int영어응시인원&Sequence_1",
+        "int국어합격&Sequence_1",
+        "int국어응시인원&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt아웃풋_과목별",
+        "io_dt아웃풋_개인별"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "시험결과집계/05. DT 저장.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt아웃풋_과목별",
+        "in_dt아웃풋_개인별"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "시험결과집계(2).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt인풋&Sequence_1",
+        "dt기준&Sequence_1",
+        "dt아웃풋&Sequence_1",
+        "arr과목&Sequence_1",
+        "valueB2&Sequence_1",
+        "valueC2&Sequence_1",
+        "valueD2&Sequence_1",
+        "rowindex&Sequence_1",
+        "dt개인별결과&Sequence_1",
+        "int국어응시인원&Sequence_1",
+        "int국어합격&Sequence_1",
+        "int영어응시인원&Sequence_1",
+        "int수학응시인원&Sequence_1",
+        "int수학합격&Sequence_1",
+        "int영어합격&Sequence_1",
+        "str국어합격률&Sequence_1",
+        "str영어합격률&Sequence_1",
+        "str수학합격률&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "시험결과집계_answer.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str합격여부&Sequence_1",
+        "ob기준점수&Sequence_1",
+        "str합격률&Sequence_1",
+        "db합격률&Sequence_1",
+        "int과목별합격자수&Sequence_1",
+        "int과목별응시자수&Sequence_1",
+        "int과목별점수&Sequence_1",
+        "str과목&Sequence_1",
+        "Sheets&Sequence_1",
+        "dt인풋&Sequence_1",
+        "dt기준&Sequence_1",
+        "dt아웃풋_개인별&Sequence_1",
+        "arr과목&Sequence_1",
+        "dt아웃풋_과목별&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

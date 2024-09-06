@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_00__Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1102.4,1112.8" sap2010:WorkflowViewState.IdRef="_00__Main_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_00__Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1128.8,1526.4" sap2010:WorkflowViewState.IdRef="_00__Main_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -83,18 +83,10 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="&lt;국립공원 채용공고&gt;&#xD;&#xA;&#xD;&#xA;• 수신한 메일에서 템플릿 파일을 내려 받고 , 검색할 항목을 추출한다&#xD;&#xA;• 템플릿 파일을 복사하여 , 결과파일을 생성한다&#xD;&#xA;- 파일명 : 국립공원채용정보_본인이름&#xD;&#xA;- 예시 : 국립공원채용정보_이지안&#xD;&#xA;• Temp 시트를 채용진행중 으로 변경한다 .&#xD;&#xA;• https://www.knps.or.kr/front/portal/recruit/recruitList.do?menuNo=7070064&#xD;&#xA;• 각 공원의 채용공고를 시트별로 작성한다 . (행은 30 Row)&#xD;&#xA;  (추출할 공원명 목록 : 수신한 메일의 본문에서 가져올 것)&#xD;&#xA;• 채용진행중 &gt; 시트에 진행현황 == 진행중 인 채용 정보만 기입한다&#xD;&#xA;• 채용진행중 &gt; 시트에 기재한 DT 를 메일 본문에 삽입하고, 결과파일을 첨부하여 발송한다" DisplayName="_00__Main" sap:VirtualizedContainerService.HintSize="416,1048" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="&lt;국립공원 채용공고&gt;&#xA;&#xA;• 수신한 메일에서 템플릿 파일을 내려 받고 , 검색할 항목을 추출한다&#xA;• 템플릿 파일을 복사하여 , 결과파일을 생성한다&#xA;- 파일명 : 국립공원채용정보_본인이름&#xA;- 예시 : 국립공원채용정보_이지안&#xA;• Temp 시트를 채용진행중 으로 변경한다 .&#xA;• https://www.knps.or.kr/front/portal/recruit/recruitList.do?menuNo=7070064&#xA;• 각 공원의 채용공고를 시트별로 작성한다 . (행은 30 Row)&#xA;  (추출할 공원명 목록 : 수신한 메일의 본문에서 가져올 것)&#xA;• 채용진행중 &gt; 시트에 진행현황 == 진행중 인 채용 정보만 기입한다&#xA;• 채용진행중 &gt; 시트에 기재한 DT 를 메일 본문에 삽입하고, 결과파일을 첨부하여 발송한다" DisplayName="_00__Main" sap:VirtualizedContainerService.HintSize="416,1461.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="arr검색목록" />
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dt채용공고" />
-      <Variable x:TypeArguments="s:String[]" Name="outarr검색목록">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:String x:Key="SourceIdRef">InvokeWorkflowFile_1</x:String>
-            <x:String x:Key="SourcePropertyName">out_arr검색목록</x:String>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </Variable>
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dt채용진행중" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -111,24 +103,33 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="01. 메일내용 추출 및 결과파일 생성 - 워크플로우 파일 호출 (국립공원 채용공고\01. 메일내용 추출 및 결과파일 생성.xaml)" sap:VirtualizedContainerService.HintSize="353.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="국립공원 채용공고\01. 메일내용 추출 및 결과파일 생성.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="01. 메일내용 추출 - 워크플로우 파일 호출 (국립공원 채용공고\01. 메일내용 추출.xaml)" sap:VirtualizedContainerService.HintSize="353.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="국립공원 채용공고\01. 메일내용 추출.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="s:String[]" x:Key="out_arr검색목록">[arr검색목록]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="02. DT 추출및가공 - 워크플로우 파일 호출 (국립공원 채용공고\02. DT 추출및가공.xaml)" sap:VirtualizedContainerService.HintSize="353.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="국립공원 채용공고\02. DT 추출및가공.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="02. 결과파일 생성 - 워크플로우 파일 호출 (국립공원 채용공고\02. 결과파일 생성.xaml)" sap:VirtualizedContainerService.HintSize="353.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="국립공원 채용공고\02. 결과파일 생성.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="03. DT 추출및가공 - 워크플로우 파일 호출 (국립공원 채용공고\03. DT 추출및가공.xaml)" sap:VirtualizedContainerService.HintSize="353.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="국립공원 채용공고\03. DT 추출및가공.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="s:String[]" x:Key="in_arr검색목록">[arr검색목록]</InArgument>
-        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt채용공고">[dt채용공고]</OutArgument>
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt채용진행중">[dt채용진행중]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="03. 결과 메일발송 - 워크플로우 파일 호출 (국립공원 채용공고\03. 결과 메일발송.xaml)" sap:VirtualizedContainerService.HintSize="353.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="국립공원 채용공고\03. 결과 메일발송.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="04. DT 저장 - 워크플로우 파일 호출 (국립공원 채용공고\04. DT 저장.xaml)" sap:VirtualizedContainerService.HintSize="353.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="국립공원 채용공고\04. DT 저장.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt채용공고중">[dt채용진행중]</InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt채용진행중">[dt채용진행중]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;국립공원 채용공고_종료&quot;]">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="05. 결과 메일발송 - 워크플로우 파일 호출 (국립공원 채용공고\05. 결과 메일발송.xaml)" sap:VirtualizedContainerService.HintSize="353.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="국립공원 채용공고\05. 결과 메일발송.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt채용진행중">[dt채용진행중]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:LogMessage DisplayName="종료 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;국립공원 채용공고_종료&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>

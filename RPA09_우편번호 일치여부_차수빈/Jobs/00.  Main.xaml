@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_00___Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1128.8,1364" sap2010:WorkflowViewState.IdRef="_00___Main_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_00___Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1130.4,1364" sap2010:WorkflowViewState.IdRef="_00___Main_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -84,7 +84,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="&lt;우편번호 일치여부&gt;&#xD;&#xA;1. 제공한 엑셀파일 (Address_Total. 을 읽고 상가업소번호 , 도로명주소 , 신우편번호 만 남긴다&#xD;&#xA;2. 추출한 우편번호 ” 컬럼과 일치여부 &quot; 컬럼을 추가한다&#xD;&#xA;3. 도로명 주소 안내시스템 사이트에 접속 한다 . 선택 : 팝업창 닫기&#xD;&#xA;: (https://www.juso.go.kr/openIndexPage.do)&#xD;&#xA;4. 엑셀에서 읽어온 데이터 중에서 도로명주소 를 사이트의 도로명주소 검색창에 입력한다&#xD;&#xA;5. 화면에서 우편 번호 를 추출 하여 추출한 우편번호 컬럼에 값을 넣는다 . 또한 , 엑셀에서 읽어온 데이터의 신우편&#xD;&#xA;번호 와 값이 일치하는지 확인한다&#xD;&#xA;(도로명 주소가 여러 개 나오는 경우에는 첫번째 주소의 우편번호를 추출할 것)&#xD;&#xA;6. “일치여부” 컬럼에 결과값 입력 일치하면 &quot;일치&quot;, 일치하지 않으면 &quot;불일치&quot;&#xD;&#xA;7. 모든 작업이 끝나면 일치여부확인 시트에 저장한다&#xD;&#xA;8. 작업이 완료된 엑셀파일만 메일로 발송한다 . 소스파일은 zip 으로 만들어 카톡으로 전송" DisplayName="_00___Main" sap:VirtualizedContainerService.HintSize="416,1299.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="&lt;우편번호 일치여부&gt;&#xA;1. 제공한 엑셀파일 (Address_Total. 을 읽고 상가업소번호 , 도로명주소 , 신우편번호 만 남긴다&#xA;2. 추출한 우편번호 ” 컬럼과 일치여부 &quot; 컬럼을 추가한다&#xA;3. 도로명 주소 안내시스템 사이트에 접속 한다 . 선택 : 팝업창 닫기&#xA;: (https://www.juso.go.kr/openIndexPage.do)&#xA;4. 엑셀에서 읽어온 데이터 중에서 도로명주소 를 사이트의 도로명주소 검색창에 입력한다&#xA;5. 화면에서 우편 번호 를 추출 하여 추출한 우편번호 컬럼에 값을 넣는다 . 또한 , 엑셀에서 읽어온 데이터의 신우편&#xA;번호 와 값이 일치하는지 확인한다&#xA;(도로명 주소가 여러 개 나오는 경우에는 첫번째 주소의 우편번호를 추출할 것)&#xA;6. “일치여부” 컬럼에 결과값 입력 일치하면 &quot;일치&quot;, 일치하지 않으면 &quot;불일치&quot;&#xA;7. 모든 작업이 끝나면 일치여부확인 시트에 저장한다&#xA;8. 작업이 완료된 엑셀파일만 메일로 발송한다 . 소스파일은 zip 으로 만들어 카톡으로 전송" DisplayName="_00___Main" sap:VirtualizedContainerService.HintSize="416,1299.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.data.DataTable]" Name="dt주소" />
     </Sequence.Variables>
@@ -104,7 +104,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="io_dt주소" DisplayName="02. dt주소 추출_가공_저장 - 워크플로우 파일 호출 (Jobs\02. dt주소 추출_가공_저장.xaml)" sap:VirtualizedContainerService.HintSize="353.6,237.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Jobs\02. dt주소 추출_가공_저장.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="io_dt주소" DisplayName="02. dt주소 추출_가공_저장 - 워크플로우 파일 호출 (Jobs\02. dt주소 추출_가공_저장.xaml)" sap:VirtualizedContainerService.HintSize="353.6,237.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Jobs\02. DT 추출및가공.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt주소">[dt주소]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>

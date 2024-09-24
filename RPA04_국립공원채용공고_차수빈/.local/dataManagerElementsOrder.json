@@ -147,6 +147,8 @@
       "Path": "국립공원 채용공고_추가개발/01. 메일내용 추출_추가개발.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "bl폴더확인&Sequence_1",
+        "bl파일확인&Sequence_1",
         "strID&Sequence_1",
         "sstrpw&Sequence_1",
         "Mail메시지&Sequence_1",
@@ -164,7 +166,9 @@
       "Path": "국립공원 채용공고_추가개발/02. 결과파일 생성_추가개발.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_arr검색목록"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -214,8 +218,9 @@
       "Path": "국립공원 채용공고_추가개발/04. DT 검증.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "current공원명&Sequence_8",
+        "current제목&Sequence_1",
         "dt진행중일치&Sequence_1",
-        "currentValue&Sequence_1",
         "dt채용진행중_수정&Sequence_1",
         "dt진행중_전체&Sequence_1",
         "dt검증용&Sequence_1"
@@ -223,6 +228,162 @@
       "ArgumentsSectionElementsOrder": [
         "io_dt채용진행중",
         "in_dt채용공고"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "국립공원 채용공고_추가개발/04. DT 검증_(2).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "current공원명&Sequence_1",
+        "dt검증용&Sequence_1",
+        "dt진행중_전체&Sequence_1",
+        "dt채용진행중_수정&Sequence_1",
+        "current제목&Sequence_1",
+        "dt진행중일치&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt채용공고",
+        "io_dt채용진행중"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "국립공원 채용공고_Final/00. Main_Final.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "arr검색목록&Sequence_1",
+        "dt채용공고&Sequence_1",
+        "dt채용진행중&Sequence_1",
+        "str검색목록&Sequence_1",
+        "dt검증용&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "국립공원 채용공고_Final/04. DT 추출_Final.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_str검색목록",
+        "in_arr검색목록",
+        "out_dt채용공고"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "국립공원 채용공고_Final/05. DT 가공_Final.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt채용공고",
+        "in_dt채용진행중",
+        "in_arr검색목록"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "국립공원 채용공고_Final/03. DT 구조 생성_Final.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_dt검증용",
+        "out_dt채용진행중"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "국립공원 채용공고_Final/06. DT 검증_Final.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt검증용&Sequence_1",
+        "dt진행중_전체&Sequence_1",
+        "dt채용진행중_수정&Sequence_1",
+        "current제목&Sequence_1",
+        "dt진행중일치&Sequence_1",
+        "current공원명&Sequence_8"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt채용공고",
+        "io_dt채용진행중"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "국립공원 채용공고_Final/06. DT 검증_(2)_Final.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt검증용&Sequence_1",
+        "current제목&Sequence_1",
+        "current공원명&Sequence_1",
+        "rowindex&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt채용진행중"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "국립공원 채용공고_Final/01. 메일내용 추출_Final.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strID&Sequence_1",
+        "sstrpw&Sequence_1",
+        "Mail메시지&Sequence_1",
+        "inu첨부파일&Sequence_1",
+        "str본문&Sequence_1",
+        "bl파일확인&Sequence_1",
+        "bl폴더확인&Sequence_1",
+        "str첨부파일이름&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_arr검색목록"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "국립공원 채용공고_Final/08. 결과 메일발송_Final.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strHTML&Sequence_1",
+        "strName&Sequence_1",
+        "sstrpw&Sequence_1",
+        "str파일첨부&Sequence_1",
+        "str본문&Sequence_1",
+        "str제목&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt채용진행중"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "국립공원 채용공고_Final/02. 결과파일 생성_Final.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_arr검색목록"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "국립공원 채용공고_Final/07. DT 저장_Final.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt채용진행중"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1090.4,1037.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="740,3134.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -94,7 +94,12 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="&lt;국립공원 Join DT&gt;&#xA;&#xA;• 산이름 _joinDT.xlsx` 파일을 Copy File 한다 . 파일명 : 산이름 JoinDT 이지안 .&#xA;• 국립공원시트와 탐방코스시트를 읽어 두개의 DT 를 생성한다&#xA;• 두 DT 를 결합 및 가공하여 Result 시트에 기입한다&#xA;  (Result 의 값을 결과샘플시트 와 똑같이 만들면 됩니다)&#xA;&#xA;• 가공 규칙&#xA;- 가공 규칙 1: dt 국립공원과 dt 탐방코스의 산이름 컬럼의 값이 같을 때 결합&#xA;- 가공 규칙 2: 결합한 새로운 DT에서 탐방코스 컬럼에 값이 비어 있는 행이 있다면 삭제&#xA;- 가공 규칙 3: 산이름 오름차순 정렬" DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,972.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap2010:Annotation.AnnotationText="&lt;국립공원 Join DT&gt;&#xA;&#xA;• 산이름 _joinDT.xlsx` 파일을 Copy File 한다 . 파일명 : 산이름 JoinDT 이지안 .&#xA;• 국립공원시트와 탐방코스시트를 읽어 두개의 DT 를 생성한다&#xA;• 두 DT 를 결합 및 가공하여 Result 시트에 기입한다&#xA;  (Result 의 값을 결과샘플시트 와 똑같이 만들면 됩니다)&#xA;&#xA;• 가공 규칙&#xA;- 가공 규칙 1: dt 국립공원과 dt 탐방코스의 산이름 컬럼의 값이 같을 때 결합&#xA;- 가공 규칙 2: 결합한 새로운 DT에서 탐방코스 컬럼에 값이 비어 있는 행이 있다면 삭제&#xA;- 가공 규칙 3: 산이름 오름차순 정렬" DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="750.4,3069.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[New system.data.DataTable]" Name="dt국립공원" />
       <Variable x:TypeArguments="sd:DataTable" Default="[New system.data.DataTable]" Name="dt탐방코스" />
@@ -108,43 +113,43 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="시작 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;RPA01_국립공원_JoinDT_시작&quot;]">
+    <ui:LogMessage DisplayName="시작 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="688,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;RPA01_국립공원_JoinDT_시작&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:CopyFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="• 산이름 _joinDT.xlsx` 파일을 Copy File 한다 . &#xA;   파일명 : 산이름 JoinDT 이지안 .&#xD;&#xA;&#xD;&#xA;- copy file은 무조건 프로젝트 순서에 들어감.&#xD;&#xA;- 원본 파일을 수정하는 경우는 거의 없음&#xD;&#xA;- 덮어쓰기를 꼭 체크할 것" Destination="Data\산이름_JoinDT_차수빈.xlsx" DisplayName="&quot;산이름_JoinDT.xlsx&quot;파일 복사 l Copy File" sap:VirtualizedContainerService.HintSize="449.6,164.8" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="Data\산이름_JoinDT.xlsx">
+    <ui:CopyFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="• 산이름 _joinDT.xlsx` 파일을 Copy File 한다 . &#xA;   파일명 : 산이름 JoinDT 이지안 .&#xA;&#xA;- copy file은 무조건 프로젝트 순서에 들어감.&#xA;- 원본 파일을 수정하는 경우는 거의 없음&#xA;- 덮어쓰기를 꼭 체크할 것" Destination="Data\산이름_JoinDT_차수빈.xlsx" DisplayName="&quot;산이름_JoinDT.xlsx&quot;파일 복사 l Copy File" sap:VirtualizedContainerService.HintSize="688,164.8" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="Data\산이름_JoinDT.xlsx">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CopyFile>
-    <Sequence sap2010:Annotation.AnnotationText="• 국립공원시트와 탐방코스시트를 읽어 두개의 DT 를 생성한다&#xD;&#xA;&#xD;&#xA;- 상단에 데이터테이블 생성할 때 테이블 형식도 같이 만들어놓음 &#xD;&#xA;  (비슷한 것들끼리 묶어놓는 것)" DisplayName="dt국립공원, dt탐방코스 생성 ㅣ Sequence" sap:VirtualizedContainerService.HintSize="449.6,132.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+    <Sequence sap2010:Annotation.AnnotationText="• 국립공원시트와 탐방코스시트를 읽어 두개의 DT 를 생성한다&#xA;&#xA;- 상단에 데이터테이블 생성할 때 테이블 형식도 같이 만들어놓음 &#xA;  (비슷한 것들끼리 묶어놓는 것)" DisplayName="dt국립공원, dt탐방코스 생성 ㅣ Sequence" sap:VirtualizedContainerService.HintSize="688,132.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt국립공원]" DisplayName="dt국립공원 ㅣ Read Range Workbook" sap:VirtualizedContainerService.HintSize="387.2,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="국립공원" WorkbookPath="Data\산이름_JoinDT_차수빈.xlsx" />
       <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt탐방코스]" DisplayName="dt탐방코스 ㅣ Read Range Workbook" sap:VirtualizedContainerService.HintSize="387.2,111.2" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="탐방코스" WorkbookPath="Data\산이름_JoinDT_차수빈.xlsx" />
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="• 두 DT 를 결합 및 가공하여 Result 시트에 기입한다&#xA;• 가공 규칙&#xA; 1. dt 국립공원과 dt 탐방코스의 산이름 컬럼의 값이 같을 때 결합&#xA; 2. 결합한 새로운 DT에서 탐방코스 컬럼에 값이 비어 있는 행이 있다면 삭제&#xA; 3. 산이름 오름차순 정렬" DisplayName="dt국립공원+dt탐방코스 결합 ㅣ Sequence" sap:VirtualizedContainerService.HintSize="449.6,148.8" sap2010:WorkflowViewState.IdRef="Sequence_28">
+    <Sequence sap2010:Annotation.AnnotationText="• 두 DT 를 결합 및 가공하여 Result 시트에 기입한다&#xA;• 가공 규칙&#xA; 1. dt 국립공원과 dt 탐방코스의 산이름 컬럼의 값이 같을 때 결합&#xA; 2. 결합한 새로운 DT에서 탐방코스 컬럼에 값이 비어 있는 행이 있다면 삭제&#xA; 3. 산이름 오름차순 정렬" DisplayName="dt국립공원+dt탐방코스 결합 ㅣ Sequence" sap:VirtualizedContainerService.HintSize="688,148.8" sap2010:WorkflowViewState.IdRef="Sequence_28">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:MultipleAssign DisplayName="변수 초기화 ㅣ Multiple Assign" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign DisplayName="변수 초기화 ㅣ Multiple Assign" sap:VirtualizedContainerService.HintSize="480,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -172,7 +177,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:MultipleAssign>
-      <ui:JoinDataTables sap2010:Annotation.AnnotationText="dt 국립공원과 dt 탐방코스의 산이름 컬럼의 값이 같을 때 결합" DataTable1="[dt국립공원]" DataTable2="[dt탐방코스]" DisplayName="dt국립공원+dt탐방코스=dt결합 ㅣ Join Data Tables" sap:VirtualizedContainerService.HintSize="387.2,136" sap2010:WorkflowViewState.IdRef="JoinDataTables_1" JoinType="Full" OutputDataTable="[dt결합]">
+      <ui:JoinDataTables sap2010:Annotation.AnnotationText="dt 국립공원과 dt 탐방코스의 산이름 컬럼의 값이 같을 때 결합&#xD;&#xA;--- 조인 형식 - Full" DataTable1="[dt국립공원]" DataTable2="[dt탐방코스]" DisplayName="dt국립공원+dt탐방코스=dt결합 ㅣ Join Data Tables" sap:VirtualizedContainerService.HintSize="480,152" sap2010:WorkflowViewState.IdRef="JoinDataTables_1" JoinType="Full" OutputDataTable="[dt결합]">
         <ui:JoinDataTables.Arguments>
           <scg:List x:TypeArguments="ui:JoinOperationArgument" Capacity="4">
             <ui:JoinOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EQ">
@@ -193,7 +198,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:JoinDataTables>
-      <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="산이름_1" DataTable="[dt결합]" DisplayName="&quot;산이름_1&quot; 중복 컬럼 제거 ㅣ Remove Data Column" sap:VirtualizedContainerService.HintSize="387.2,211.2" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_1">
+      <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="산이름_1" DataTable="[dt결합]" DisplayName="&quot;산이름_1&quot; 중복 컬럼 제거 ㅣ Remove Data Column" sap:VirtualizedContainerService.HintSize="480,211.2" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -202,41 +207,51 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:RemoveDataColumn>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="결합한 새로운 DT에서 탐방코스 컬럼에 값이 비어 있는 행이 있다면 삭제" DisplayName="dt결합 가공 ㅣ Sequence" sap:VirtualizedContainerService.HintSize="449.6,88" sap2010:WorkflowViewState.IdRef="Sequence_29">
+    <Sequence sap2010:Annotation.AnnotationText="결합한 새로운 DT에서 탐방코스 컬럼에 값이 비어 있는 행이 있다면 삭제" DisplayName="dt결합 가공 ㅣ Sequence" sap:VirtualizedContainerService.HintSize="688,2184.8" sap2010:WorkflowViewState.IdRef="Sequence_31">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt결합]" DisplayName="삭제할 행 리스트 만들기_ list삭제할행 ㅣ For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="625.6,746.4" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt결합]" DisplayName="삭제할 행 리스트 만들기_ list삭제할행 ㅣ For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="625.6,837.6" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="592,548.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="592,640" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If Condition="[String.IsNullOrEmpty(CurrentRow(&quot;탐방코스1&quot;).ToString.Trim) or String.IsNullOrEmpty(CurrentRow(&quot;탐방코스2&quot;).ToString.Trim) or String.IsNullOrEmpty(CurrentRow(&quot;탐방코스3&quot;).ToString.Trim) or String.IsNullOrEmpty(CurrentRow(&quot;탐방코스4&quot;).ToString.Trim)]" DisplayName="탐방코스 컬럼에 값이 비어있는 행이 있다면 ㅣ If" sap:VirtualizedContainerService.HintSize="529.6,460" sap2010:WorkflowViewState.IdRef="If_1">
+              <If sap2010:Annotation.AnnotationText="String.IsNullOrEmpty(CurrentRow(&quot;탐방코스1&quot;).ToString.Trim) or String.IsNullOrEmpty(CurrentRow(&quot;탐방코스2&quot;).ToString.Trim) or String.IsNullOrEmpty(CurrentRow(&quot;탐방코스3&quot;).ToString.Trim) or String.IsNullOrEmpty(CurrentRow(&quot;탐방코스4&quot;).ToString.Trim)" Condition="[String.IsNullOrEmpty(CurrentRow(&quot;탐방코스1&quot;).ToString.Trim) or String.IsNullOrEmpty(CurrentRow(&quot;탐방코스2&quot;).ToString.Trim) or String.IsNullOrEmpty(CurrentRow(&quot;탐방코스3&quot;).ToString.Trim) or String.IsNullOrEmpty(CurrentRow(&quot;탐방코스4&quot;).ToString.Trim)]" DisplayName="탐방코스 컬럼에 값이 비어있는 행이 있다면 ㅣ If" sap:VirtualizedContainerService.HintSize="529.6,551.2" sap2010:WorkflowViewState.IdRef="If_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
-                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,193.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,224.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign DisplayName="list삭제할행에 행 목록 추가 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_16">
+                    <Assign sap2010:Annotation.AnnotationText="list삭제할행.Append(CurrentRow).ToList" DisplayName="list삭제할행에 행 목록 추가 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,136" sap2010:WorkflowViewState.IdRef="Assign_16">
                       <Assign.To>
                         <OutArgument x:TypeArguments="scg:List(sd:DataRow)">[list삭제할행]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
                         <InArgument x:TypeArguments="scg:List(sd:DataRow)">[list삭제할행.Append(CurrentRow).ToList]</InArgument>
                       </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </Assign>
                   </Sequence>
                 </If.Then>
@@ -260,7 +275,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
-      <InvokeMethod sap2010:Annotation.AnnotationText="dt결합의 모든 행을 삭제 가능한 상태로 변경 ㅣ Invoke Method" DisplayName="dt결합의 모든 행을 삭제 가능한 상태로 변경 ㅣ Invoke Method" sap:VirtualizedContainerService.HintSize="625.6,210.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_5" MethodName="AcceptChanges">
+      <InvokeMethod sap2010:Annotation.AnnotationText="dt결합의 모든 행을 삭제 가능한 상태로 변경 ㅣ Invoke Method" DisplayName="dt결합의 모든 행을 삭제 가능한 상태로 변경 ㅣ Invoke Method" sap:VirtualizedContainerService.HintSize="625.6,100.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_5" MethodName="AcceptChanges">
         <InvokeMethod.TargetObject>
           <InArgument x:TypeArguments="sd:DataTable">[dt결합]</InArgument>
         </InvokeMethod.TargetObject>
@@ -272,25 +287,30 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </InvokeMethod>
-      <ui:ForEach x:TypeArguments="sd:DataRow" CurrentIndex="{x:Null}" DisplayName="dt결합에서 list삭제할행 제거 ㅣ For Each currentDataRow" sap:VirtualizedContainerService.HintSize="625.6,915.2" sap2010:WorkflowViewState.IdRef="ForEach`1_10" Values="[list삭제할행]">
+      <ui:ForEach x:TypeArguments="sd:DataRow" CurrentIndex="{x:Null}" DisplayName="dt결합에서 list삭제할행 제거 ㅣ For Each currentDataRow" sap:VirtualizedContainerService.HintSize="625.6,959.2" sap2010:WorkflowViewState.IdRef="ForEach`1_10" Values="[list삭제할행]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="currentDataRow" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="512,768.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
+            <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="512,812.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign DisplayName="bl_exists 변수 ㅣ Assign" sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_19">
+              <Assign sap2010:Annotation.AnnotationText="dt결합.AsEnumerable().Any(Function(row) row(&quot;산이름&quot;).ToString().Trim() = currentDataRow(&quot;산이름&quot;).ToString().Trim())" DisplayName="bl_exists 변수 ㅣ Assign" sap:VirtualizedContainerService.HintSize="449.6,157.6" sap2010:WorkflowViewState.IdRef="Assign_19">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Boolean">[bl_exists]</OutArgument>
                 </Assign.To>
                 <Assign.Value>
                   <InArgument x:TypeArguments="x:Boolean">[dt결합.AsEnumerable().Any(Function(row) row("산이름").ToString().Trim() = currentDataRow("산이름").ToString().Trim())]</InArgument>
                 </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
               </Assign>
               <If Condition="[bl_exists]" DisplayName="[검증] 만약 list삭제할행이 dt결합에 존재한다면 ㅣ If" sap:VirtualizedContainerService.HintSize="449.6,566.4" sap2010:WorkflowViewState.IdRef="If_3">
                 <If.Then>
@@ -330,7 +350,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEach>
-      <ui:SortDataTable ColumnIndex="{x:Null}" DataColumn="{x:Null}" sap2010:Annotation.AnnotationText="산이름 오름차순 정렬" ColumnName="산이름" DataTable="[dt결합]" DisplayName="dt결합 &quot;산이름&quot; 오름차순 정렬 ㅣ Sort Data Table" sap:VirtualizedContainerService.HintSize="625.6,79.2" sap2010:WorkflowViewState.IdRef="SortDataTable_1" Order="Ascending" OutputDataTable="[dt결합]" SortOrder="Ascending">
+      <ui:SortDataTable ColumnIndex="{x:Null}" DataColumn="{x:Null}" sap2010:Annotation.AnnotationText="산이름 오름차순 정렬" ColumnName="산이름" DataTable="[dt결합]" DisplayName="dt결합 &quot;산이름&quot; 오름차순 정렬 ㅣ Sort Data Table" sap:VirtualizedContainerService.HintSize="625.6,135.2" sap2010:WorkflowViewState.IdRef="SortDataTable_1" Order="Ascending" OutputDataTable="[dt결합]" SortOrder="Ascending">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -340,20 +360,26 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:SortDataTable>
     </Sequence>
-    <Sequence DisplayName="dt결합_가공 저장 ㅣ Sequence" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="dt결합_가공 저장 ㅣ Sequence" sap:VirtualizedContainerService.HintSize="688,56.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt결합]" DisplayName="dt결합 -&gt; &quot;Result&quot; 시트에 저장 ㅣ Write Range Workbook" sap:VirtualizedContainerService.HintSize="387.2,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Result" WorkbookPath="Data\산이름_JoinDT_차수빈.xlsx" />
+      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="--- 속성 - 머리글 체크" DataTable="[dt결합]" DisplayName="dt결합 -&gt; &quot;Result&quot; 시트에 저장 ㅣ Write Range Workbook" sap:VirtualizedContainerService.HintSize="387.2,170.4" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Result" WorkbookPath="Data\산이름_JoinDT_차수빈.xlsx">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:WriteRange>
     </Sequence>
-    <ui:LogMessage DisplayName="종료 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="449.6,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;RPA01_국립공원_JoinDT_종료&quot;]">
+    <ui:LogMessage DisplayName="종료 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="688,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;RPA01_국립공원_JoinDT_종료&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>

@@ -54,7 +54,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Jobs/02. dt주소 추출_가공_저장.xaml",
+      "Path": "Jobs/02. DT 추출및가공.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "str도로명주소&Sequence_1",
@@ -98,6 +98,16 @@
         "dt주소&Sequence_1",
         "dt일치&Sequence_1"
       ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt주소"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Jobs/03. DT 저장.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
         "in_dt주소"
       ],

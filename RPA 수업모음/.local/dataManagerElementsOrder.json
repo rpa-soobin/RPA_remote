@@ -974,6 +974,16 @@
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "01_이론/09. PDF 자동화.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strPDF&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }

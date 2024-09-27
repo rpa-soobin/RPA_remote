@@ -1,4 +1,14 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_08__메일_발송" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="870.4,908" sap2010:WorkflowViewState.IdRef="_06__메일_발송_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_08__메일_발송" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_strResultFile" Type="InArgument(x:String)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_dt_TransactionData" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1128.8,1452</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>_06__메일_발송_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -41,6 +51,9 @@
       <x:String>UiPath.Mail.Activities</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -97,14 +110,24 @@
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="08. 메일 발송" sap:VirtualizedContainerService.HintSize="496,843.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="08. 메일 발송" sap:VirtualizedContainerService.HintSize="496,1387.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strName" />
       <Variable x:TypeArguments="ss:SecureString" Name="sstrpw" />
       <Variable x:TypeArguments="x:String" Name="str파일첨부" />
       <Variable x:TypeArguments="s:String[]" Name="arr파일첨부" />
+      <Variable x:TypeArguments="x:String" Name="strHTML" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -126,12 +149,44 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotCredential>
+    <Assign sap2010:Annotation.AnnotationText="in_dt_TransactionData.ToHtmlTable" DisplayName="strHTML l Assign" sap:VirtualizedContainerService.HintSize="433.6,144.8" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[strHTML]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[in_dt_TransactionData.ToHtmlTable]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <Assign sap2010:Annotation.AnnotationText="strHTML.Replace(&quot;&lt;table&gt;&lt;tr&gt;&quot;,&#xA;    &quot;&lt;table class='table' style='width: 100%; border-collapse: collapse; table-layout: auto;' border='1'&gt;&quot; +&#xA;    &quot;&lt;tr style='background-color: #e6e6fa; text-align: center; font-size: 16px; font-weight: bold;'&gt;&quot;)&#xA;&#xA;--- 연두색 : #d0f0c0&#xA;--- 연한 노란색 : #ffffe0&#xA;--- 연한 연보라색 : #e6e6fa" DisplayName="strHTML 형식 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,271.2" sap2010:WorkflowViewState.IdRef="Assign_6">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[strHTML]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String" xml:space="preserve">[strHTML.Replace("&lt;table&gt;&lt;tr&gt;",
+    "&lt;table class='table' style='width: 100%; border-collapse: collapse; table-layout: auto;' border='1'&gt;" +
+    "&lt;tr style='background-color: #e6e6fa; text-align: center; font-size: 16px; font-weight: bold;'&gt;")]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
     <Assign sap2010:Annotation.AnnotationText="풀 경로를 적어줘야 합니다. 경로만 적으면 안 되고 정확한 파일 이름이 들어가야 합니다. " DisplayName="str파일첨부 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[str파일첨부]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">C:\C드라이브\UIPATH\RPA06_부동산공시가격_차수빈\Data\부동산공시가격\부동산공시가격_Temp_차수빈.xlsx</InArgument>
+        <InArgument x:TypeArguments="x:String">[in_strResultFile]</InArgument>
       </Assign.Value>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -139,7 +194,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <ui:SendMail Bcc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="서버 : &quot;smtp.gmail.com&quot;&#xA;포트 : 587&#xA;&#xA;&quot;rpa.soobin@gmail.com&quot;&#xA;&quot;rpa.jian23@gmail.com&quot;" Body="[&quot;[동부RPA] 06. 부동산공시가격_차수빈&quot; + Environment.NewLine + &quot;과제 제출합니다. 확인 부탁드립니다.&quot;]" Cc="rpa.soobin@gmail.com" DisplayName="파일첨부 이메일 보내기 ㅣ Send SMTP Mail Message" Email="[strName]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="433.6,272.8" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Port="587" SecureConnection="Auto" SecurePassword="[sstrpw]" Server="smtp.gmail.com" Subject="[동부RPA] 06. 부동산공시가격_차수빈" To="rpa.soobin@gmail.com">
+    <ui:SendMail Bcc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="server : &quot;smtp.gmail.com&quot;&#xA;port : 587&#xA;HTML = True&#xA;&#xA;---- 제목 ----&#xA;String.Format(in_Config(&quot;Subject&quot;).ToString.Trim, in_Config(&quot;부서코드&quot;).ToString.Trim,in_Config(&quot;과제명&quot;).ToString.Trim, &quot;실패입니다.&quot;)&#xA;&#xA;---- 본문 ----&#xA;String.Format(in_Config(&quot;MailBody&quot;).ToString.Trim,  today.ToString(&quot;yyMMdd&quot;), in_Config(&quot;과제명&quot;).ToString.Trim, strHTML)" Body="[String.Format(in_Config(&quot;MailBody&quot;).ToString.Trim,  today.ToString(&quot;yyMMdd&quot;), in_Config(&quot;과제명&quot;).ToString.Trim, strHTML)]" Cc="rpa.soobin@gmail.com" DisplayName="파일첨부 이메일 보내기 ㅣ Send SMTP Mail Message" Email="[strName]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="433.6,400.8" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="True" Port="587" SecureConnection="Auto" SecurePassword="[sstrpw]" Server="smtp.gmail.com" Subject="[String.Format(in_Config(&quot;Subject&quot;).ToString.Trim, in_Config(&quot;부서코드&quot;).ToString.Trim,in_Config(&quot;과제명&quot;).ToString.Trim, &quot;실패입니다.&quot;)]" To="[in_Config(&quot;MailTo&quot;).ToString.Trim]">
       <ui:SendMail.Files>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
           <InArgument x:TypeArguments="x:String">[str파일첨부]</InArgument>

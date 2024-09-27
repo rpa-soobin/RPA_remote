@@ -601,6 +601,7 @@
       "Path": "01_이론/04. 예외처리_retry_trycatch.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "arrTest&Sequence_1",
         "idx&Sequence_1",
         "bl헤드라인버튼여부&Sequence_1",
         "ExtractDataTable&Sequence_1"

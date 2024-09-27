@@ -1,12 +1,11 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="_04__도로명_초성추출" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="io_dt_TransactionData" Type="InOutArgument(sd:DataTable)" />
-    <x:Property Name="out_TransactionItem" Type="OutArgument(sd:DataRow)" />
+    <x:Property Name="io_dt회원목록" Type="InOutArgument(sd:DataTable)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>870.4,1248.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1126.4,596.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_02__초성_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -93,7 +92,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="04. 도로명 초성추출" sap:VirtualizedContainerService.HintSize="638.4,1184" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="04. 도로명 초성추출" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="초성" />
       <Variable x:TypeArguments="x:Int32" Name="유니코드" />
@@ -107,7 +106,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="시작 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="576,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;04. 도로명 초성추출_시작&quot;]">
+    <ui:LogMessage DisplayName="시작 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;04. 도로명 초성추출_시작&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -115,19 +114,19 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[io_dt_TransactionData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="576,990.4" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[io_dt회원목록]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="out_TransactionItem" />
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="542.4,792.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="542.4,670.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MultipleAssign sap2010:Annotation.AnnotationText="' 초성 배열을 정의합니다. 한글 초성은 총 19개입니다.&#xA;Dim choSung As String() = {&quot;ㄱ&quot;, &quot;ㄲ&quot;, &quot;ㄴ&quot;, &quot;ㄷ&quot;, &quot;ㄸ&quot;, &quot;ㄹ&quot;, &quot;ㅁ&quot;, &quot;ㅂ&quot;, &quot;ㅃ&quot;, &quot;ㅅ&quot;, &quot;ㅆ&quot;, &quot;ㅇ&quot;, &quot;ㅈ&quot;, &quot;ㅉ&quot;, &quot;ㅊ&quot;, &quot;ㅋ&quot;, &quot;ㅌ&quot;, &quot;ㅍ&quot;, &quot;ㅎ&quot;}&#xA;&#xA;' CurrentRow(&quot;소분류&quot;)에서 첫 번째 문자를 가져와 유니코드 값으로 변환한 다음, 한글 '가'의 유니코드 값(&amp;HAC00)을 빼줍니다.&#xA;' 이렇게 하면 '가'로부터의 상대적인 위치를 얻을 수 있습니다.&#xA;Dim uniCode As Integer = Convert.ToInt32(Convert.ToChar(CurrentRow(&quot;소분류&quot;).ToString().Substring(0, 1))) - &amp;HAC00&#xA;&#xA;' 계산된 유니코드 값을 588로 나눕니다. 한글은 각각의 초성마다 588개의 문자(중성 21 * 종성 28)가 있습니다.&#xA;' 이 연산 결과는 초성의 인덱스를 나타냅니다.&#xA;Dim choSungIndex As Integer = uniCode \ 588&#xA;&#xA;' 초성 배열에서 해당 인덱스의 값을 가져옵니다. 이 값이 우리가 찾는 초성입니다.&#xA;Dim result As String = choSung(choSungIndex)&#xA;&#xA;' 결과 사용 예시: result 변수에는 추출된 초성이 저장됩니다.&#xA;' 예를 들어, CurrentRow(&quot;소분류&quot;)의 값이 &quot;마곡서로&quot;인 경우, 이 코드를 실행하면 result 변수에 &quot;ㅁ&quot;이 저장됩니다." DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="480,590.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+            <ui:MultipleAssign sap2010:Annotation.AnnotationText="' 초성 배열을 정의합니다. 한글 초성은 총 19개입니다.&#xA;Dim choSung As String() = {&quot;ㄱ&quot;, &quot;ㄲ&quot;, &quot;ㄴ&quot;, &quot;ㄷ&quot;, &quot;ㄸ&quot;, &quot;ㄹ&quot;, &quot;ㅁ&quot;, &quot;ㅂ&quot;, &quot;ㅃ&quot;, &quot;ㅅ&quot;, &quot;ㅆ&quot;, &quot;ㅇ&quot;, &quot;ㅈ&quot;, &quot;ㅉ&quot;, &quot;ㅊ&quot;, &quot;ㅋ&quot;, &quot;ㅌ&quot;, &quot;ㅍ&quot;, &quot;ㅎ&quot;}&#xA;&#xA;' CurrentRow(&quot;소분류&quot;)에서 첫 번째 문자를 가져와 유니코드 값으로 변환한 다음, 한글 '가'의 유니코드 값(&amp;HAC00)을 빼줍니다.&#xA;' 이렇게 하면 '가'로부터의 상대적인 위치를 얻을 수 있습니다.&#xA;Dim uniCode As Integer = Convert.ToInt32(Convert.ToChar(CurrentRow(&quot;소분류&quot;).ToString().Substring(0, 1))) - &amp;HAC00&#xA;&#xA;' 계산된 유니코드 값을 588로 나눕니다. 한글은 각각의 초성마다 588개의 문자(중성 21 * 종성 28)가 있습니다.&#xA;' 이 연산 결과는 초성의 인덱스를 나타냅니다.&#xA;Dim choSungIndex As Integer = uniCode \ 588&#xA;&#xA;' 초성 배열에서 해당 인덱스의 값을 가져옵니다. 이 값이 우리가 찾는 초성입니다.&#xA;Dim result As String = choSung(choSungIndex)&#xA;&#xA;' 결과 사용 예시: result 변수에는 추출된 초성이 저장됩니다.&#xA;' 예를 들어, CurrentRow(&quot;소분류&quot;)의 값이 &quot;마곡서로&quot;인 경우, 이 코드를 실행하면 result 변수에 &quot;ㅁ&quot;이 저장됩니다." DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="480,581.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -143,7 +142,7 @@
                       <OutArgument x:TypeArguments="x:Int32">[유니코드]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(Convert.ToChar(out_TransactionItem("소분류").ToString.Substring(0, 1))) - &amp;HAC00]</InArgument>
+                      <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(Convert.ToChar(CurrentRow("소분류").ToString.Substring(0, 1))) - &amp;HAC00]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -156,7 +155,7 @@
                   </ui:AssignOperation>
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
                     <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:Object">[out_TransactionItem("초성")]</OutArgument>
+                      <OutArgument x:TypeArguments="x:Object">[CurrentRow("초성")]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
                       <InArgument x:TypeArguments="x:Object">[초성(초성_index)]</InArgument>
@@ -167,23 +166,20 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:MultipleAssign>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="480,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[out_TransactionItem(&quot;초성&quot;).ToString]" />
           </Sequence>
         </ActivityAction>
       </ui:ForEachRow.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:LogMessage DisplayName="종료 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="576,48" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;04. 도로명 초성추출_종료&quot;]">
+    <ui:LogMessage DisplayName="종료 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;04. 도로명 초성추출_종료&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>

@@ -2,14 +2,18 @@
   <x:Members>
     <x:Property Name="in_dt티켓랭킹" Type="InArgument(sd:DataTable)" />
     <x:Property Name="in_str시트명" Type="InArgument(x:String)" />
+    <x:Property Name="in_strResultFile" Type="InArgument(x:String)" />
   </x:Members>
   <this:_12__DT_저장.in_str시트명>
     <InArgument x:TypeArguments="x:String" />
   </this:_12__DT_저장.in_str시트명>
+  <this:_12__DT_저장.in_strResultFile>
+    <InArgument x:TypeArguments="x:String" />
+  </this:_12__DT_저장.in_strResultFile>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1128.8,683.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>870.4,683.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_07__DT_저장_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -172,7 +176,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[in_dt티켓랭킹]" DisplayName="티켓랭킹 DT 저장 ㅣ Write Range Workbook" sap:VirtualizedContainerService.HintSize="353.6,148" sap2010:WorkflowViewState.IdRef="WriteRange_7" SheetName="[in_str시트명]" WorkbookPath="Data\티켓랭킹_작업지시서\티켓랭킹_Temp_차수빈.xlsx">
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[in_dt티켓랭킹]" DisplayName="티켓랭킹 DT 저장 ㅣ Write Range Workbook" sap:VirtualizedContainerService.HintSize="353.6,148" sap2010:WorkflowViewState.IdRef="WriteRange_7" SheetName="[in_str시트명]" WorkbookPath="[in_strResultFIle]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>

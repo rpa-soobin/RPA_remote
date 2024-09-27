@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>870.4,979.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>870.4,1169.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_01__폴더확인_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -85,7 +85,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_01__폴더확인" sap:VirtualizedContainerService.HintSize="512,914.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_01__폴더확인" sap:VirtualizedContainerService.HintSize="513.6,1104.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="bl파일확인" />
     </Sequence.Variables>
@@ -94,7 +94,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="시작 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;01. 폴더확인_시작&quot;]">
+    <ui:LogMessage DisplayName="시작 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="451.2,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;01. 폴더확인_시작&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -102,8 +102,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:FileExistsX DisplayName="File Exists" Exists="[bl파일확인]" sap:VirtualizedContainerService.HintSize="449.6,166.4" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[in_strTempFile]" />
-    <If Condition="[bl파일확인]" sap:VirtualizedContainerService.HintSize="449.6,388" sap2010:WorkflowViewState.IdRef="If_1">
+    <ui:FileExistsX DisplayName="File Exists" Exists="[bl파일확인]" sap:VirtualizedContainerService.HintSize="451.2,166.4" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="C:\C드라이브\UIPATH\RE\RE-03.티켓랭킹\Data\Input\티켓랭킹_Temp.xlsx" />
+    <If Condition="[bl파일확인]" sap:VirtualizedContainerService.HintSize="451.2,388" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -117,7 +117,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="353.6,104" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[in_strTempFile]" />
+          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="353.6,104" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="Data\Input\티켓랭킹_Temp.xlsx" />
         </Sequence>
       </If.Then>
       <If.Else>
@@ -131,8 +131,19 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:CreateFile ContinueOnError="{x:Null}" Name="{x:Null}" Output="{x:Null}" DisplayName="Create File" sap:VirtualizedContainerService.HintSize="449.6,166.4" sap2010:WorkflowViewState.IdRef="CreateFile_1" Path="[in_strTempFile]" />
-    <ui:LogMessage DisplayName="종료 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="449.6,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;01. 폴더확인_종료&quot;]">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="451.2,356.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="416,246.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:CreateFile ContinueOnError="{x:Null}" Name="{x:Null}" Output="{x:Null}" DisplayName="Create File" sap:VirtualizedContainerService.HintSize="353.6,157.6" sap2010:WorkflowViewState.IdRef="CreateFile_1" Path="[in_strTempFile]" />
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:LogMessage DisplayName="종료 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="451.2,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;01. 폴더확인_종료&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>

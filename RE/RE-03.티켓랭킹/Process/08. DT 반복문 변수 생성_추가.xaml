@@ -2,19 +2,19 @@
   <x:Members>
     <x:Property Name="out_str클릭항목" Type="OutArgument(x:String)" />
     <x:Property Name="out_strURL" Type="OutArgument(x:String)" />
-    <x:Property Name="in_CurrentRow_URL" Type="InArgument(sd:DataRow)" />
     <x:Property Name="out_str정보" Type="OutArgument(x:String)" />
     <x:Property Name="out_str시작일" Type="OutArgument(x:String)" />
     <x:Property Name="out_str종료일_장소" Type="OutArgument(x:String)" />
     <x:Property Name="out_str종료일" Type="OutArgument(x:String)" />
     <x:Property Name="out_str장소" Type="OutArgument(x:String)" />
     <x:Property Name="out_str시트명" Type="OutArgument(x:String)" />
+    <x:Property Name="io_TransactionItem" Type="InOutArgument(sd:DataRow)" />
     <x:Property Name="io_dt티켓랭킹" Type="InOutArgument(sd:DataTable)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1128.8,1192.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>870.4,1075.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>변수_생성_및_초기화_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -100,13 +100,13 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="08. 변수_생성_및_초기화" sap:VirtualizedContainerService.HintSize="542.4,1128" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="08. 변수_생성_및_초기화" sap:VirtualizedContainerService.HintSize="542.4,1010.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="480,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;08. 변수_생성_및_초기화_시작&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="480,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="{x:Null}" Message="[&quot;08. 변수_생성_및_초기화_시작&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -114,7 +114,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:MultipleAssign sap2010:Annotation.AnnotationText="str클릭항목 = in_CurrentRow_URL(&quot;항목&quot;).ToString.Trim&#xA;strURL = in_CurrentRow_URL(&quot;항목URL&quot;).ToString.Trim" DisplayName="URL 변수 ㅣ Multiple Assign" sap:VirtualizedContainerService.HintSize="480,224" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign sap2010:Annotation.AnnotationText="str클릭항목 = io_TransactionItem(&quot;항목&quot;).ToString.Trim&#xA;strURL = io_TransactionItem(&quot;항목URL&quot;).ToString.Trim" DisplayName="URL 변수 ㅣ Multiple Assign" sap:VirtualizedContainerService.HintSize="480,224" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -122,7 +122,7 @@
               <OutArgument x:TypeArguments="x:String">[out_str클릭항목]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[in_CurrentRow_URL("항목").ToString.Trim]</InArgument>
+              <InArgument x:TypeArguments="x:String">[io_TransactionItem("항목").ToString.Trim]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
@@ -130,7 +130,7 @@
               <OutArgument x:TypeArguments="x:String">[out_strURL]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[in_CurrentRow_URL("항목URL").ToString.Trim]</InArgument>
+              <InArgument x:TypeArguments="x:String">[io_TransactionItem("항목URL").ToString.Trim]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
         </scg:List>
@@ -150,7 +150,10 @@
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
               <InArgument x:TypeArguments="x:String">
-                <Literal x:TypeArguments="x:String" Value="" />
+                <Literal x:TypeArguments="x:String">
+                  <Literal.Result>
+                    <OutArgument x:TypeArguments="x:String" />
+                  </Literal.Result></Literal>
               </InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
@@ -160,7 +163,10 @@
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
               <InArgument x:TypeArguments="x:String">
-                <Literal x:TypeArguments="x:String" Value="" />
+                <Literal x:TypeArguments="x:String">
+                  <Literal.Result>
+                    <OutArgument x:TypeArguments="x:String" />
+                  </Literal.Result></Literal>
               </InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
@@ -170,7 +176,10 @@
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
               <InArgument x:TypeArguments="x:String">
-                <Literal x:TypeArguments="x:String" Value="" />
+                <Literal x:TypeArguments="x:String">
+                  <Literal.Result>
+                    <OutArgument x:TypeArguments="x:String" />
+                  </Literal.Result></Literal>
               </InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
@@ -180,7 +189,10 @@
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
               <InArgument x:TypeArguments="x:String">
-                <Literal x:TypeArguments="x:String" Value="" />
+                <Literal x:TypeArguments="x:String">
+                  <Literal.Result>
+                    <OutArgument x:TypeArguments="x:String" />
+                  </Literal.Result></Literal>
               </InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
@@ -190,7 +202,10 @@
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
               <InArgument x:TypeArguments="x:String">
-                <Literal x:TypeArguments="x:String" Value="" />
+                <Literal x:TypeArguments="x:String">
+                  <Literal.Result>
+                    <OutArgument x:TypeArguments="x:String" />
+                  </Literal.Result></Literal>
               </InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
@@ -219,6 +234,13 @@
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
     <ui:ClearDataTable DataTable="[io_dt티켓랭킹]" DisplayName="티켓랭킹 DT 초기화 ㅣ Clear Data Table" sap:VirtualizedContainerService.HintSize="480,112.8" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="480,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;08. 변수_생성_및_초기화_종료&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="480,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="{x:Null}" Message="[&quot;08. 변수_생성_및_초기화_종료&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
   </Sequence>
 </Activity>

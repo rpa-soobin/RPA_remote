@@ -4,10 +4,7 @@
     <x:Property Name="in_idx_추출항목" Type="InArgument(x:Int32)" />
     <x:Property Name="in_arr추출항목" Type="InArgument(s:String[])" />
     <x:Property Name="out_str추출항목" Type="OutArgument(x:String)" />
-    <x:Property Name="io_dt랭킹_1위" Type="InOutArgument(sd:DataTable)" />
-    <x:Property Name="in_CurrentRow_URL" Type="InArgument(sd:DataRow)" />
     <x:Property Name="in_strURL" Type="InArgument(x:String)" />
-    <x:Property Name="out_str시트이름" Type="OutArgument(x:String)" />
     <x:Property Name="out_str클릭항목" Type="OutArgument(x:String)" />
   </x:Members>
   <this:_09__티켓랭킹_DT_추출.in_strURL>
@@ -16,7 +13,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1128.8,1434.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>870.4,1434.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_05__DT_추출_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">

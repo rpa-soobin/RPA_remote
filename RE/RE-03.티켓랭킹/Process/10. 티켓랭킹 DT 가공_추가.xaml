@@ -1,7 +1,6 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="_10__티켓랭킹_DT_가공" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="io_dt티켓랭킹" Type="InOutArgument(sd:DataTable)" />
-    <x:Property Name="io_dt랭킹_1위" Type="InOutArgument(sd:DataTable)" />
     <x:Property Name="in_CurrentRow_티켓랭킹" Type="InArgument(sd:DataRow)" />
     <x:Property Name="in_str시작일" Type="InArgument(x:String)" />
     <x:Property Name="in_str정보" Type="InArgument(x:String)" />
@@ -27,7 +26,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1128.8,1998.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>870.4,1998.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_06__DT_가공_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">

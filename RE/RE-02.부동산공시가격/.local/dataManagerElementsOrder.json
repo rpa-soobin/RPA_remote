@@ -1,0 +1,251 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Mail/01. Send Mail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strHTML&Sequence_1",
+        "strName&Sequence_1",
+        "sstrpw&Sequence_1",
+        "str파일첨부&Sequence_1",
+        "arr파일첨부&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt_TransactionData",
+        "in_Config",
+        "in_strResultFile"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bl오류&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "strTempFile&StateMachine_1",
+        "dt회원목록&StateMachine_1",
+        "strResultFile&StateMachine_1",
+        "lstAttachment&StateMachine_1",
+        "TransactionItem&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "excelSheet&StateMachine_1",
+        "ShouldStop&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/02. DT 추출_(3).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "list시도_추출&Sequence_1",
+        "str대분류&Sequence_1",
+        "str소분류&Sequence_1",
+        "str단지명&Sequence_1",
+        "str동&Sequence_1",
+        "str호&Sequence_1",
+        "str중분류&Sequence_1",
+        "str소분류_초성&Sequence_1",
+        "str공시기준일가격&Sequence_1",
+        "str공시기준&Sequence_1",
+        "str동_첫글자&Sequence_1",
+        "list동_추출&Sequence_1",
+        "list단지명_추출&Sequence_1",
+        "list호_추출&Sequence_1",
+        "bl공통주택가격&Sequence_1",
+        "idx&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_bl오류",
+        "out_bl대분류존재여부",
+        "io_dt_TransactionData",
+        "io_TransactionItem"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/04. 도로명 초성추출_(3).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "초성&Sequence_1",
+        "유니코드&Sequence_1",
+        "arrTest&Sequence_1",
+        "초성_index&Sequence_1",
+        "dtTest&Sequence_1",
+        "dt초성확인&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_TransactionItem",
+        "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/01. 경로설정.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_strTempFile",
+        "out_strResultFile",
+        "out_lstAttachment",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bl오류&Sequence_1",
+        "bl대분류존재여부&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strResultFile",
+        "in_Config",
+        "io_TransactionItem",
+        "in_dt_TransactionData",
+        "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/03. DT 생성 및 컬럼수정_(3).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_strTempFile",
+        "out_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_TransactionItem",
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionField1",
+        "out_TransactionField2",
+        "out_TransactionID",
+        "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/03. DT 가공_(3).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "int기준가격&Sequence_1",
+        "int공시기준일가격&Sequence_1",
+        "str기준가격&Sequence_1",
+        "str공시기준일가격&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_TransactionItem",
+        "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueRetry&Sequence_17",
+        "ScreenshotPath&Sequence_17"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_BusinessException",
+        "in_TransactionField1",
+        "in_TransactionField2",
+        "in_TransactionID",
+        "in_SystemException",
+        "in_Config",
+        "in_TransactionItem",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "io_ConsecutiveSystemExceptions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/04. DT 저장_(3).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt_TransactionData",
+        "in_strResultFile"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/02. Copy File_(3).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_strTempFile",
+        "in_strResultFile"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

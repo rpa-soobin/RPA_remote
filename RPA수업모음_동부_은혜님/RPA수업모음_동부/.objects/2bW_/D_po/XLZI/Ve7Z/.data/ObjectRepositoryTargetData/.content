@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="AAWx-_vU70yXILW703oejg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="1cd9ec14-c362-431a-9fd5-76a1dcdb5376" CvElementArea="280, 23, 23, 23" CvType="CloseButton" DesignTimeRectangle="274, 15, 36, 40" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl name='이 페이지를 번역하시겠습니까?' role='alert' /&gt;&lt;ctrl name='닫기' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='이 페이지를 번역하시겠습니까?' role='alert' /&gt;&lt;ctrl name='닫기' role='push button' automationid='' check:text='닫기' /&gt;" Guid="86f127b0-be35-4107-bb2c-b095b28334cb" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='이 페이지를 번역하시겠습니까?' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="6e6e55f7883475388cf8f2193eb839b8.png" xmlns="">0hAOpGilW5EqE42xokIUpnw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

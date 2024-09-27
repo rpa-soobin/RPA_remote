@@ -1,0 +1,13 @@
+﻿{
+  "Name": "수정화면 띄우기  Use Browser Chrome ACME System 1",
+  "Type": "Screen",
+  "Id": "XLZIpagsBUGRebyCWfypiA",
+  "Reference": "e2lcE5wYM0iBEI2ZChnKww/XLZIpagsBUGRebyCWfypiA",
+  "ParentRef": "e2lcE5wYM0iBEI2ZChnKww/D_poQI_R8EyQILwxCFCxLA",
+  "Created": "2024-08-22T05:45:06.275014Z",
+  "Updated": "2024-08-22T05:45:06.275014Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,342 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "arr추출항목&StateMachine_1",
+        "strTempFIle&StateMachine_1",
+        "strResultFile&StateMachine_1",
+        "lstAttachment&StateMachine_1",
+        "dt티켓랭킹&StateMachine_1",
+        "dt랭킹_1위&StateMachine_1",
+        "list실패항목&StateMachine_1",
+        "list성공항목&StateMachine_1",
+        "bl오류&StateMachine_1",
+        "ShouldStop&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/03. 파일 Copy_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_strResultFile",
+        "in_strTempFile"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/04. DT 구조 및 성공실패_list 생성_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_dt티켓랭킹",
+        "out_dt랭킹_1위",
+        "out_list성공항목",
+        "out_list실패항목"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/05. URL DT 추출_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/07. 결과파일 생성_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str시트명&Sequence_1",
+        "str클릭항목&Sequence_1",
+        "str추출항목&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strResultFile",
+        "in_dt_TransactionData",
+        "in_arr추출항목",
+        "io_list성공항목",
+        "io_list실패항목"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/01. 파일확인.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bl파일확인&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strTempFile"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/01. 경로설정.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_strTempFile",
+        "out_strResultFile",
+        "out_lstAttachment",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/02. 메일수신 및 내용추출_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strID&Sequence_1",
+        "sstrpw&Sequence_1",
+        "Mail메시지&Sequence_1",
+        "inu첨부파일&Sequence_1",
+        "str본문&Sequence_1",
+        "bl파일확인&Sequence_1",
+        "bl폴더확인&Sequence_1",
+        "str첨부파일이름&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_arr추출항목"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "out_TransactionField1",
+        "out_TransactionField2",
+        "out_TransactionID",
+        "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str추출항목&Sequence_1",
+        "idx_추출항목&Sequence_1",
+        "str시트명&Sequence_1",
+        "str장소&Sequence_1",
+        "str종료일&Sequence_1",
+        "str종료일_장소&Sequence_1",
+        "str시작일&Sequence_1",
+        "str정보&Sequence_1",
+        "strURL&Sequence_1",
+        "str클릭항목&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strResultFile",
+        "io_dt랭킹_1위",
+        "in_arr추출항목",
+        "in_dt티켓랭킹",
+        "in_TransactionItem",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/00. Main_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "arr추출항목&Sequence_1",
+        "dt티켓랭킹&Sequence_1",
+        "dt랭킹_1위&Sequence_1",
+        "str추출항목&Sequence_1",
+        "idx_추출항목&Sequence_1",
+        "dtURL&Sequence_1",
+        "strURL&Sequence_1",
+        "str클릭항목&Sequence_1",
+        "list성공항목&Sequence_1",
+        "list실패항목&Sequence_1",
+        "str시트이름&Sequence_1",
+        "str정보&Sequence_1",
+        "str시작일&Sequence_1",
+        "str종료일_장소&Sequence_1",
+        "str종료일&Sequence_1",
+        "str장소&Sequence_1",
+        "str시트명&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/08. DT 반복문 변수 생성_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt티켓랭킹",
+        "io_TransactionItem",
+        "out_str클릭항목",
+        "out_strURL",
+        "out_str정보",
+        "out_str시작일",
+        "out_str종료일_장소",
+        "out_str종료일",
+        "out_str장소",
+        "out_str시트명"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/09. 티켓랭킹 DT 추출_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt원본_추가&Sequence_1",
+        "arrURL&Sequence_1",
+        "listURL&Sequence_1",
+        "dtURL&Sequence_1",
+        "str시트명&Sequence_1",
+        "CurrentElement&Sequence_1",
+        "CurrentElement_Label&Sequence_1",
+        "str시작일&Sequence_1",
+        "str정보&Sequence_1",
+        "str종료일_장소&Sequence_1",
+        "str장소&Sequence_1",
+        "str종료일&Sequence_1",
+        "dt랭킹&Sequence_1",
+        "index&Sequence_1",
+        "str추출항목&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt티켓랭킹",
+        "in_idx_추출항목",
+        "in_arr추출항목",
+        "out_str추출항목",
+        "in_strURL",
+        "out_str클릭항목"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/10. 티켓랭킹 DT 가공_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt랭킹&Sequence_1",
+        "index&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt티켓랭킹",
+        "in_CurrentRow_티켓랭킹",
+        "in_str시작일",
+        "in_str정보",
+        "in_str종료일_장소",
+        "in_str장소",
+        "in_str종료일"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/11. 랭킹_1위 데이터 취합_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_CurrentRow_티켓랭킹",
+        "io_dt랭킹_1위"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/12. 티켓랭킹 DT 저장_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_strResultFile",
+        "in_dt티켓랭킹",
+        "in_str시트명"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueRetry&Sequence_17",
+        "ScreenshotPath&Sequence_17"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_BusinessException",
+        "in_TransactionField1",
+        "in_TransactionField2",
+        "in_TransactionID",
+        "in_SystemException",
+        "in_Config",
+        "in_TransactionItem",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "io_ConsecutiveSystemExceptions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Mail/14. 메일 발송_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strHTML&Sequence_1",
+        "strName&Sequence_1",
+        "sstrpw&Sequence_1",
+        "str파일첨부&Sequence_1",
+        "str본문&Sequence_1",
+        "str제목&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt랭킹_1위",
+        "in_list성공항목",
+        "in_list실패항목"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

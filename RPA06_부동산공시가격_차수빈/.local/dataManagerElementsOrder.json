@@ -1,0 +1,286 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/00. Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt회원목록&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/01. 폴더확인.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bl폴더확인&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/05. DT 추출.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str대분류&Sequence_1",
+        "str소분류&Sequence_1",
+        "str단지명&Sequence_1",
+        "str동&Sequence_1",
+        "str호&Sequence_1",
+        "str중분류&Sequence_1",
+        "str소분류_초성&Sequence_1",
+        "str동이름_추출&Sequence_1",
+        "str조합1&Sequence_1",
+        "str조합2&Sequence_1",
+        "str동_일치여부&Sequence_1",
+        "arr조합&Sequence_1",
+        "bl_click클릭성공&Sequence_1",
+        "현재조합&Sequence_1",
+        "str공시기준일가격&Sequence_1",
+        "str공시기준&Sequence_1",
+        "str동_첫글자&Sequence_1",
+        "str단지명_추출&Sequence_1",
+        "idx&Sequence_1",
+        "bl조합1&Sequence_1",
+        "bl동명없음&Sequence_1",
+        "lst동이름_추출&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_CurrentRow",
+        "io_dt회원목록"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/04. 도로명 초성추출.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt초성확인&Sequence_1",
+        "초성_index&Sequence_1",
+        "유니코드&Sequence_1",
+        "초성&Sequence_1",
+        "arrTest&Sequence_1",
+        "dtTest&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt회원목록"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/06. DT 가공.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str공시기준일가격&Sequence_1",
+        "int기준가격&Sequence_1",
+        "int공시기준일가격&Sequence_1",
+        "str기준가격&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_CurrentRow",
+        "io_dt회원목록"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/07. DT 저장.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt회원목록"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/08. 메일 발송.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strName&Sequence_1",
+        "sstrpw&Sequence_1",
+        "str파일첨부&Sequence_1",
+        "arr파일첨부&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/02. Copy File.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/03. DT 생성 및 컬럼수정.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_dt회원목록"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(2)/00. Main_(2).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt회원목록&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(2)/05. DT 추출_(2).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "list호_추출&Sequence_1",
+        "list단지명_추출&Sequence_1",
+        "list동_추출&Sequence_1",
+        "str대분류&Sequence_1",
+        "str소분류&Sequence_1",
+        "str단지명&Sequence_1",
+        "str동&Sequence_1",
+        "str호&Sequence_1",
+        "str중분류&Sequence_1",
+        "str소분류_초성&Sequence_1",
+        "str공시기준일가격&Sequence_1",
+        "str공시기준&Sequence_1",
+        "str동_첫글자&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt회원목록",
+        "io_CurrentRow"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(2)/01. 폴더확인_(2).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bl폴더확인&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(2)/04. 도로명 초성추출_(2).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "초성&Sequence_1",
+        "유니코드&Sequence_1",
+        "arrTest&Sequence_1",
+        "초성_index&Sequence_1",
+        "dtTest&Sequence_1",
+        "dt초성확인&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt회원목록"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(2)/03. DT 생성 및 컬럼수정_(2).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_dt회원목록"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(2)/08. 메일 발송_(2).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strName&Sequence_1",
+        "sstrpw&Sequence_1",
+        "str파일첨부&Sequence_1",
+        "arr파일첨부&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(3)/00. Main_(3).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt회원목록&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(3)/05. DT 추출_(3).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "idx&Sequence_1",
+        "bl공통주택가격&Sequence_1",
+        "str대분류&Sequence_1",
+        "str소분류&Sequence_1",
+        "str단지명&Sequence_1",
+        "str동&Sequence_1",
+        "str호&Sequence_1",
+        "str중분류&Sequence_1",
+        "str소분류_초성&Sequence_1",
+        "str공시기준일가격&Sequence_1",
+        "str공시기준&Sequence_1",
+        "str동_첫글자&Sequence_1",
+        "list동_추출&Sequence_1",
+        "list단지명_추출&Sequence_1",
+        "list호_추출&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt회원목록",
+        "io_CurrentRow"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(2)/06. DT 가공_(2).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "int기준가격&Sequence_1",
+        "int공시기준일가격&Sequence_1",
+        "str기준가격&Sequence_1",
+        "str공시기준일가격&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_CurrentRow",
+        "io_dt회원목록"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

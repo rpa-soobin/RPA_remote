@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Click '닫기'",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "Ve7ZyDeLR0G6V8D41OGZhQ",
+  "Reference": "e2lcE5wYM0iBEI2ZChnKww/Ve7ZyDeLR0G6V8D41OGZhQ",
+  "ParentRef": "e2lcE5wYM0iBEI2ZChnKww/XLZIpagsBUGRebyCWfypiA",
+  "Created": "2024-08-22T05:45:06.6430865Z",
+  "Updated": "2024-08-22T05:45:06.6430865Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

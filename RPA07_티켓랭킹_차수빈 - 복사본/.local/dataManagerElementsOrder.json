@@ -1,0 +1,529 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/00. Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strURL&Sequence_1",
+        "dtURL&Sequence_1",
+        "idx_추출항목&Sequence_1",
+        "str추출항목&Sequence_1",
+        "dt랭킹_1위&Sequence_1",
+        "arr추출항목&Sequence_1",
+        "dt티켓랭킹&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/02. 메일수신 및 내용추출.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strID&Sequence_1",
+        "sstrpw&Sequence_1",
+        "Mail메시지&Sequence_1",
+        "inu첨부파일&Sequence_1",
+        "str본문&Sequence_1",
+        "bl파일확인&Sequence_1",
+        "bl폴더확인&Sequence_1",
+        "str첨부파일이름&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_arr추출항목"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/01. 폴더확인.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bl폴더확인&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/03. 결과파일 생성.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str시트이름&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_arr추출항목"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/04. DT 구조 생성.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_dt랭킹_1위",
+        "out_dt티켓랭킹"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/05. DT 추출.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt원본_추가&Sequence_1",
+        "strURL&Sequence_1",
+        "arrURL&Sequence_1",
+        "listURL&Sequence_1",
+        "str시트명&Sequence_1",
+        "CurrentElement&Sequence_1",
+        "CurrentElement_Label&Sequence_1",
+        "str시작일&Sequence_1",
+        "str정보&Sequence_1",
+        "str종료일_장소&Sequence_1",
+        "str장소&Sequence_1",
+        "str종료일&Sequence_1",
+        "dt랭킹&Sequence_1",
+        "index&Sequence_1",
+        "dtURL&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt랭킹_1위",
+        "out_str추출항목",
+        "in_arr추출항목",
+        "in_idx_추출항목",
+        "in_str추출항목",
+        "io_dt티켓랭킹"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/06. DT 가공.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "index&Sequence_1",
+        "dt랭킹&Sequence_1",
+        "str종료일&Sequence_1",
+        "str장소&Sequence_1",
+        "str종료일_장소&Sequence_1",
+        "str정보&Sequence_1",
+        "str시작일&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_CurrentRow",
+        "io_dt랭킹_1위",
+        "io_dt티켓랭킹"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/07. DT 저장.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str시트명&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt랭킹_1위",
+        "in_str추출항목",
+        "in_dt티켓랭킹"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/09. 메일 발송.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strHTML&Sequence_1",
+        "strName&Sequence_1",
+        "sstrpw&Sequence_1",
+        "str파일첨부&Sequence_1",
+        "str본문&Sequence_1",
+        "str제목&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt랭킹_1위"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/08. 랭킹_1위 DT 수정.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt랭킹_1위"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(2)/00. Main_(2).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "arr추출항목&Sequence_1",
+        "dt티켓랭킹&Sequence_1",
+        "dt랭킹_1위&Sequence_1",
+        "str추출항목&Sequence_1",
+        "idx_추출항목&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(2)/05. DT 추출_(2).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "arrURL&Sequence_1",
+        "strURL&Sequence_1",
+        "dt원본_추가&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_idx_추출항목",
+        "io_dt티켓랭킹",
+        "in_str추출항목"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(2)/03. 결과파일 생성_(2).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str시트이름&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_arr추출항목"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(2)/06. DT 가공_(2).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str시작일&Sequence_1",
+        "str정보&Sequence_1",
+        "str종료일_장소&Sequence_1",
+        "str장소&Sequence_1",
+        "str종료일&Sequence_1",
+        "dt랭킹&Sequence_1",
+        "index&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt티켓랭킹",
+        "io_dt랭킹_1위"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(2)/08. 랭킹_1위 DT 수정_(2).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt랭킹_1위"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(3)/05. URL DT 추출_(3).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_dtURL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(3)/06. 티켓랭킹 DT 추출_(3).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt원본_추가&Sequence_1",
+        "strURL&Sequence_1",
+        "arrURL&Sequence_1",
+        "listURL&Sequence_1",
+        "dtURL&Sequence_1",
+        "str시트명&Sequence_1",
+        "CurrentElement&Sequence_1",
+        "CurrentElement_Label&Sequence_1",
+        "str시작일&Sequence_1",
+        "str정보&Sequence_1",
+        "str종료일_장소&Sequence_1",
+        "str장소&Sequence_1",
+        "str종료일&Sequence_1",
+        "dt랭킹&Sequence_1",
+        "index&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_CurrentRow_URL",
+        "io_dt티켓랭킹",
+        "in_str추출항목",
+        "in_idx_추출항목",
+        "in_arr추출항목",
+        "out_str추출항목",
+        "io_dt랭킹_1위"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(3)/00. Main_(3).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "arr추출항목&Sequence_1",
+        "dt티켓랭킹&Sequence_1",
+        "dt랭킹_1위&Sequence_1",
+        "str추출항목&Sequence_1",
+        "idx_추출항목&Sequence_1",
+        "dtURL&Sequence_1",
+        "strURL&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(3)/07. 티켓랭킹 DT 가공_(3).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str시작일&Sequence_1",
+        "str정보&Sequence_1",
+        "str종료일_장소&Sequence_1",
+        "str장소&Sequence_1",
+        "str종료일&Sequence_1",
+        "dt랭킹&Sequence_1",
+        "index&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_CurrentRow_티켓랭킹",
+        "io_dt티켓랭킹",
+        "io_dt랭킹_1위"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(3)/08. 티켓랭킹 DT 저장_(3).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str시트명&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt티켓랭킹",
+        "in_str추출항목",
+        "in_dt랭킹_1위",
+        "in_CurrentRow"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(3)/03. 결과파일 생성_(3).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str시트이름&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_arr추출항목"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(3)_추가개발/06. 티켓랭킹 DT 추출_(3)_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt원본_추가&Sequence_1",
+        "arrURL&Sequence_1",
+        "listURL&Sequence_1",
+        "dtURL&Sequence_1",
+        "str시트명&Sequence_1",
+        "CurrentElement&Sequence_1",
+        "CurrentElement_Label&Sequence_1",
+        "str시작일&Sequence_1",
+        "str정보&Sequence_1",
+        "str종료일_장소&Sequence_1",
+        "str장소&Sequence_1",
+        "str종료일&Sequence_1",
+        "dt랭킹&Sequence_1",
+        "index&Sequence_1",
+        "str추출항목&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_str클릭항목",
+        "out_str시트이름",
+        "in_strURL",
+        "io_dt티켓랭킹",
+        "in_idx_추출항목",
+        "in_arr추출항목",
+        "out_str추출항목",
+        "io_dt랭킹_1위",
+        "in_CurrentRow_URL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(3)_추가개발/00. Main_(3)_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "arr추출항목&Sequence_1",
+        "dt티켓랭킹&Sequence_1",
+        "dt랭킹_1위&Sequence_1",
+        "str추출항목&Sequence_1",
+        "idx_추출항목&Sequence_1",
+        "dtURL&Sequence_1",
+        "strURL&Sequence_1",
+        "str클릭항목&Sequence_1",
+        "str시트이름&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(3)_추가개발/07. 티켓랭킹 DT 가공_(3)_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str시작일&Sequence_1",
+        "str정보&Sequence_1",
+        "str종료일_장소&Sequence_1",
+        "str장소&Sequence_1",
+        "str종료일&Sequence_1",
+        "dt랭킹&Sequence_1",
+        "index&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt티켓랭킹",
+        "io_dt랭킹_1위",
+        "in_CurrentRow_티켓랭킹"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(3)_추가개발/03. 결과파일 생성_(3)_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str시트이름&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_arr추출항목"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(3)_추가개발/05. URL DT 추출_(3)_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_dtURL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(3)_추가개발/09. 티켓랭킹 DT 저장_(3)_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str시트이름&Sequence_1",
+        "str추출항목&Sequence_1",
+        "str시트명&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str클릭항목",
+        "in_str시트이름",
+        "in_arr추출항목",
+        "in_dt티켓랭킹",
+        "in_str추출항목",
+        "in_dt랭킹_1위",
+        "in_CurrentRow_URL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(3)_추가개발/08. 랭킹_1위 데이터 취합_(3)_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_CurrentRow_티켓랭킹",
+        "io_dt랭킹_1위"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(2)/07. DT 저장_(2).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str시트명&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt티켓랭킹",
+        "in_str추출항목",
+        "in_dt랭킹_1위"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(3)_추가개발/10. 랭킹_1위 DT 수정_(3)_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt랭킹_1위"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(3)_추가개발/01. 폴더확인_(3)_추가.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bl폴더확인&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join_(3)_추가개발/시트 삭제.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "항목존재여부&Sequence_1",
+        "str시트명&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str클릭항목",
+        "in_arr추출항목"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

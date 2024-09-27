@@ -1,0 +1,153 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/00. Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "txt내용&Sequence_1",
+        "dtBilling&Sequence_1",
+        "TotalAmount기록&Sequence_1",
+        "dtBilling_total&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/01. 폴더확인 및 텍스트 파일 생성.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bl폴더확인&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_txt내용"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/02. Billing DT 생성.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "startIndex&Sequence_1",
+        "endIndex&Sequence_1",
+        "relevantText&Sequence_1",
+        "arrLines&Sequence_1",
+        "index&Sequence_1",
+        "인덱스&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_txt내용",
+        "out_dtBilling"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/03. Billing_Total DT 생성.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "relevantText_total&Sequence_1",
+        "endIndex_total&Sequence_1",
+        "startIndex_total&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_dtBilling_total",
+        "in_txt내용"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/04. Total Amount 계산.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strAmount&Sequence_1",
+        "Amount&Sequence_1",
+        "TotalAmount&Sequence_1",
+        "dtBilling_가공&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_TotalAmount기록",
+        "io_dtBilling"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/05. DT 저장.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "txt최종&Sequence_1",
+        "txt본문&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_dtBilling",
+        "in_dtBilling_total"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/07. 메일 발송.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "arr파일첨부&Sequence_1",
+        "strName&Sequence_1",
+        "sstrpw&Sequence_1",
+        "str파일첨부&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Join/06. Total Amount 확인.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "contentToAdd&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TotalAmount기록",
+        "in_dtBilling_total"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "------ 02..xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "txt내용&Sequence_1",
+        "lines&Sequence_1",
+        "ReferenceNo&Sequence_1",
+        "Amount&Sequence_1",
+        "numberMatches&Sequence_1",
+        "words&Sequence_1",
+        "dollarindex&Sequence_1",
+        "amountWord&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_dtBilling"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

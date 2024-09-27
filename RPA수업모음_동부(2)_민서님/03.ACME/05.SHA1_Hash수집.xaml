@@ -1,0 +1,288 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_05_SHA1_Hash수집" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1498,2905" sap2010:WorkflowViewState.IdRef="_05_SHA1_Hash수집_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="*Hash 정보 수집하기 &#xA;1. Client 엑셀파일을 불러와 DT로 저장한다. +  hash 컬럼을 추가한다. &#xA;&#xA;2. &quot;http://www.sha1-online.com/&quot; 해당 사이트를 연다.  &#xA;&#xA;3. 검색창에 추출한 Client ID, Client Name, Client Country 값을 불러와 검색한다. &#xA;예시)&#xA;KI44163 Edison Byam Germany  &#xA;&#xA;4. 검색하여 나오는 값을 추출하여, hash 컬럼에 값을 넣는다. &#xA;&#xA;5. 가공한 값을 저장한다. &#xA;경로 : &quot;Data\ACME\ACME.xlsx&quot;&#xA;시트명 : &quot;Hash&quot;" DisplayName="_05_SHA1_Hash수집" sap:VirtualizedContainerService.HintSize="670,2840" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dtWI5" />
+      <Variable x:TypeArguments="x:Int32" Name="인덱스">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">ForEachRow_1</x:String>
+            <x:String x:Key="SourcePropertyName">CurrentIndex</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="608,57" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;&gt;&gt;&gt; 05_SHA1_Hash수집 시작&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="1-1. Client 엑셀파일을 불러와 DT로 저장한다. " DataTable="[dtWI5]" DisplayName="dtWI5 | Read Range Workbook" sap:VirtualizedContainerService.HintSize="608,151" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Client" WorkbookPath="Data\ACME\ACME.xlsx">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ReadRange>
+    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" sap2010:Annotation.AnnotationText="1-2. hash 컬럼을 추가한다. " ColumnName="hash" DataTable="[dtWI5]" DisplayName="hash 칼럼 추가 | Add Data Column" sap:VirtualizedContainerService.HintSize="608,249" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:AddDataColumn>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[인덱스]" DataTable="[dtWI5]" DisplayName="dtWI5 | For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="608,1709" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="574,1513" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="str검색어" />
+              <Variable x:TypeArguments="x:String" Name="strHash" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MultipleAssign sap2010:Annotation.AnnotationText="str검색어&#xA;strHash" DisplayName="변수 초기화 | Multiple Assign" sap:VirtualizedContainerService.HintSize="512,221" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[str검색어]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <Literal x:TypeArguments="x:String" Value="" />
+                      </InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[strHash]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <Literal x:TypeArguments="x:String" Value="" />
+                      </InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:MultipleAssign>
+            <Assign DisplayName="str검색어 | Assign" sap:VirtualizedContainerService.HintSize="512,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[str검색어]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow("Client ID").ToString + " " + CurrentRow("Client Name").ToString + " " + CurrentRow("Client Country").ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Sequence DisplayName="데이터 추출 | Sequence" sap:VirtualizedContainerService.HintSize="512,1090" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NApplicationCard sap2010:Annotation.AnnotationText="2. &quot;http://www.sha1-online.com/&quot; 해당 사이트를 연다." AttachMode="ByInstance" DisplayName="SHA1 | Use Browser Chrome: SHA1 online" sap:VirtualizedContainerService.HintSize="450,874" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="4e549026-fc1c-473c-aa45-501160920804" Version="V2" WindowResize="Maximize">
+                <uix:NApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="416,594" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="3. 검색창에 추출한 Client ID, Client Name, Client Country 값을 불러와 검색한다. &#xA;예시)&#xA;KI44163 Edison Byam Germany  " ClickBeforeMode="Single" DisplayName="str검색어 입력 | Type Into 'INPUT textToHashId'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,322" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="4e549026-fc1c-473c-aa45-501160920804" Text="[str검색어 + &quot;[k(Enter)]&quot;]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="http://www.sha1-online.com/" DesignTimeRectangle="778, 310, 333, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='textToHashId' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='textToHashId' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="f9381ef8-7cc1-403d-8988-5164558c350b" InformativeScreenshot="95b996e1fc8dc29d273fa72980ec25aa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SHA1 online' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTypeInto>
+                      <uix:NGetText DisplayName="strHash | Get Text '4cd5a6267b475e73721c76d…'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="4e549026-fc1c-473c-aa45-501160920804" TextString="[strHash]" Version="V3">
+                        <uix:NGetText.Target>
+                          <uix:TargetAnchorable BrowserURL="http://www.sha1-online.com/" DesignTimeRectangle="813, 441, 479, 22" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='result-sha1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='result-sha1' tag='SPAN' type='' class='' /&gt;" Guid="15988cd9-8c60-4b46-a874-7634835ad9e9" InformativeScreenshot="b8109ed583738d998adc39fae5f5db12.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SHA1 online' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                        </uix:NGetText.Target>
+                      </uix:NGetText>
+                    </Sequence>
+                  </ActivityAction>
+                </uix:NApplicationCard.Body>
+                <uix:NApplicationCard.TargetApp>
+                  <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="3270c4a596c3db9688031898576e8aa1.jpg" Selector="&lt;html app='chrome.exe' title='SHA1 online' /&gt;" Title="SHA1 online" Url="http://www.sha1-online.com/" />
+                </uix:NApplicationCard.TargetApp>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NApplicationCard>
+              <Assign DisplayName="hash 컬럼에 담기 | Assign" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Object">[CurrentRow("hash")]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Object">[strHash]</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+    <Sequence DisplayName="데이터 기록 | Sequence" sap:VirtualizedContainerService.HintSize="608,316" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="5. 가공한 값을 저장한다. &#xA;경로 : &quot;Data\ACME\ACME.xlsx&quot;&#xA;시트명 : &quot;Hash&quot;" DataTable="[dtWI5]" DisplayName="dtWI5 _ Hash 기록 | Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,196" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Hash" WorkbookPath="Data\ACME\ACME.xlsx">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:WriteRange>
+    </Sequence>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="608,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;&lt;&lt;&lt; 05_SHA1_Hash수집 종료&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+  </Sequence>
+</Activity>

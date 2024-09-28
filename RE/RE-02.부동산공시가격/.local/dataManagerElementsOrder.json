@@ -12,16 +12,16 @@
       "Path": "Mail/01. Send Mail.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "strHTML&Sequence_1",
         "strName&Sequence_1",
         "sstrpw&Sequence_1",
         "str파일첨부&Sequence_1",
-        "arr파일첨부&Sequence_1"
+        "arr파일첨부&Sequence_1",
+        "strHTML&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
-        "in_dt_TransactionData",
+        "in_strResultFile",
         "in_Config",
-        "in_strResultFile"
+        "in_dt_TransactionData"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -30,7 +30,6 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "bl오류&StateMachine_1",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
         "TransactionNumber&StateMachine_1",
@@ -47,7 +46,13 @@
         "TransactionItem&StateMachine_1",
         "dt_TransactionData&StateMachine_1",
         "excelSheet&StateMachine_1",
-        "ShouldStop&Sequence_25"
+        "bl오류&StateMachine_1",
+        "ShouldStop&Sequence_25",
+        "strName&Sequence_1",
+        "sstrpw&Sequence_1",
+        "str파일첨부&Sequence_1",
+        "arr파일첨부&Sequence_1",
+        "strHTML&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_OrchestratorQueueName",

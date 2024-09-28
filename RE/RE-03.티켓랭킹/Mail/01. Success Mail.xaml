@@ -3,6 +3,8 @@
     <x:Property Name="in_dt랭킹_1위" Type="InArgument(sd:DataTable)" />
     <x:Property Name="in_list성공항목" Type="InArgument(scg:List(x:String))" />
     <x:Property Name="in_list실패항목" Type="InArgument(scg:List(x:String))" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_strResultFile" Type="InArgument(x:String)" />
   </x:Members>
   <this:_14__메일_발송.in_list성공항목>
     <InArgument x:TypeArguments="scg:List(x:String)" />
@@ -10,6 +12,9 @@
   <this:_14__메일_발송.in_list실패항목>
     <InArgument x:TypeArguments="scg:List(x:String)" />
   </this:_14__메일_발송.in_list실패항목>
+  <this:_14__메일_발송.in_strResultFile>
+    <InArgument x:TypeArguments="x:String" />
+  </this:_14__메일_발송.in_strResultFile>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
@@ -111,16 +116,17 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="14. 메일 발송" sap:VirtualizedContainerService.HintSize="496,1852.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="14. 메일 발송" sap:VirtualizedContainerService.HintSize="913.6000000000001,1089.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strHTML" />
       <Variable x:TypeArguments="x:String" Name="strName" />
       <Variable x:TypeArguments="ss:SecureString" Name="sstrpw" />
       <Variable x:TypeArguments="x:String" Name="str파일첨부" />
-      <Variable x:TypeArguments="x:String" Name="str본문" />
-      <Variable x:TypeArguments="x:String" Name="str제목" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -135,21 +141,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <Assign sap2010:Annotation.AnnotationText="&quot;[티켓랭킹] 2024/09/12 RPA 수행 결과_차수빈&quot;" DisplayName="메일 제목 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,144.8" sap2010:WorkflowViewState.IdRef="Assign_1">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[str제목]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[티켓랭킹] 2024/09/12 RPA 수행 결과_차수빈</InArgument>
-      </Assign.Value>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </Assign>
     <Assign sap2010:Annotation.AnnotationText="in_dt랭킹_1위.ToHtmlTable" DisplayName="strHTML l Assign" sap:VirtualizedContainerService.HintSize="433.6,144.8" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[strHTML]</OutArgument>
@@ -182,60 +173,17 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <Assign sap2010:Annotation.AnnotationText="&quot;&lt;br&gt;&#xA;&#xA;2024/09/12 티켓랭킹 결과 안내드립니다.  &lt;br&gt;&lt;br&gt;&#xA;&#xA;결과 데이터를 확인하여 주시기 바랍니다. &lt;br&gt;&lt;br&gt;&#xA;&#xA;감사합니다. &lt;br&gt;&lt;br&gt;&#xA;&#xA;- 성공 항목 : {1} &lt;br&gt;&#xA;&#xA;- 실패 항목 :  {2} &lt;br&gt;&lt;br&gt;&#xA;&#xA;{0} &quot;" DisplayName="메일 본문 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,335.2" sap2010:WorkflowViewState.IdRef="Assign_4">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[str본문]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String" xml:space="preserve">&lt;br&gt;
-
-2024/09/12 티켓랭킹 결과 안내드립니다.  &lt;br&gt;&lt;br&gt;
-
-결과 데이터를 확인하여 주시기 바랍니다. &lt;br&gt;&lt;br&gt;
-
-감사합니다. &lt;br&gt;&lt;br&gt;
-
-- 성공 항목 : {1} &lt;br&gt;
-
-- 실패 항목 :  {2} &lt;br&gt;&lt;br&gt;
-
-{0} </InArgument>
-      </Assign.Value>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </Assign>
-    <Assign sap2010:Annotation.AnnotationText="String.Format(str본문, strHTML, String.Join(&quot;, &quot;, in_list성공항목), String.Join(&quot;, &quot;, in_list실패항목))" DisplayName="메일 본문 형식 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="Assign_5">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[str본문]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[String.Format(str본문, strHTML, String.Join(", ", in_list성공항목), String.Join(", ", in_list실패항목))]</InArgument>
-      </Assign.Value>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </Assign>
-    <Assign sap2010:Annotation.AnnotationText="&quot;C:\C드라이브\UIPATH\RPA07_티켓랭킹_차수빈\Data\티켓랭킹_작업지시서\티켓랭킹_Temp_차수빈.xlsx&quot;" DisplayName="결과파일 첨부 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+    <Assign DisplayName="결과파일 첨부 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_6">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[str파일첨부]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">C:\C드라이브\UIPATH\RPA07_티켓랭킹_차수빈\Data\티켓랭킹_작업지시서\티켓랭킹_Temp_차수빈.xlsx</InArgument>
+        <InArgument x:TypeArguments="x:String">[in_strResultFile]</InArgument>
       </Assign.Value>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
@@ -247,7 +195,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotCredential>
-    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="서버 : &quot;smtp.gmail.com&quot;&#xA;포트 : 587&#xA;&#xA;&quot;rpa.jian23@gmail.com&quot;&#xA;&quot;rpa.soobin@gmail.com&quot;" Body="[str본문]" DisplayName="파일첨부 이메일 보내기 ㅣ Send SMTP Mail Message" Email="[strName]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="433.6,272.8" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="True" Port="587" SecureConnection="Auto" SecurePassword="[sstrpw]" Server="smtp.gmail.com" Subject="[str제목]" To="rpa.soobin@gmail.com">
+    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="서버 : &quot;smtp.gmail.com&quot;&#xA;포트 : 587&#xA;본문 HTML임 = True&#xA;" Body="[String.Format(in_Config(&quot;MailBody&quot;).ToString.Trim,  today.ToString(&quot;yyMMdd&quot;), in_Config(&quot;과제명&quot;).ToString.Trim, String.Join(&quot;, &quot;, in_list성공항목), String.Join(&quot;, &quot;, in_list실패항목), strHTML)]" DisplayName="파일첨부 이메일 보내기 ㅣ Send SMTP Mail Message" Email="[strName]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="433.6,256.8" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="True" Port="587" SecureConnection="Auto" SecurePassword="[sstrpw]" Server="smtp.gmail.com" Subject="[String.Format(in_Config(&quot;Subject&quot;).ToString.Trim, in_Config(&quot;부서코드&quot;).ToString.Trim,in_Config(&quot;과제명&quot;).ToString.Trim, &quot;성공입니다.&quot;)]" To="[in_Config(&quot;MailTo&quot;).ToString.Trim]">
       <ui:SendMail.Files>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
           <InArgument x:TypeArguments="x:String">[str파일첨부]</InArgument>

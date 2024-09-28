@@ -337,6 +337,41 @@
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "Mail/01. Send Mail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strHTML&Sequence_1",
+        "strName&Sequence_1",
+        "sstrpw&Sequence_1",
+        "str파일첨부&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strResultFile",
+        "in_Config",
+        "in_dt랭킹_1위",
+        "in_list성공항목",
+        "in_list실패항목"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }

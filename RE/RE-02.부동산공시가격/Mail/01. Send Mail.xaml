@@ -121,7 +121,7 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="08. 메일 발송" sap:VirtualizedContainerService.HintSize="496,1387.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="08. 메일 발송" sap:VirtualizedContainerService.HintSize="913.6000000000001,1337.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strName" />
       <Variable x:TypeArguments="ss:SecureString" Name="sstrpw" />
@@ -164,14 +164,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <Assign sap2010:Annotation.AnnotationText="strHTML.Replace(&quot;&lt;table&gt;&lt;tr&gt;&quot;,&#xA;    &quot;&lt;table class='table' style='width: 100%; border-collapse: collapse; table-layout: auto;' border='1'&gt;&quot; +&#xA;    &quot;&lt;tr style='background-color: #e6e6fa; text-align: center; font-size: 16px; font-weight: bold;'&gt;&quot;)&#xA;&#xA;--- 연두색 : #d0f0c0&#xA;--- 연한 노란색 : #ffffe0&#xA;--- 연한 연보라색 : #e6e6fa" DisplayName="strHTML 형식 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,271.2" sap2010:WorkflowViewState.IdRef="Assign_6">
+    <Assign sap2010:Annotation.AnnotationText="strHTML.Replace(&quot;&lt;table&gt;&lt;tr&gt;&quot;,&#xA;    &quot;&lt;table class='table' style='width: 100%; border-collapse: collapse; table-layout: auto;' border='1'&gt;&quot; +&#xA;    &quot;&lt;tr style='background-color: #e6e6fa; text-align: center; font-size: 16px; font-weight: bold;'&gt;&quot;)&#xA;&#xA;--- 연두색 : #d0f0c0&#xA;--- 연한 노란색 : #ffffe0&#xA;--- 연한 연보라색 : #e6e6fa&#xD;&#xA;--- 라이트 골든로드 옐로우 : #FFFACD" DisplayName="strHTML 형식 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,287.2" sap2010:WorkflowViewState.IdRef="Assign_6">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[strHTML]</OutArgument>
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="x:String" xml:space="preserve">[strHTML.Replace("&lt;table&gt;&lt;tr&gt;",
     "&lt;table class='table' style='width: 100%; border-collapse: collapse; table-layout: auto;' border='1'&gt;" +
-    "&lt;tr style='background-color: #e6e6fa; text-align: center; font-size: 16px; font-weight: bold;'&gt;")]</InArgument>
+    "&lt;tr style='background-color: #FFFACD; text-align: center; font-size: 16px; font-weight: bold;'&gt;")]</InArgument>
       </Assign.Value>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">

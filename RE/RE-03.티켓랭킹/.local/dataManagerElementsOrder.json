@@ -12,6 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "bl첨부파일&StateMachine_1",
         "TransactionItem&StateMachine_1",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
@@ -31,7 +32,6 @@
         "dt랭킹_1위&StateMachine_1",
         "list실패항목&StateMachine_1",
         "list성공항목&StateMachine_1",
-        "bl오류&StateMachine_1",
         "ShouldStop&Sequence_25"
       ],
       "ArgumentsSectionElementsOrder": [
@@ -122,16 +122,17 @@
       "Path": "Init/02. 메일수신 및 내용추출_추가.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str첨부파일이름&Sequence_1",
         "strID&Sequence_1",
         "sstrpw&Sequence_1",
         "Mail메시지&Sequence_1",
         "inu첨부파일&Sequence_1",
         "str본문&Sequence_1",
         "bl파일확인&Sequence_1",
-        "bl폴더확인&Sequence_1",
-        "str첨부파일이름&Sequence_3"
+        "bl폴더확인&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "out_bl첨부파일",
         "out_arr추출항목"
       ],
       "ConstantsSectionElementsOrder": [],
@@ -339,7 +340,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Mail/01. Send Mail.xaml",
+      "Path": "Mail/01. Success Mail.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "strHTML&Sequence_1",
@@ -369,6 +370,44 @@
         "in_ConfigFile",
         "in_ConfigSheets",
         "out_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Mail/02. Fail Mail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strHTML&Sequence_1",
+        "strName&Sequence_1",
+        "sstrpw&Sequence_1",
+        "str파일첨부&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt랭킹_1위",
+        "in_list성공항목",
+        "in_list실패항목",
+        "in_Config",
+        "in_strResultFile"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Mail/03. No data Mail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strHTML&Sequence_1",
+        "strName&Sequence_1",
+        "sstrpw&Sequence_1",
+        "str파일첨부&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt랭킹_1위",
+        "in_list성공항목",
+        "in_list실패항목",
+        "in_Config",
+        "in_strResultFile"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

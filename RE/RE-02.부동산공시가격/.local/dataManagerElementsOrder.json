@@ -47,12 +47,7 @@
         "dt_TransactionData&StateMachine_1",
         "excelSheet&StateMachine_1",
         "bl오류&StateMachine_1",
-        "ShouldStop&Sequence_25",
-        "strName&Sequence_1",
-        "sstrpw&Sequence_1",
-        "str파일첨부&Sequence_1",
-        "arr파일첨부&Sequence_1",
-        "strHTML&Sequence_1"
+        "ShouldStop&Sequence_25"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_OrchestratorQueueName",
@@ -149,7 +144,6 @@
         "in_strResultFile",
         "in_Config",
         "io_TransactionItem",
-        "in_dt_TransactionData",
         "io_dt_TransactionData"
       ],
       "ConstantsSectionElementsOrder": [],
@@ -248,6 +242,17 @@
       "ArgumentsSectionElementsOrder": [
         "in_strTempFile",
         "in_strResultFile"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "End/01. 컬럼 삭제 및 색 변경.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "io_strResultFile",
+        "io_dt_TransactionData"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

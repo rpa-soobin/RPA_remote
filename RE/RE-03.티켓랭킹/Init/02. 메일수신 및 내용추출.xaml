@@ -104,7 +104,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="02. 메일수신 및 내용추출" sap:VirtualizedContainerService.HintSize="1172,3702.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="02. 메일수신 및 내용추출" sap:VirtualizedContainerService.HintSize="1172,4123.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strID" />
       <Variable x:TypeArguments="ss:SecureString" Name="sstrpw" />
@@ -120,7 +120,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="시작 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="635.2,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;02. 메일수신 및 내용추출_시작&quot;]">
+    <ui:LogMessage DisplayName="시작 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="704,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;02. 메일수신 및 내용추출_시작&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -128,7 +128,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="strID&#xA;sstrpw" AssetName="Gmail_login" CacheStrategy="None" DisplayName="Gmail_login l Get Credential" FolderPath="rpa.soobin@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="635.2,100.8" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[sstrpw]" Username="[strID]">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="strID&#xA;sstrpw" AssetName="Gmail_login" CacheStrategy="None" DisplayName="Gmail_login l Get Credential" FolderPath="rpa.soobin@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="704,100.8" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[sstrpw]" Username="[strID]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -137,59 +137,89 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotCredential>
-    <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" Password="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="서버 : &quot;imap.gmail.com&quot;&#xA;포트 : 993&#xA;&#xA;&quot;FROM 'rpa.jian23@gmail.com'&quot;" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[strID]" EnableSSL="True" FilterExpression="FROM 'rpa.soobin@gmail.com'" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="635.2,148.8" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" IgnoreCRL="False" MailFolder="Inbox" MarkAsRead="False" Messages="[Mail메시지]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Port="993" SecureConnection="Auto" SecurePassword="[sstrpw]" Server="imap.gmail.com" Top="10">
+    <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" Password="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="서버 : &quot;imap.gmail.com&quot;&#xA;포트 : 993&#xA;&#xA;&quot;FROM 'rpa.jian23@gmail.com'&quot;" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[strID]" EnableSSL="True" FilterExpression="FROM 'rpa.jian23@gmail.com'" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="704,148.8" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" IgnoreCRL="False" MailFolder="Inbox" MarkAsRead="False" Messages="[Mail메시지]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Port="993" SecureConnection="Auto" SecurePassword="[sstrpw]" Server="imap.gmail.com" Top="10">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetIMAPMailMessages>
-    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="메일함 탐색 ㅣ For Each currentMailMessage" sap:VirtualizedContainerService.HintSize="635.2,3324.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Mail메시지]">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="704,275.2" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_11">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Boolean">[out_bl첨부파일]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="메일함 탐색 ㅣ For Each currentMailMessage" sap:VirtualizedContainerService.HintSize="704,3470.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Mail메시지]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="snm:MailMessage">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="currentMailMessage" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="601.6,3178.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="670.4,3324" sap2010:WorkflowViewState.IdRef="Sequence_17">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If sap2010:Annotation.AnnotationText="currentMailMessage.Subject.Contains(&quot;티켓랭킹 작업지시서&quot;)&#xA;----- 안 읽은 메시지 중에서 제목에 &quot;티켓랭킹 작업지시서&quot;이 포함되어 있는 메일&#xA;&#xA;currentMailMessage.Subject.Contains(&quot;티켓랭킹&quot;) And currentMailMessage.Subject.Contains(&quot;2024/09/07&quot;)" Condition="[currentMailMessage.Subject.Contains(&quot;티켓랭킹 작업지시서&quot;)]" DisplayName="조건에 맞는 메일 추출 ㅣ If" sap:VirtualizedContainerService.HintSize="568,3118.4" sap2010:WorkflowViewState.IdRef="If_1">
+            <If sap2010:Annotation.AnnotationText="currentMailMessage.Subject.Contains(&quot;티켓랭킹 작업지시서&quot;)&#xA;----- 안 읽은 메시지 중에서 제목에 &quot;티켓랭킹 작업지시서&quot;이 포함되어 있는 메일&#xA;&#xA;currentMailMessage.Subject.Contains(&quot;티켓랭킹&quot;) And currentMailMessage.Subject.Contains(&quot;2024/09/07&quot;)" Condition="[currentMailMessage.Subject.Contains(&quot;티켓랭킹 작업지시서&quot;)]" DisplayName="조건에 맞는 메일 추출 ㅣ If" sap:VirtualizedContainerService.HintSize="636.8,3264" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="534.4,2775.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="603.2,2936.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <WriteLine DisplayName="제목 ㅣ Write Line" sap:VirtualizedContainerService.HintSize="500.8,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[currentMailMessage.Subject]" />
-                  <WriteLine DisplayName="본문 ㅣ Write Line" sap:VirtualizedContainerService.HintSize="500.8,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[currentMailMessage.Body]" />
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="500.8,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[currentMailMessage.Attachments.Count.ToString]" />
-                  <If Condition="[currentMailMessage.Attachments.Count = 0]" DisplayName="첨부파일 존재 여부 ㅣ If" sap:VirtualizedContainerService.HintSize="500.8,847.2" sap2010:WorkflowViewState.IdRef="If_2">
+                  <WriteLine DisplayName="제목 ㅣ Write Line" sap:VirtualizedContainerService.HintSize="569.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[currentMailMessage.Subject]" />
+                  <WriteLine DisplayName="본문 ㅣ Write Line" sap:VirtualizedContainerService.HintSize="569.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[currentMailMessage.Body]" />
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="569.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[currentMailMessage.Attachments.Count.ToString]" />
+                  <If Condition="[currentMailMessage.Attachments.Count = 0]" DisplayName="첨부파일 존재 여부 ㅣ If" sap:VirtualizedContainerService.HintSize="569.6,1008.8" sap2010:WorkflowViewState.IdRef="If_2">
                     <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="467.2,461.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="536,623.2" sap2010:WorkflowViewState.IdRef="Sequence_19">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[&quot;SystemException : 메일 첨부파일 없음&quot;]" />
-                        <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_10">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:Boolean">[out_bl첨부파일]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                        <Throw Exception="[New SystemException(&quot;첨부파일이 없습니다&quot;)]" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="502.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[&quot;SystemException : 메일 첨부파일 없음&quot;]" />
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="502.4,275.2" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                          <ui:CommentOut.Body>
+                            <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Boolean">[out_bl첨부파일]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </ui:CommentOut.Body>
+                        </ui:CommentOut>
+                        <Throw Exception="[New SystemException(&quot;첨부파일이 없습니다&quot;)]" sap:VirtualizedContainerService.HintSize="502.4,113.6" sap2010:WorkflowViewState.IdRef="Throw_2" />
                       </Sequence>
                     </If.Then>
                     <If.Else>
@@ -209,7 +239,7 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <ui:ForEach x:TypeArguments="snm:Attachment" CurrentIndex="{x:Null}" DisplayName="For Each currentAttachment" sap:VirtualizedContainerService.HintSize="500.8,342.4" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[currentMailMessage.Attachments]">
+                  <ui:ForEach x:TypeArguments="snm:Attachment" CurrentIndex="{x:Null}" DisplayName="For Each currentAttachment" sap:VirtualizedContainerService.HintSize="569.6,342.4" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[currentMailMessage.Attachments]">
                     <ui:ForEach.Body>
                       <ActivityAction x:TypeArguments="snm:Attachment">
                         <ActivityAction.Argument>
@@ -244,7 +274,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ForEach>
-                  <Assign sap2010:Annotation.AnnotationText="안녕하세요.&#xA;&#xA;추출할 데이터 목록 정보 전달드립니다.&#xA;&#xA;-추출 항목 : 전체, 콘서트, 뮤지컬, 연극, 클래식/무용, 전시/행사&#xA;&#xA;감사합니다." DisplayName="메일 본문 ㅣ Assign" sap:VirtualizedContainerService.HintSize="500.8,237.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                  <Assign sap2010:Annotation.AnnotationText="안녕하세요.&#xA;&#xA;추출할 데이터 목록 정보 전달드립니다.&#xA;&#xA;-추출 항목 : 전체, 콘서트, 뮤지컬, 연극, 클래식/무용, 전시/행사&#xA;&#xA;감사합니다." DisplayName="메일 본문 ㅣ Assign" sap:VirtualizedContainerService.HintSize="569.6,237.6" sap2010:WorkflowViewState.IdRef="Assign_3">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[str본문]</OutArgument>
                     </Assign.To>
@@ -259,7 +289,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </Assign>
-                  <Sequence DisplayName="메일 본문 일부 추출 ㅣ Sequence" sap:VirtualizedContainerService.HintSize="500.8,841.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <Sequence DisplayName="메일 본문 일부 추출 ㅣ Sequence" sap:VirtualizedContainerService.HintSize="569.6,841.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -307,7 +337,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                     </Assign>
                   </Sequence>
-                  <ui:Break sap2010:Annotation.AnnotationText="조건에 맞는 메일 중 가장 최근 메일 찾으면 탐색 종료" sap:VirtualizedContainerService.HintSize="500.8,79.2" sap2010:WorkflowViewState.IdRef="Break_2">
+                  <ui:Break sap2010:Annotation.AnnotationText="조건에 맞는 메일 중 가장 최근 메일 찾으면 탐색 종료" sap:VirtualizedContainerService.HintSize="569.6,79.2" sap2010:WorkflowViewState.IdRef="Break_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -336,7 +366,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <ui:LogMessage DisplayName="종료 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="635.2,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;02. 메일수신 및 내용추출_종료&quot;]">
+    <ui:LogMessage DisplayName="종료 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="704,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;02. 메일수신 및 내용추출_종료&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>

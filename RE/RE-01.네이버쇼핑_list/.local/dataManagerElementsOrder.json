@@ -12,6 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dt_RPA결과&StateMachine_1",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
         "TransactionNumber&StateMachine_1",
@@ -28,18 +29,17 @@
         "lstSuccess&StateMachine_1",
         "TransactionItem&StateMachine_1",
         "newRow&StateMachine_1",
-        "dt_TransationData&StateMachine_1",
         "intSuccessCount&Sequence_17",
         "intFailCount&Sequence_17",
         "ShouldStop&Sequence_25"
       ],
       "ArgumentsSectionElementsOrder": [
+        "io_dt_RPA결과",
         "in_OrchestratorQueueName",
         "in_OrchestratorQueueFolder",
         "io_intTotalCount",
         "io_intFailCount",
         "io_intSuccessCount",
-        "io_dt_TransationData",
         "io_list_TransactionData"
       ],
       "ConstantsSectionElementsOrder": [],
@@ -214,7 +214,7 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "out_dt_TransactionData",
+        "out_dt_RPA결과",
         "in_Config",
         "out_list_TransactionData"
       ],

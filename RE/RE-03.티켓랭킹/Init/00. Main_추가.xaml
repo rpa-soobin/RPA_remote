@@ -168,7 +168,7 @@
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="04. DT 구조 생성_추가 - 워크플로우 파일 호출 (Join_(3)_추가개발\04. DT 구조 생성_(3)_추가.xaml)" sap:VirtualizedContainerService.HintSize="641.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_40" UnSafe="False" WorkflowFileName="Init\05. DT 구조 및 성공실패_list 생성.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="04. DT 구조 생성_추가 - 워크플로우 파일 호출 (Join_(3)_추가개발\04. DT 구조 생성_(3)_추가.xaml)" sap:VirtualizedContainerService.HintSize="641.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_40" UnSafe="False" WorkflowFileName="Init\05. DT 구조 및 변수 생성.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt티켓랭킹">[dt티켓랭킹]</OutArgument>
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt랭킹_1위">[dt랭킹_1위]</OutArgument>

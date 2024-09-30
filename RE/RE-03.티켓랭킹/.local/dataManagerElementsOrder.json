@@ -12,7 +12,9 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "bl첨부파일&StateMachine_1",
+        "bl_Init_SystemException&StateMachine_1",
+        "bl_SystemException&StateMachine_1",
+        "bl_BusinessException&StateMachine_1",
         "TransactionItem&StateMachine_1",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
@@ -35,6 +37,9 @@
         "ShouldStop&Sequence_25"
       ],
       "ArgumentsSectionElementsOrder": [
+        "io_intFailCount",
+        "io_intSuccessCount",
+        "io_intTotalCount",
         "in_OrchestratorQueueName",
         "in_OrchestratorQueueFolder"
       ],
@@ -42,7 +47,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Init/03. 파일 Copy_추가.xaml",
+      "Path": "Init/04. 파일 Copy.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
@@ -53,10 +58,15 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Init/04. DT 구조 및 성공실패_list 생성_추가.xaml",
+      "Path": "Init/05. DT 구조 및 변수 생성.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
+        "out_intFailCount",
+        "out_intSuccessCount",
+        "out_intTotalCount",
+        "out_bl_SystemException",
+        "out_bl_BusinessException",
         "out_dt티켓랭킹",
         "out_dt랭킹_1위",
         "out_list성공항목",
@@ -66,7 +76,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Init/05. URL DT 추출_추가.xaml",
+      "Path": "Init/06. URL DT 추출.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
@@ -76,7 +86,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Init/07. 결과파일 생성_추가.xaml",
+      "Path": "Init/07. 결과파일 생성.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "str시트명&Sequence_1",
@@ -106,7 +116,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Init/01. 경로설정.xaml",
+      "Path": "Init/03. 경로설정.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
@@ -119,7 +129,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Init/02. 메일수신 및 내용추출_추가.xaml",
+      "Path": "Init/02. 메일수신 및 내용추출.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "str첨부파일이름&Sequence_1",
@@ -207,7 +217,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Process/08. DT 반복문 변수 생성_추가.xaml",
+      "Path": "Process/01. DT 반복문 변수 생성.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
@@ -226,7 +236,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Process/09. 티켓랭킹 DT 추출_추가.xaml",
+      "Path": "Process/02. 티켓랭킹 DT 추출.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "dt원본_추가&Sequence_1",
@@ -257,7 +267,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Process/10. 티켓랭킹 DT 가공_추가.xaml",
+      "Path": "Process/03. 티켓랭킹 DT 가공.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "dt랭킹&Sequence_1",
@@ -276,7 +286,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Process/11. 랭킹_1위 데이터 취합_추가.xaml",
+      "Path": "Process/04. 랭킹_1위 데이터 취합.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
@@ -287,7 +297,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Process/12. 티켓랭킹 DT 저장_추가.xaml",
+      "Path": "Process/05. 티켓랭킹 DT 저장.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
@@ -349,6 +359,9 @@
         "str파일첨부&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_intFailCount",
+        "in_intSuccessCount",
+        "in_intTotalCount",
         "in_strResultFile",
         "in_Config",
         "in_dt랭킹_1위",
@@ -384,6 +397,9 @@
         "str파일첨부&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_intFailCount",
+        "in_intSuccessCount",
+        "in_intTotalCount",
         "in_dt랭킹_1위",
         "in_list성공항목",
         "in_list실패항목",
@@ -408,6 +424,16 @@
         "in_list실패항목",
         "in_Config",
         "in_strResultFile"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "End/01. 랭킹_1위 DT 수정.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt랭킹_1위"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

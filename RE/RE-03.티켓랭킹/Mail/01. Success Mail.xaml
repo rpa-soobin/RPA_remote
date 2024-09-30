@@ -5,6 +5,9 @@
     <x:Property Name="in_list실패항목" Type="InArgument(scg:List(x:String))" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_strResultFile" Type="InArgument(x:String)" />
+    <x:Property Name="in_intTotalCount" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_intSuccessCount" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_intFailCount" Type="InArgument(x:Int32)" />
   </x:Members>
   <this:_14__메일_발송.in_list성공항목>
     <InArgument x:TypeArguments="scg:List(x:String)" />
@@ -57,6 +60,7 @@
       <x:String>System.Xml.Serialization</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -119,9 +123,10 @@
       <AssemblyReference>System.CodeDom</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="14. 메일 발송" sap:VirtualizedContainerService.HintSize="913.6000000000001,1089.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="14. 메일 발송" sap:VirtualizedContainerService.HintSize="1172,1217.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strHTML" />
       <Variable x:TypeArguments="x:String" Name="strName" />
@@ -195,7 +200,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotCredential>
-    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="서버 : &quot;smtp.gmail.com&quot;&#xA;포트 : 587&#xA;본문 HTML임 = True&#xA;" Body="[String.Format(in_Config(&quot;MailBody&quot;).ToString.Trim,  today.ToString(&quot;yyMMdd&quot;), in_Config(&quot;과제명&quot;).ToString.Trim, String.Join(&quot;, &quot;, in_list성공항목), String.Join(&quot;, &quot;, in_list실패항목), strHTML)]" DisplayName="파일첨부 이메일 보내기 ㅣ Send SMTP Mail Message" Email="[strName]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="433.6,256.8" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="True" Port="587" SecureConnection="Auto" SecurePassword="[sstrpw]" Server="smtp.gmail.com" Subject="[String.Format(in_Config(&quot;Subject&quot;).ToString.Trim, in_Config(&quot;부서코드&quot;).ToString.Trim,in_Config(&quot;과제명&quot;).ToString.Trim, &quot;성공입니다.&quot;)]" To="[in_Config(&quot;MailTo&quot;).ToString.Trim]">
+    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="서버 : &quot;smtp.gmail.com&quot;&#xA;포트 : 587&#xA;본문 HTML임 = True&#xA;&#xD;&#xA;String.Format(in_Config(&quot;Subject&quot;).ToString.Trim, in_Config(&quot;부서코드&quot;).ToString.Trim,in_Config(&quot;과제명&quot;).ToString.Trim, &quot;성공입니다.&quot;)&#xD;&#xA;&#xD;&#xA;String.Format(in_Config(&quot;MailBody&quot;).ToString.Trim,  today.ToString(&quot;yyMMdd&quot;), in_Config(&quot;과제명&quot;).ToString.Trim, String.Join(&quot;, &quot;, in_list성공항목), String.Join(&quot;, &quot;, in_list실패항목), strHTML)" Body="[String.Format(in_Config(&quot;MailBody&quot;).ToString.Trim,  today.ToString(&quot;yyMMdd&quot;), in_Config(&quot;과제명&quot;).ToString.Trim, String.Join(&quot;, &quot;, in_list성공항목), String.Join(&quot;, &quot;, in_list실패항목), strHTML, in_intTotalCount, in_intSuccessCount, in_intFailCount)]" DisplayName="파일첨부 이메일 보내기 ㅣ Send SMTP Mail Message" Email="[strName]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="433.6,384.8" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="True" Port="587" SecureConnection="Auto" SecurePassword="[sstrpw]" Server="smtp.gmail.com" Subject="[String.Format(in_Config(&quot;Subject&quot;).ToString.Trim, in_Config(&quot;부서코드&quot;).ToString.Trim,in_Config(&quot;과제명&quot;).ToString.Trim, &quot;성공입니다.&quot;)]" To="[in_Config(&quot;MailTo&quot;).ToString.Trim]">
       <ui:SendMail.Files>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
           <InArgument x:TypeArguments="x:String">[str파일첨부]</InArgument>

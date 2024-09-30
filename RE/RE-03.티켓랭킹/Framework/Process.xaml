@@ -120,7 +120,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1172,1642.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1172,1384" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str클릭항목" />
       <Variable x:TypeArguments="x:String" Name="strURL" />
@@ -154,7 +154,7 @@
         <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt티켓랭킹">[in_dt티켓랭킹]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <If sap2010:Annotation.AnnotationText="arr추출항목 = { &quot;전체&quot;, &quot;스포츠&quot;, &quot;콘서트&quot;, &quot;뮤지컬&quot;, &quot;캠핑&quot; }&#xD;&#xA;전체ㅣ콘서트ㅣ뮤지컬ㅣ연극ㅣ클래식/무용ㅣ전시/행사ㅣ아동/가족" Condition="[in_arr추출항목.Contains(str클릭항목)]" sap:VirtualizedContainerService.HintSize="449.6,1083.2" sap2010:WorkflowViewState.IdRef="If_1">
+    <If sap2010:Annotation.AnnotationText="arr추출항목 = { &quot;전체&quot;, &quot;스포츠&quot;, &quot;콘서트&quot;, &quot;뮤지컬&quot;, &quot;캠핑&quot; }&#xD;&#xA;전체ㅣ콘서트ㅣ뮤지컬ㅣ연극ㅣ클래식/무용ㅣ전시/행사ㅣ아동/가족" Condition="[in_arr추출항목.Contains(str클릭항목)]" sap:VirtualizedContainerService.HintSize="449.6,824.8" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -226,14 +226,12 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,348" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Throw Exception="[New BusinessRuleException(&quot;추출항목 없음&quot;)]" sap:VirtualizedContainerService.HintSize="382.4,122.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;BusinessRuleException : 추출항목 없음&quot;]" />
         </Sequence>
       </If.Else>
     </If>

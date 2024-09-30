@@ -9,7 +9,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Mail/01. Send Mail.xaml",
+      "Path": "Mail/01. Success Mail.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "strName&Sequence_1",
@@ -30,6 +30,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "bl_BusinessException&StateMachine_1",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
         "TransactionNumber&StateMachine_1",
@@ -46,7 +47,6 @@
         "TransactionItem&StateMachine_1",
         "dt_TransactionData&StateMachine_1",
         "excelSheet&StateMachine_1",
-        "bl오류&StateMachine_1",
         "ShouldStop&Sequence_25"
       ],
       "ArgumentsSectionElementsOrder": [
@@ -78,7 +78,7 @@
         "idx&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
-        "out_bl오류",
+        "out_bl_BusinessException",
         "out_bl대분류존재여부",
         "io_dt_TransactionData",
         "io_TransactionItem"
@@ -137,7 +137,7 @@
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "bl오류&Sequence_1",
+        "bl_BusinessException&Sequence_1",
         "bl대분류존재여부&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
@@ -253,6 +253,24 @@
       "ArgumentsSectionElementsOrder": [
         "io_strResultFile",
         "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Mail/02. Fail Mail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strName&Sequence_1",
+        "sstrpw&Sequence_1",
+        "str파일첨부&Sequence_1",
+        "arr파일첨부&Sequence_1",
+        "strHTML&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strResultFile",
+        "in_Config",
+        "in_dt_TransactionData"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

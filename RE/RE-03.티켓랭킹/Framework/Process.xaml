@@ -120,7 +120,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="608,2083.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1172,1642.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str클릭항목" />
       <Variable x:TypeArguments="x:String" Name="strURL" />
@@ -139,8 +139,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="545.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="08. DT 반복문 변수 생성_추가 - 워크플로우 파일 호출 (Process\08. DT 반복문 변수 생성_추가.xaml)" sap:VirtualizedContainerService.HintSize="545.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Process\08. DT 반복문 변수 생성_추가.xaml">
+    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="01. DT 반복문 변수 생성 - 워크플로우 파일 호출 (Process\01. DT 반복문 변수 생성.xaml)" sap:VirtualizedContainerService.HintSize="449.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Process\01. DT 반복문 변수 생성.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="x:String" x:Key="out_str클릭항목">[str클릭항목]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="out_strURL">[strURL]</OutArgument>
@@ -154,15 +154,20 @@
         <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt티켓랭킹">[in_dt티켓랭킹]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <If Condition="[in_arr추출항목.Contains(str클릭항목)]" sap:VirtualizedContainerService.HintSize="545.6,1458.4" sap2010:WorkflowViewState.IdRef="If_1">
+    <If sap2010:Annotation.AnnotationText="arr추출항목 = { &quot;전체&quot;, &quot;스포츠&quot;, &quot;콘서트&quot;, &quot;뮤지컬&quot;, &quot;캠핑&quot; }&#xD;&#xA;전체ㅣ콘서트ㅣ뮤지컬ㅣ연극ㅣ클래식/무용ㅣ전시/행사ㅣ아동/가족" Condition="[in_arr추출항목.Contains(str클릭항목)]" sap:VirtualizedContainerService.HintSize="449.6,1083.2" sap2010:WorkflowViewState.IdRef="If_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,1183.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,520.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="09. 티켓랭킹 DT 추출_추가 - 워크플로우 파일 호출 (Process\09. 티켓랭킹 DT 추출_추가.xaml)" sap:VirtualizedContainerService.HintSize="449.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Process\09. 티켓랭킹 DT 추출_추가.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="02. 티켓랭킹 DT 추출 - 워크플로우 파일 호출 (Process\09. 티켓랭킹 DT 추출_추가.xaml)" sap:VirtualizedContainerService.HintSize="382.4,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Process\02. 티켓랭킹 DT 추출.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt티켓랭킹">[in_dt티켓랭킹]</InOutArgument>
               <InArgument x:TypeArguments="x:Int32" x:Key="in_idx_추출항목">[idx_추출항목]</InArgument>
@@ -172,19 +177,19 @@
               <OutArgument x:TypeArguments="x:String" x:Key="out_str클릭항목">[str클릭항목]</OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dt티켓랭킹]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="449.6,690.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dt티켓랭킹]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="382.4,56.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow_티켓랭킹" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="416,492.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="416,464" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="10. 티켓랭킹 DT 가공_추가 - 워크플로우 파일 호출 (Process\10. 티켓랭킹 DT 가공_추가.xaml)" sap:VirtualizedContainerService.HintSize="353.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Process\10. 티켓랭킹 DT 가공_추가.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="03. 티켓랭킹 DT 가공 - 워크플로우 파일 호출 (Process\10. 티켓랭킹 DT 가공_추가.xaml)" sap:VirtualizedContainerService.HintSize="382.4,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Process\03. 티켓랭킹 DT 가공.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt티켓랭킹">[in_dt티켓랭킹]</InOutArgument>
                       <InArgument x:TypeArguments="sd:DataRow" x:Key="in_CurrentRow_티켓랭킹">[CurrentRow_티켓랭킹]</InArgument>
@@ -195,7 +200,7 @@
                       <InArgument x:TypeArguments="x:String" x:Key="in_str종료일">[str종료일]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="11. 랭킹_1위 데이터 취합_추가 - 워크플로우 파일 호출 (Process\11. 랭킹_1위 데이터 취합_추가.xaml)" sap:VirtualizedContainerService.HintSize="353.6,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Process\11. 랭킹_1위 데이터 취합_추가.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="04. 랭킹_1위 데이터 취합 - 워크플로우 파일 호출 (Process\11. 랭킹_1위 데이터 취합_추가.xaml)" sap:VirtualizedContainerService.HintSize="382.4,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Process\04. 랭킹_1위 데이터 취합.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="sd:DataRow" x:Key="in_CurrentRow_티켓랭킹">[CurrentRow_티켓랭킹]</InArgument>
                       <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt랭킹_1위">[io_dt랭킹_1위]</InOutArgument>
@@ -206,12 +211,12 @@
             </ui:ForEachRow.Body>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ForEachRow>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="12. 티켓랭킹 DT 저장_추가 - 워크플로우 파일 호출 (Process\12. 티켓랭킹 DT 저장_추가.xaml)" sap:VirtualizedContainerService.HintSize="449.6,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Process\12. 티켓랭킹 DT 저장_추가.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="05. 티켓랭킹 DT 저장_추가 - 워크플로우 파일 호출 (Process\12. 티켓랭킹 DT 저장_추가.xaml)" sap:VirtualizedContainerService.HintSize="382.4,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Process\05. 티켓랭킹 DT 저장.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt티켓랭킹">[in_dt티켓랭킹]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_str시트명">[str시트명]</InArgument>
@@ -221,15 +226,17 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,348" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
+          <Throw Exception="[New BusinessRuleException(&quot;추출항목 없음&quot;)]" sap:VirtualizedContainerService.HintSize="382.4,122.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;BusinessRuleException : 추출항목 없음&quot;]" />
         </Sequence>
       </If.Else>
     </If>
-    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="545.6,79.2" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
+    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="449.6,79.2" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
   </Sequence>
 </Activity>

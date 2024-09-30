@@ -3,7 +3,7 @@
     <x:Property Name="io_dt_TransactionData" Type="InOutArgument(sd:DataTable)" />
     <x:Property Name="io_TransactionItem" Type="InOutArgument(sd:DataRow)" />
     <x:Property Name="out_bl대분류존재여부" Type="OutArgument(x:Boolean)" />
-    <x:Property Name="out_bl오류" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="out_bl_BusinessException" Type="OutArgument(x:Boolean)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -130,7 +130,7 @@
       <AssemblyReference>System.Management.Automation</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="클래식 - Find Children &#xA;모던 - For Each UiElement &#xA;----- 이것도 사용해볼 것" DisplayName="05. DT 추출" sap:VirtualizedContainerService.HintSize="913.6000000000001,5410.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="클래식 - Find Children &#xA;모던 - For Each UiElement &#xA;----- 이것도 사용해볼 것" DisplayName="05. DT 추출" sap:VirtualizedContainerService.HintSize="913.6000000000001,5352.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str대분류" />
       <Variable x:TypeArguments="x:String" Name="str소분류" />
@@ -300,7 +300,7 @@
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_29">
             <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:Boolean">[out_bl오류]</OutArgument>
+              <OutArgument x:TypeArguments="x:Boolean">[out_bl_BusinessException]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
               <InArgument x:TypeArguments="x:Boolean">False</InArgument>
@@ -402,13 +402,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="&quot;https://www.realtyprice.kr/notice/town/searchPastYear.htm&quot;" AttachMode="ByInstance" CloseMode="Never" DisplayName="부동산공시가격 페이지 이동 ㅣ Use Browser Chrome: 부동산공시가격 알리미" sap:VirtualizedContainerService.HintSize="800,3988.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="388e317a-759a-4585-9751-c7fe9c9daea1" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="&quot;https://www.realtyprice.kr/notice/town/searchPastYear.htm&quot;" AttachMode="ByInstance" CloseMode="Never" DisplayName="부동산공시가격 페이지 이동 ㅣ Use Browser Chrome: 부동산공시가격 알리미" sap:VirtualizedContainerService.HintSize="800,3931.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="388e317a-759a-4585-9751-c7fe9c9daea1" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="737.6,3708.8" sap2010:WorkflowViewState.IdRef="Sequence_50">
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="737.6,3651.2" sap2010:WorkflowViewState.IdRef="Sequence_50">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -774,7 +774,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <TryCatch DisplayName="시/도 선택 ㅣ Try Catch" sap:VirtualizedContainerService.HintSize="704,848.8" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+            <TryCatch DisplayName="시/도 선택 ㅣ Try Catch" sap:VirtualizedContainerService.HintSize="704,791.2" sap2010:WorkflowViewState.IdRef="TryCatch_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -823,7 +823,7 @@
                 </Sequence>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="473.6,652.8" sap2010:WorkflowViewState.IdRef="Catch`1_8">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="473.6,595.2" sap2010:WorkflowViewState.IdRef="Catch`1_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -834,7 +834,7 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <Sequence sap:VirtualizedContainerService.HintSize="467.2,581.6" sap2010:WorkflowViewState.IdRef="Sequence_276">
+                    <Sequence sap:VirtualizedContainerService.HintSize="467.2,524" sap2010:WorkflowViewState.IdRef="Sequence_276">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -842,14 +842,31 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_37" Level="Error" Message="[&quot;BusinessRuleException : 대분류(시/도) 정보 없음&quot;]" />
-                      <Assign sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_84">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:Boolean">[out_bl오류]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                        </Assign.Value>
-                      </Assign>
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_277">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_84">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Boolean">[out_bl_BusinessException]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:CommentOut>
                       <Assign sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_85">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Object">[io_TransactionItem("RPA")]</OutArgument>

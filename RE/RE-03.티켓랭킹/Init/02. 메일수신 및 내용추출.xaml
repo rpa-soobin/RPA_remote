@@ -104,7 +104,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="02. 메일수신 및 내용추출" sap:VirtualizedContainerService.HintSize="837.6000000000001,3702.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="02. 메일수신 및 내용추출" sap:VirtualizedContainerService.HintSize="1172,3702.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strID" />
       <Variable x:TypeArguments="ss:SecureString" Name="sstrpw" />
@@ -137,7 +137,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotCredential>
-    <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" Password="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="서버 : &quot;imap.gmail.com&quot;&#xA;포트 : 993&#xD;&#xA;&#xD;&#xA;&quot;FROM 'rpa.jian23@gmail.com'&quot;" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[strID]" EnableSSL="True" FilterExpression="FROM 'rpa.jian23@gmail.com'" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="635.2,148.8" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" IgnoreCRL="False" MailFolder="Inbox" MarkAsRead="False" Messages="[Mail메시지]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Port="993" SecureConnection="Auto" SecurePassword="[sstrpw]" Server="imap.gmail.com" Top="10">
+    <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" Password="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="서버 : &quot;imap.gmail.com&quot;&#xA;포트 : 993&#xA;&#xA;&quot;FROM 'rpa.jian23@gmail.com'&quot;" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[strID]" EnableSSL="True" FilterExpression="FROM 'rpa.soobin@gmail.com'" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="635.2,148.8" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" IgnoreCRL="False" MailFolder="Inbox" MarkAsRead="False" Messages="[Mail메시지]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Port="993" SecureConnection="Auto" SecurePassword="[sstrpw]" Server="imap.gmail.com" Top="10">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -180,7 +180,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[&quot;BusinessRuleException : 메일 첨부파일 없음&quot;]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[&quot;SystemException : 메일 첨부파일 없음&quot;]" />
                         <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_10">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Boolean">[out_bl첨부파일]</OutArgument>
@@ -189,7 +189,7 @@
                             <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Throw Exception="[New BusinessRuleException(&quot;첨부파일이 없습니다&quot;)]" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                        <Throw Exception="[New SystemException(&quot;첨부파일이 없습니다&quot;)]" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Throw_2" />
                       </Sequence>
                     </If.Then>
                     <If.Else>
@@ -199,7 +199,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:SaveMailAttachments sap2010:Annotation.AnnotationText="inu첨부파일&#xD;&#xA;--- 첨부파일이 없어도 오류가 발생되지는 않음" Attachments="[inu첨부파일]" DisplayName="첨부파일 ㅣ Save Attachments" ExcludeInlineAttachments="False" FolderPath="Data\Input" sap:VirtualizedContainerService.HintSize="382.4,155.2" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_1" Message="[currentMailMessage]" OverwriteExisting="False">
+                        <ui:SaveMailAttachments sap2010:Annotation.AnnotationText="inu첨부파일&#xA;--- 첨부파일이 없어도 오류가 발생되지는 않음" Attachments="[inu첨부파일]" DisplayName="첨부파일 ㅣ Save Attachments" ExcludeInlineAttachments="False" FolderPath="Data\Input" sap:VirtualizedContainerService.HintSize="382.4,155.2" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_1" Message="[currentMailMessage]" OverwriteExisting="False">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>

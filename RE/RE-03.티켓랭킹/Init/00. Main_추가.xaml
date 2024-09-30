@@ -153,7 +153,7 @@
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="out_arr추출항목&#xA;{ &quot;전체&quot;, &quot;스포츠&quot;, &quot;콘서트&quot;, &quot;뮤지컬&quot;, &quot;캠핑&quot; }" DisplayName="02. 메일수신 및 내용추출_추가 - 워크플로우 파일 호출 (Join_(3)_추가개발\02. 메일수신 및 내용추출_(3)_추가.xaml)" sap:VirtualizedContainerService.HintSize="641.6,250.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_38" UnSafe="False" WorkflowFileName="Init\02. 메일수신 및 내용추출_추가.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="out_arr추출항목&#xA;{ &quot;전체&quot;, &quot;스포츠&quot;, &quot;콘서트&quot;, &quot;뮤지컬&quot;, &quot;캠핑&quot; }" DisplayName="02. 메일수신 및 내용추출_추가 - 워크플로우 파일 호출 (Join_(3)_추가개발\02. 메일수신 및 내용추출_(3)_추가.xaml)" sap:VirtualizedContainerService.HintSize="641.6,250.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_38" UnSafe="False" WorkflowFileName="Init\02. 메일수신 및 내용추출.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="s:String[]" x:Key="out_arr추출항목">[arr추출항목]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
@@ -163,12 +163,12 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="03. 파일 Copy_추가 - 워크플로우 파일 호출 (Join_(3)_추가개발\파일 Copy.xaml)" sap:VirtualizedContainerService.HintSize="641.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_56" UnSafe="False" WorkflowFileName="Init\03. 파일 Copy_추가.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="03. 파일 Copy_추가 - 워크플로우 파일 호출 (Join_(3)_추가개발\파일 Copy.xaml)" sap:VirtualizedContainerService.HintSize="641.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_56" UnSafe="False" WorkflowFileName="Init\04. 파일 Copy.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="04. DT 구조 생성_추가 - 워크플로우 파일 호출 (Join_(3)_추가개발\04. DT 구조 생성_(3)_추가.xaml)" sap:VirtualizedContainerService.HintSize="641.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_40" UnSafe="False" WorkflowFileName="Init\04. DT 구조 및 성공실패_list 생성_추가.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="04. DT 구조 생성_추가 - 워크플로우 파일 호출 (Join_(3)_추가개발\04. DT 구조 생성_(3)_추가.xaml)" sap:VirtualizedContainerService.HintSize="641.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_40" UnSafe="False" WorkflowFileName="Init\05. DT 구조 및 성공실패_list 생성.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt티켓랭킹">[dt티켓랭킹]</OutArgument>
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt랭킹_1위">[dt랭킹_1위]</OutArgument>
@@ -182,7 +182,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="dtURL ---------- 항목ㅣ항목URL&#xA;전체ㅣ콘서트ㅣ뮤지컬ㅣ연극ㅣ클래식/무용ㅣ전시/행사ㅣ아동/가족" DisplayName="05. URL DT 추출_추가 - 워크플로우 파일 호출 (Join_(3)_추가개발\05. URL DT 추출_(3)_추가.xaml)" sap:VirtualizedContainerService.HintSize="641.6,266.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_41" UnSafe="False" WorkflowFileName="Init\05. URL DT 추출_추가.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="dtURL ---------- 항목ㅣ항목URL&#xA;전체ㅣ콘서트ㅣ뮤지컬ㅣ연극ㅣ클래식/무용ㅣ전시/행사ㅣ아동/가족" DisplayName="05. URL DT 추출_추가 - 워크플로우 파일 호출 (Join_(3)_추가개발\05. URL DT 추출_(3)_추가.xaml)" sap:VirtualizedContainerService.HintSize="641.6,266.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_41" UnSafe="False" WorkflowFileName="Init\06. URL DT 추출.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtURL">[dtURL]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
@@ -198,7 +198,7 @@
         <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="out_list실패항목">[list실패항목]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="for each arr추출항목 - str추출항목&#xA;str추출항목이 dtURL의 항목URL에 동일한 항목이 있을 때만 시트 생성" DisplayName="07. 결과파일 생성_추가 - 워크플로우 파일 호출 (Join_(3)_추가개발\03. 결과파일 생성_(3)_추가.xaml)" sap:VirtualizedContainerService.HintSize="641.6,266.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_39" UnSafe="False" WorkflowFileName="Init\07. 결과파일 생성_추가.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="for each arr추출항목 - str추출항목&#xA;str추출항목이 dtURL의 항목URL에 동일한 항목이 있을 때만 시트 생성" DisplayName="07. 결과파일 생성_추가 - 워크플로우 파일 호출 (Join_(3)_추가개발\03. 결과파일 생성_(3)_추가.xaml)" sap:VirtualizedContainerService.HintSize="641.6,266.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_39" UnSafe="False" WorkflowFileName="Init\07. 결과파일 생성.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="s:String[]" x:Key="in_arr추출항목">[arr추출항목]</InArgument>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtURL">[dtURL]</InArgument>

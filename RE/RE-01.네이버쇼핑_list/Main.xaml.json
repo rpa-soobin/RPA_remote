@@ -66,8 +66,8 @@
       "DataSourceItems": null
     },
     {
-      "Name": "io_dt_TransationData",
-      "DisplayName": "io_dt_TransationData",
+      "Name": "io_list_TransactionData",
+      "DisplayName": "io_list_TransactionData",
       "Category": null,
       "Tooltip": null,
       "Placeholder": null,
@@ -78,8 +78,8 @@
       "DataSourceItems": null
     },
     {
-      "Name": "io_list_TransactionData",
-      "DisplayName": "io_list_TransactionData",
+      "Name": "io_dt_RPA결과",
+      "DisplayName": "io_dt_RPA결과",
       "Category": null,
       "Tooltip": null,
       "Placeholder": null,

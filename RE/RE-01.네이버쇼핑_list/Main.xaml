@@ -5,8 +5,8 @@
     <x:Property Name="io_intTotalCount" Type="InArgument(x:Int32)" />
     <x:Property Name="io_intFailCount" Type="InArgument(x:Int32)" />
     <x:Property Name="io_intSuccessCount" Type="InArgument(x:Int32)" />
-    <x:Property Name="io_dt_TransationData" Type="InOutArgument(sd:DataTable)" />
     <x:Property Name="io_list_TransactionData" Type="InOutArgument(scg:List(x:String))" />
+    <x:Property Name="io_dt_RPA결과" Type="InOutArgument(sd:DataTable)" />
   </x:Members>
   <this:Main.io_intTotalCount>
     <InArgument x:TypeArguments="x:Int32" />
@@ -133,7 +133,7 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="930.4,424.8" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="930.4000000000001,560.8" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -164,7 +164,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </WriteLine>
-          <WriteLine sap2010:Annotation.AnnotationText="&quot;Get Transation Data 들어옴 - DT 행 수 : &quot; + io_dt_TransationData.RowCount.ToString" DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="529.6,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[&quot;Get Transation Data 들어옴 - DT 행 수 : &quot; + io_dt_TransationData.RowCount.ToString]">
+          <WriteLine sap2010:Annotation.AnnotationText="&quot;Get Transation Data 들어옴 - DT 행 수 : &quot; + io_dt_TransationData.RowCount.ToString" DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="529.6,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[&quot;Get Transation Data 들어옴 - DT 행 수 : &quot; + io_dt_RPA결과.RowCount.ToString]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -311,7 +311,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <WriteLine DisplayName="DT 행 개수 확인 ㅣ Write Line" sap:VirtualizedContainerService.HintSize="496,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[&quot;Process Transation 들어옴 - DT 행 수 : &quot; + io_dt_TransationData.RowCount.ToString]" />
+                      <WriteLine DisplayName="DT 행 개수 확인 ㅣ Write Line" sap:VirtualizedContainerService.HintSize="496,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[&quot;Process Transation 들어옴 - DT 행 수 : &quot; + io_dt_RPA결과.RowCount.ToString]" />
                       <Assign sap2010:Annotation.AnnotationText="&gt;&gt; BusinessException 초기화" DisplayName="Assign BusinessException" sap:VirtualizedContainerService.HintSize="496,144.8" sap2010:WorkflowViewState.IdRef="Assign_25">
                         <Assign.To>
                           <OutArgument x:TypeArguments="ui:BusinessRuleException">[BusinessException]</OutArgument>
@@ -351,7 +351,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:InvokeWorkflowFile>
-                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="496,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[io_dt_TransationData.RowCount.ToString]" />
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="496,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[io_dt_RPA결과.RowCount.ToString]" />
                       <TryCatch sap2010:Annotation.AnnotationText="&gt;&gt; 트랜젝션 상태 변경 (TransactionNumber +1)&#xA;트랜젝션의 일관성을 유지하기 위해 실패했을 경우에도 트랜젝션의 상태를 변경함" DisplayName="Try Catch Set Transaction Status (Success)" sap:VirtualizedContainerService.HintSize="496,497.6" sap2010:WorkflowViewState.IdRef="TryCatch_10">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -422,7 +422,7 @@
                             <OutArgument x:TypeArguments="sd:DataRow">[newRow]</OutArgument>
                           </Assign.To>
                           <Assign.Value>
-                            <InArgument x:TypeArguments="sd:DataRow">[io_dt_TransationData.NewRow]</InArgument>
+                            <InArgument x:TypeArguments="sd:DataRow">[io_dt_RPA결과.NewRow]</InArgument>
                           </Assign.Value>
                         </Assign>
                         <Assign DisplayName="RPA '검색상품' 컬럼값 삽입 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_52">
@@ -441,7 +441,7 @@
                             <InArgument x:TypeArguments="x:Object">["성공"]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRow]" DataTable="[io_dt_TransationData]" DisplayName="DT에 행 추가 ㅣ Add Data Row" sap:VirtualizedContainerService.HintSize="433.6,211.2" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                        <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRow]" DataTable="[io_dt_RPA결과]" DisplayName="DT에 행 추가 ㅣ Add Data Row" sap:VirtualizedContainerService.HintSize="433.6,211.2" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                       </Sequence>
                     </Sequence>
                   </TryCatch.Try>
@@ -536,7 +536,7 @@
                                 <OutArgument x:TypeArguments="sd:DataRow">[newRow]</OutArgument>
                               </Assign.To>
                               <Assign.Value>
-                                <InArgument x:TypeArguments="sd:DataRow">[io_dt_TransationData.NewRow]</InArgument>
+                                <InArgument x:TypeArguments="sd:DataRow">[io_dt_RPA결과.NewRow]</InArgument>
                               </Assign.Value>
                             </Assign>
                             <Assign DisplayName="RPA '검색상품' 컬럼값 삽입 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_54">
@@ -555,7 +555,7 @@
                                 <InArgument x:TypeArguments="x:Object">["실패"]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRow]" DataTable="[io_dt_TransationData]" DisplayName="DT에 행 추가 ㅣ Add Data Row" sap:VirtualizedContainerService.HintSize="433.6,211.2" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                            <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRow]" DataTable="[io_dt_RPA결과]" DisplayName="DT에 행 추가 ㅣ Add Data Row" sap:VirtualizedContainerService.HintSize="433.6,211.2" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
                           </Sequence>
                         </Sequence>
                       </ActivityAction>
@@ -648,7 +648,7 @@
                                 <OutArgument x:TypeArguments="sd:DataRow">[newRow]</OutArgument>
                               </Assign.To>
                               <Assign.Value>
-                                <InArgument x:TypeArguments="sd:DataRow">[io_dt_TransationData.NewRow]</InArgument>
+                                <InArgument x:TypeArguments="sd:DataRow">[io_dt_RPA결과.NewRow]</InArgument>
                               </Assign.Value>
                             </Assign>
                             <Assign DisplayName="RPA '검색상품' 컬럼값 삽입 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_63">
@@ -667,7 +667,7 @@
                                 <InArgument x:TypeArguments="x:Object">["실패"]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRow]" DataTable="[io_dt_TransationData]" DisplayName="DT에 행 추가 ㅣ Add Data Row" sap:VirtualizedContainerService.HintSize="433.6,211.2" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
+                            <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRow]" DataTable="[io_dt_RPA결과]" DisplayName="DT에 행 추가 ㅣ Add Data Row" sap:VirtualizedContainerService.HintSize="433.6,211.2" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
                           </Sequence>
                         </Sequence>
                       </ActivityAction>
@@ -754,7 +754,7 @@
                   <Transition.To>
                     <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="&gt;&gt; 과제 수행에 앞서 준비 설정&#xA;&#xA;1. SystemException 초기화&#xA;2. Config 읽어서 Dictionary 만들기&#xA;3. 변수 선언 및 초기화&#xA;4. 사전 준비 작업" DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="232,168" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
-                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="675.2,3300" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="675.2,3227.2" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -762,7 +762,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="512,3068.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="483.2,2996" sap2010:WorkflowViewState.IdRef="Sequence_4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -782,7 +782,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </Assign>
-                              <If sap2010:Annotation.AnnotationText="&gt;&gt; 과제 수행 시 한 번만 하는 작업 == Config라는 변수에 값이 없다면" Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="449.6,2158.4" sap2010:WorkflowViewState.IdRef="If_1">
+                              <If sap2010:Annotation.AnnotationText="&gt;&gt; 과제 수행 시 한 번만 하는 작업 == Config라는 변수에 값이 없다면" Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="449.6,2114.4" sap2010:WorkflowViewState.IdRef="If_1">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -791,7 +791,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence sap2010:Annotation.AnnotationText="&gt;&gt; 한 번만 하는 작업들은 여기에&#xA;&gt;&gt; TransactionDT 생성 등" DisplayName="First run" sap:VirtualizedContainerService.HintSize="416,1852" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                  <Sequence sap2010:Annotation.AnnotationText="&gt;&gt; 한 번만 하는 작업들은 여기에&#xA;&gt;&gt; TransactionDT 생성 등" DisplayName="First run" sap:VirtualizedContainerService.HintSize="416,1823.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:Int32" Name="intSuccessCount" />
                                       <Variable x:TypeArguments="x:Int32" Name="intFailCount" />
@@ -803,8 +803,8 @@
                                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:LogMessage DisplayName="Log Message screen resolution" sap:VirtualizedContainerService.HintSize="353.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Info" Message="[&quot;The primary screen resolution is: &quot;+Screen.PrimaryScreen.Bounds.Width.ToString+&quot; x &quot;+ Screen.PrimaryScreen.Bounds.Height.ToString]" />
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="&gt;&gt; Config 변수에 값을 채워넣는 작업" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="353.6,237.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
+                                    <ui:LogMessage DisplayName="Log Message screen resolution" sap:VirtualizedContainerService.HintSize="382.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Info" Message="[&quot;The primary screen resolution is: &quot;+Screen.PrimaryScreen.Bounds.Width.ToString+&quot; x &quot;+ Screen.PrimaryScreen.Bounds.Height.ToString]" />
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="&gt;&gt; Config 변수에 값을 채워넣는 작업" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="382.4,237.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
                                         <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings", "Constants"}]</InArgument>
@@ -816,7 +816,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:InvokeWorkflowFile>
-                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="382.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                                       <ui:CommentOut.Body>
                                         <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="416,260.8" sap2010:WorkflowViewState.IdRef="Sequence_32">
                                           <sap:WorkflowViewStateService.ViewState>
@@ -852,7 +852,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:CommentOut>
-                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="382.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                                       <ui:CommentOut.Body>
                                         <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="416,260.8" sap2010:WorkflowViewState.IdRef="Sequence_33">
                                           <sap:WorkflowViewStateService.ViewState>
@@ -897,7 +897,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:CommentOut>
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="01. 경로 설정 - 워크플로우 파일 호출 (네이버쇼핑\01. 경로 설정.xaml)" sap:VirtualizedContainerService.HintSize="353.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_34" UnSafe="False" WorkflowFileName="네이버쇼핑\01. 경로 설정.xaml">
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="01. 경로 설정 - 워크플로우 파일 호출 (네이버쇼핑\01. 경로 설정.xaml)" sap:VirtualizedContainerService.HintSize="382.4,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_34" UnSafe="False" WorkflowFileName="네이버쇼핑\01. 경로 설정.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
                                         <OutArgument x:TypeArguments="x:String" x:Key="out_strTempFile">[strTempFile]</OutArgument>
@@ -905,13 +905,13 @@
                                         <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="out_lstAttachment">[lstAttachment]</OutArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="02. 파일 Copy - 워크플로우 파일 호출 (네이버쇼핑\02. 파일 Copy.xaml)" sap:VirtualizedContainerService.HintSize="353.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_30" UnSafe="False" WorkflowFileName="네이버쇼핑\02. 파일 Copy.xaml">
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="02. 파일 Copy - 워크플로우 파일 호출 (네이버쇼핑\02. 파일 Copy.xaml)" sap:VirtualizedContainerService.HintSize="382.4,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_30" UnSafe="False" WorkflowFileName="네이버쇼핑\02. 파일 Copy.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <InArgument x:TypeArguments="x:String" x:Key="in_strTempFile">[strTempFile]</InArgument>
                                         <InArgument x:TypeArguments="x:String" x:Key="in_strResultFile">[strResultFile]</InArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="03. 초기 데이터 생성 및 변수 초기화 - 워크플로우 파일 호출 (네이버쇼핑\03. 초기 데이터 생성 및 변수 초기화.xaml)" sap:VirtualizedContainerService.HintSize="353.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_31" UnSafe="False" WorkflowFileName="네이버쇼핑\03. 초기 데이터 생성 및 변수 초기화.xaml">
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="03. 초기 데이터 생성 및 변수 초기화 - 워크플로우 파일 호출 (네이버쇼핑\03. 초기 데이터 생성 및 변수 초기화.xaml)" sap:VirtualizedContainerService.HintSize="382.4,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_31" UnSafe="False" WorkflowFileName="네이버쇼핑\03. 초기 데이터 생성 및 변수 초기화.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <OutArgument x:TypeArguments="x:Int32" x:Key="out_intTotalCount">[io_intTotalCount]</OutArgument>
                                         <OutArgument x:TypeArguments="x:Int32" x:Key="out_intSuccessCount">[io_intSuccessCount]</OutArgument>
@@ -920,15 +920,15 @@
                                         <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="out_lstSuccess">[lstSuccess]</OutArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="04. list_TransactionData 생성 - 워크플로우 파일 호출 (네이버쇼핑\04. list_TransactionData 생성.xaml)" sap:VirtualizedContainerService.HintSize="353.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_32" UnSafe="False" WorkflowFileName="네이버쇼핑\04. list_TransactionData 생성.xaml">
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="04. list_TransactionData 생성 - 워크플로우 파일 호출 (네이버쇼핑\04. list_TransactionData 생성.xaml)" sap:VirtualizedContainerService.HintSize="382.4,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_32" UnSafe="False" WorkflowFileName="네이버쇼핑\04. list_TransactionData 생성.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="out_list_TransactionData">[io_list_TransactionData]</OutArgument>
                                         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
-                                        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_TransactionData">[io_dt_TransationData]</OutArgument>
+                                        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_RPA결과">[dt_RPA결과]</OutArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
-                                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="353.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[&quot;DT 행 수 : &quot; + io_dt_TransationData.RowCount.ToString]" />
-                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382.4,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[&quot;DT 행 수 : &quot; + io_dt_RPA결과.RowCount.ToString]" />
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="382.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
                                       <ui:CommentOut.Body>
                                         <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="416,394.4" sap2010:WorkflowViewState.IdRef="Sequence_41">
                                           <sap:WorkflowViewStateService.ViewState>
@@ -957,7 +957,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:CommentOut>
-                                    <ui:AddLogFields sap2010:Annotation.AnnotationText="Add the process name to the logs generated after this point. &#xA;This log field can be used to create reports and visualizations about the process." DisplayName="Add Log Fields (BusinessProcessName)" sap:VirtualizedContainerService.HintSize="353.6,188.8" sap2010:WorkflowViewState.IdRef="AddLogFields_2">
+                                    <ui:AddLogFields sap2010:Annotation.AnnotationText="Add the process name to the logs generated after this point. &#xA;This log field can be used to create reports and visualizations about the process." DisplayName="Add Log Fields (BusinessProcessName)" sap:VirtualizedContainerService.HintSize="382.4,188.8" sap2010:WorkflowViewState.IdRef="AddLogFields_2">
                                       <ui:AddLogFields.Fields>
                                         <InArgument x:TypeArguments="x:String" x:Key="logF_BusinessProcessName">[Config("logF_BusinessProcessName").ToString]</InArgument>
                                       </ui:AddLogFields.Fields>
@@ -970,7 +970,7 @@
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
-                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_31">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1081,9 +1081,9 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.To>
-                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="&gt;&gt; 사용한 프로그램 종료 및 결과 메일 발송 " DisplayName="End Process" sap:VirtualizedContainerService.HintSize="595.2,1224.8" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="&gt;&gt; 사용한 프로그램 종료 및 결과 메일 발송 " DisplayName="End Process" sap:VirtualizedContainerService.HintSize="149.6,120" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                               <State.Entry>
-                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="550.4,1080" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="521.6,1022.4" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1091,13 +1091,13 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <TryCatch.Try>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="513.6,848.8" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="484.8,791.2" sap2010:WorkflowViewState.IdRef="Sequence_37">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[io_dt_TransationData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="451.2,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="RPA" WorkbookPath="[strResultFile]" />
+                                      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[io_dt_RPA결과]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="451.2,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="RPA" WorkbookPath="[strResultFile]" />
                                       <uasa:AppendItemToList x:TypeArguments="x:String" ItemIndex="{x:Null}" DisplayName="Append Item to List" sap:VirtualizedContainerService.HintSize="451.2,167.2" sap2010:WorkflowViewState.IdRef="AppendItemToList`1_1" ItemToAppend="[strResultFile]" List="[lstAttachment]" />
                                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="01. SendMail - 워크플로우 파일 호출 (Mail\01. SendMail.xaml)" sap:VirtualizedContainerService.HintSize="451.2,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_33" UnSafe="False" WorkflowFileName="Mail\01. SendMail.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
@@ -1108,15 +1108,15 @@
                                           <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_lstAttachment">[lstAttachment]</InArgument>
                                         </ui:InvokeWorkflowFile.Arguments>
                                       </ui:InvokeWorkflowFile>
-                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="451.2,238.4" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="451.2,209.6" sap2010:WorkflowViewState.IdRef="CommentOut_3">
                                         <ui:CommentOut.Body>
-                                          <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                          <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_39">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CloseAllApplications workflow" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="Framework\CloseAllApplications.xaml">
+                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CloseAllApplications workflow" sap:VirtualizedContainerService.HintSize="382.4,48" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="Framework\CloseAllApplications.xaml">
                                               <ui:InvokeWorkflowFile.Arguments>
                                                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                               </ui:InvokeWorkflowFile.Arguments>
@@ -1133,7 +1133,7 @@
                                     </Sequence>
                                   </TryCatch.Try>
                                   <TryCatch.Catches>
-                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="516.8,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="488,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_5">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1144,13 +1144,13 @@
                                         <ActivityAction.Argument>
                                           <DelegateInArgument x:TypeArguments="s:Exception" Name="Exception" />
                                         </ActivityAction.Argument>
-                                        <Sequence DisplayName="Failed to close applications, so kill processes" sap:VirtualizedContainerService.HintSize="416,460.8" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                        <Sequence DisplayName="Failed to close applications, so kill processes" sap:VirtualizedContainerService.HintSize="416,432" sap2010:WorkflowViewState.IdRef="Sequence_26">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:LogMessage DisplayName="Log message (Failed to close applications)" sap:VirtualizedContainerService.HintSize="353.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="Warn" Message="[&quot;Applications failed to close gracefully. &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source]" />
+                                          <ui:LogMessage DisplayName="Log message (Failed to close applications)" sap:VirtualizedContainerService.HintSize="382.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="Warn" Message="[&quot;Applications failed to close gracefully. &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source]" />
                                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke KillAllProcesses workflow (End process)" sap:VirtualizedContainerService.HintSize="353.6,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
                                             <ui:InvokeWorkflowFile.Arguments>
                                               <scg:Dictionary x:TypeArguments="x:String, Argument" />
@@ -1310,7 +1310,7 @@
       <Variable x:TypeArguments="scg:List(x:String)" Name="lstSuccess" />
       <Variable x:TypeArguments="x:String" Name="TransactionItem" />
       <Variable x:TypeArguments="sd:DataRow" Name="newRow" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dt_TransationData" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_RPA결과" />
     </StateMachine.Variables>
   </StateMachine>
 </Activity>

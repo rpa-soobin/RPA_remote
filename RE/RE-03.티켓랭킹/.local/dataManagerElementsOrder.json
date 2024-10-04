@@ -12,9 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "bl_Init_SystemException&StateMachine_1",
-        "bl_SystemException&StateMachine_1",
-        "bl_BusinessException&StateMachine_1",
+        "strMemo&StateMachine_1",
         "TransactionItem&StateMachine_1",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
@@ -34,14 +32,17 @@
         "dt랭킹_1위&StateMachine_1",
         "list실패항목&StateMachine_1",
         "list성공항목&StateMachine_1",
+        "bl_Init_SystemException&StateMachine_1",
+        "bl_BusinessException&StateMachine_1",
+        "bl_SystemException&StateMachine_1",
         "ShouldStop&Sequence_25"
       ],
       "ArgumentsSectionElementsOrder": [
-        "io_intFailCount",
-        "io_intSuccessCount",
-        "io_intTotalCount",
         "in_OrchestratorQueueName",
-        "in_OrchestratorQueueFolder"
+        "in_OrchestratorQueueFolder",
+        "io_intTotalCount",
+        "io_intSuccessCount",
+        "io_intFailCount"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -62,6 +63,7 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
+        "out_strMemo",
         "out_intFailCount",
         "out_intSuccessCount",
         "out_intTotalCount",
@@ -78,8 +80,12 @@
     {
       "Path": "Init/06. URL DT 추출.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "str클릭항목&Sequence_1",
+        "dt_URL&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [
+        "in_arr추출항목",
         "out_dt_TransactionData"
       ],
       "ConstantsSectionElementsOrder": [],
@@ -94,6 +100,8 @@
         "str추출항목&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "io_strMemo",
+        "io_intTotalCount",
         "in_strResultFile",
         "in_dt_TransactionData",
         "in_arr추출항목",
@@ -180,6 +188,8 @@
         "str클릭항목&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "io_strMemo",
+        "io_intSuccessCount",
         "in_strResultFile",
         "io_dt랭킹_1위",
         "in_arr추출항목",
@@ -239,6 +249,7 @@
       "Path": "Process/02. 티켓랭킹 DT 추출.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_29",
         "dt원본_추가&Sequence_1",
         "arrURL&Sequence_1",
         "listURL&Sequence_1",
@@ -359,6 +370,7 @@
         "str파일첨부&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_strMemo",
         "in_intFailCount",
         "in_intSuccessCount",
         "in_intTotalCount",
@@ -397,6 +409,7 @@
         "str파일첨부&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_strMemo",
         "in_intFailCount",
         "in_intSuccessCount",
         "in_intTotalCount",

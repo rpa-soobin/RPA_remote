@@ -1,0 +1,12 @@
+﻿{
+  "Name": "예스티켓 랭킹 페이지 이동 ㅣ Use Browser Chrome 예스24 티켓",
+  "Type": "App",
+  "Id": "DjQuPhbd0UCPhngttUX0uw",
+  "Reference": "331ckxpQO0Cp4QBlw9jPVg/DjQuPhbd0UCPhngttUX0uw",
+  "Created": "2024-10-01T01:10:08.8629748Z",
+  "Updated": "2024-10-01T01:10:08.8629748Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

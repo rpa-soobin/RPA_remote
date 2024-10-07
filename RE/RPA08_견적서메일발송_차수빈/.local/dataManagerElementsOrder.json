@@ -1,0 +1,359 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strMemo&State_3",
+        "strMemo&StateMachine_1",
+        "str첨부파일이름&StateMachine_1",
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "strTempFile&StateMachine_1",
+        "strResultFile&StateMachine_1",
+        "lstAttachment&StateMachine_1",
+        "list성공항목&StateMachine_1",
+        "list실패항목&StateMachine_1",
+        "bl_BusinessException&StateMachine_1",
+        "bl_SystemException&StateMachine_1",
+        "intTotalCount&StateMachine_1",
+        "intSuccessCount&StateMachine_1",
+        "intFailCount&StateMachine_1",
+        "bl_Init_SystemException&StateMachine_1",
+        "str품목코드&StateMachine_1",
+        "strPDF&StateMachine_1",
+        "ShouldStop&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strMemo",
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder",
+        "io_intTotalCount",
+        "io_intSuccessCount",
+        "io_intFailCount",
+        "io_list실패항목",
+        "io_list성공항목"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/02. 메일수신 및 내용추출.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strID&Sequence_1",
+        "sstrpw&Sequence_1",
+        "Mail메시지&Sequence_1",
+        "inu첨부파일&Sequence_1",
+        "str본문&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_str첨부파일이름"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/01. 파일확인.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bl_PDF확인&Sequence_1",
+        "bl파일확인&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strTempFile"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/03. 경로설정.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_str첨부파일이름",
+        "out_strPDF",
+        "out_strTempFile",
+        "out_strResultFile",
+        "out_lstAttachment",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/04. 파일 Copy.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_strTempFile",
+        "in_strResultFile"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/05. DT 구조 및 변수 생성.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_dt_TransactionData",
+        "in_strResultFile",
+        "out_list성공항목",
+        "out_list실패항목",
+        "out_bl_BusinessException",
+        "out_bl_SystemException",
+        "out_intTotalCount",
+        "out_intSuccessCount",
+        "out_intFailCount",
+        "out_strMemo"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/01. 반복문 변수 생성.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_str수량",
+        "io_TransactionItem",
+        "out_str품목코드"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/02. DT 추출.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt품목코드&Sequence_1",
+        "str상품정보&Sequence_1",
+        "str품목코드_추출&Sequence_1",
+        "bl확인&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_strMemo",
+        "in_str수량",
+        "in_str품목코드"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "out_TransactionField1",
+        "out_TransactionField2",
+        "out_TransactionID",
+        "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "End/01. 견적서 PDF 생성.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bl장바구니&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strPDF"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueRetry&Sequence_17",
+        "ScreenshotPath&Sequence_17"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_BusinessException",
+        "in_TransactionField1",
+        "in_TransactionField2",
+        "in_TransactionID",
+        "in_SystemException",
+        "in_Config",
+        "in_TransactionItem",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "io_ConsecutiveSystemExceptions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str수량&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strMemo",
+        "in_strPDF",
+        "in_dt_TransactionData",
+        "in_TransactionNumber",
+        "out_str품목코드",
+        "in_TransactionItem",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Mail/03. No data Mail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strHTML&Sequence_1",
+        "strName&Sequence_1",
+        "sstrpw&Sequence_1",
+        "str파일첨부&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_list성공항목",
+        "in_list실패항목",
+        "in_Config",
+        "in_strResultFile"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Mail/02. Fail Mail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strHTML&Sequence_1",
+        "strName&Sequence_1",
+        "sstrpw&Sequence_1",
+        "str파일첨부&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strPDF",
+        "in_dt_TransactionData",
+        "in_list성공항목",
+        "in_list실패항목",
+        "in_Config",
+        "in_strResultFile",
+        "in_intTotalCount",
+        "in_intSuccessCount",
+        "in_intFailCount",
+        "in_strMemo"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Mail/01. Success Mail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strHTML&Sequence_1",
+        "strName&Sequence_1",
+        "sstrpw&Sequence_1",
+        "str파일첨부&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strPDF",
+        "in_list성공항목",
+        "in_list실패항목",
+        "in_Config",
+        "in_strResultFile",
+        "in_intTotalCount",
+        "in_intSuccessCount",
+        "in_intFailCount",
+        "in_strMemo"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/06. 장바구니 초기화.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/05. DT 및 변수 생성.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_list성공항목",
+        "out_list실패항목",
+        "out_bl_BusinessException",
+        "out_bl_SystemException",
+        "out_intTotalCount",
+        "out_intSuccessCount",
+        "out_intFailCount",
+        "out_strMemo",
+        "in_strResultFile",
+        "out_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/03. 견적서 PDF 생성.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bl장바구니&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strPDF"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

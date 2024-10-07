@@ -1,0 +1,13 @@
+﻿{
+  "Name": "티켓랭킹 데이터 추가 ㅣ Extract Table Data",
+  "Type": "Element",
+  "Id": "KnrM8V9mHUye3YIe678m0Q",
+  "Reference": "331ckxpQO0Cp4QBlw9jPVg/KnrM8V9mHUye3YIe678m0Q",
+  "ParentRef": "331ckxpQO0Cp4QBlw9jPVg/7gxi9AOes0q-OqCwR_uG1A",
+  "Created": "2024-10-01T01:10:09.3002137Z",
+  "Updated": "2024-10-01T01:10:09.3002137Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

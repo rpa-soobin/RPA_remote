@@ -107,7 +107,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_01__견적서_PDF_생성" sap:VirtualizedContainerService.HintSize="1172,1183.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_01__견적서_PDF_생성" sap:VirtualizedContainerService.HintSize="657.6000000000001,1143.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="bl장바구니" />
     </Sequence.Variables>
@@ -116,7 +116,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="524,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;&gt;&gt;&gt; 견적서 PDF 생성_시작 ----------&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;&gt;&gt;&gt; 견적서 PDF 생성_시작 ----------&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -124,7 +124,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="오피스디포 장바구니 페이지 이동ㅣ Use Browser Chrome: 오피스디포 공식쇼핑몰" sap:VirtualizedContainerService.HintSize="524,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="529ffe36-fb59-4be1-b0e0-f2aaa174e254" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="오피스디포 장바구니 페이지 이동ㅣ Use Browser Chrome: 오피스디포 공식쇼핑몰" sap:VirtualizedContainerService.HintSize="452,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="529ffe36-fb59-4be1-b0e0-f2aaa174e254" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -248,7 +248,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="견적서 PDF 저장 ㅣ Use Browser Chrome: 오피스디포 공식쇼핑몰" sap:VirtualizedContainerService.HintSize="524,998.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="d70ba635-20f8-48e4-a041-6a361ea37f0b" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="견적서 PDF 저장 ㅣ Use Browser Chrome: 오피스디포 공식쇼핑몰" sap:VirtualizedContainerService.HintSize="452,958.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="d70ba635-20f8-48e4-a041-6a361ea37f0b" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -324,7 +324,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <Delay DisplayName=" Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="382.4,115.2" sap2010:WorkflowViewState.IdRef="Delay_7" />
+            <Delay DisplayName=" Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="382.4,115.2" sap2010:WorkflowViewState.IdRef="Delay_8" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
@@ -338,7 +338,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="524,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;---------- 견적서 PDF 생성_종료 &lt;&lt;&lt;&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;---------- 견적서 PDF 생성_종료 &lt;&lt;&lt;&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>

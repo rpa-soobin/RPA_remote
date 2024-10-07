@@ -111,7 +111,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="02. 메일수신 및 내용추출" sap:VirtualizedContainerService.HintSize="1181.6000000000001,3160.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="02. 메일수신 및 내용추출" sap:VirtualizedContainerService.HintSize="924.0000000000001,3160.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strID" />
       <Variable x:TypeArguments="ss:SecureString" Name="sstrpw" />
@@ -274,7 +274,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <If sap2010:Annotation.AnnotationText="&quot;작업지시서_2024018.xlsx&quot;&#xA;&#xA;Not str첨부파일이름.Contains(Today.ToString(&quot;yyMMdd&quot;))" Condition="[Not out_str첨부파일이름.Contains(Today.ToString(&quot;yyMMdd&quot;))]" sap:VirtualizedContainerService.HintSize="635.2,668" sap2010:WorkflowViewState.IdRef="If_3">
+    <If sap2010:Annotation.AnnotationText="&quot;작업지시서_2024018.xlsx&quot;&#xA;&#xA;Not str첨부파일이름.Contains(Today.ToString(&quot;yyMMdd&quot;))" Condition="[Not out_str첨부파일이름.Contains(Today.ToString(&quot;yyMMdd&quot;))]" sap:VirtualizedContainerService.HintSize="635.2,668" sap2010:WorkflowViewState.IdRef="If_5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>

@@ -120,7 +120,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="14. 메일 발송" sap:VirtualizedContainerService.HintSize="920.0000000000001,672" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="14. 메일 발송" sap:VirtualizedContainerService.HintSize="924.0000000000001,672" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strHTML" />
       <Variable x:TypeArguments="x:String" Name="strName" />
@@ -148,7 +148,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotCredential>
-    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="서버 : &quot;smtp.gmail.com&quot;&#xA;포트 : 587&#xA;본문 HTML임 = True&#xA;&#xA;String.Format(in_Config(&quot;Subject&quot;).ToString.Trim, in_Config(&quot;부서코드&quot;).ToString.Trim,in_Config(&quot;과제명&quot;).ToString.Trim, &quot;처리할 데이터가 없습니다.&quot;)&#xA;&#xA;String.Format(in_Config(&quot;MailBody_NoData&quot;).ToString.Trim,  today.ToString(&quot;yyMMdd&quot;), in_Config(&quot;과제명&quot;).ToString.Trim)" Body="[String.Format(in_Config(&quot;MailBody_NoData&quot;).ToString.Trim,  today.ToString(&quot;yyMMdd&quot;), in_Config(&quot;과제명&quot;).ToString.Trim)]" DisplayName="파일첨부 이메일 보내기 ㅣ Send SMTP Mail Message" Email="[strName]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="416,368.8" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Port="587" SecureConnection="Auto" SecurePassword="[sstrpw]" Server="smtp.gmail.com" Subject="[String.Format(in_Config(&quot;Subject&quot;).ToString.Trim, in_Config(&quot;부서코드&quot;).ToString.Trim,in_Config(&quot;과제명&quot;).ToString.Trim, &quot;처리할 데이터가 없습니다.&quot;)]" To="[in_Config(&quot;MailTo&quot;).ToString.Trim]">
+    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="서버 : &quot;smtp.gmail.com&quot;&#xA;포트 : 587&#xA;본문 HTML임 = True&#xA;&#xA;String.Format(in_Config(&quot;Subject&quot;).ToString.Trim, in_Config(&quot;부서코드&quot;).ToString.Trim,in_Config(&quot;과제명&quot;).ToString.Trim, &quot;처리할 데이터가 없습니다.&quot;)&#xA;&#xA;String.Format(in_Config(&quot;MailBody_NoData&quot;).ToString.Trim,  today.ToString(&quot;yyMMdd&quot;), in_Config(&quot;과제명&quot;).ToString.Trim)" Body="[String.Format(in_Config(&quot;MailBody_NoData&quot;).ToString.Trim,  today.ToString(&quot;yyMMdd&quot;), in_Config(&quot;과제명&quot;).ToString.Trim)]" DisplayName="파일첨부 이메일 보내기 ㅣ Send SMTP Mail Message" Email="[strName]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="416,368.8" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="True" Port="587" SecureConnection="Auto" SecurePassword="[sstrpw]" Server="smtp.gmail.com" Subject="[String.Format(in_Config(&quot;Subject&quot;).ToString.Trim, in_Config(&quot;부서코드&quot;).ToString.Trim,in_Config(&quot;과제명&quot;).ToString.Trim, &quot;처리할 데이터가 없습니다.&quot;)]" To="[in_Config(&quot;MailTo&quot;).ToString.Trim]">
       <ui:SendMail.Files>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
       </ui:SendMail.Files>

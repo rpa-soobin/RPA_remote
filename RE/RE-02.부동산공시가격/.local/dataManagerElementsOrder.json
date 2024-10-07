@@ -57,7 +57,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Process/02. DT 추출_(3).xaml",
+      "Path": "Process/01. DT 추출.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "list시도_추출&Sequence_1",
@@ -103,7 +103,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Init/04. 도로명 초성추출_(3).xaml",
+      "Path": "Init/04. 도로명 초성추출.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "초성&Sequence_1",
@@ -150,7 +150,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Init/03. DT 생성 및 컬럼수정_(3).xaml",
+      "Path": "Init/03. DT 생성 및 컬럼수정.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
@@ -187,7 +187,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Process/03. DT 가공_(3).xaml",
+      "Path": "Process/02. DT 가공.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "int기준가격&Sequence_1",
@@ -225,7 +225,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Process/04. DT 저장_(3).xaml",
+      "Path": "Process/03. DT 저장.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
@@ -236,7 +236,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Init/02. Copy File_(3).xaml",
+      "Path": "Init/02. Copy File.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [

@@ -83,9 +83,12 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_01__폴더확인" sap:VirtualizedContainerService.HintSize="1172,1402.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_01__폴더확인" sap:VirtualizedContainerService.HintSize="1181.6000000000001,1522.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="bl파일확인" />
       <Variable x:TypeArguments="x:Boolean" Name="bl_PDF확인" />
@@ -103,13 +106,19 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <Sequence DisplayName="Temp 파일 삭제 ㅣ Sequence" sap:VirtualizedContainerService.HintSize="483.2,608.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence DisplayName="Temp 파일 삭제 ㅣ Sequence" sap:VirtualizedContainerService.HintSize="483.2,668.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:FileExistsX DisplayName="File Exists" Exists="[bl파일확인]" sap:VirtualizedContainerService.HintSize="449.6,166.4" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="C:\C드라이브\UIPATH\RE\RPA08_견적서메일발송_차수빈\Data\Input\작업지시서_2024018.xlsx" />
+      <ui:FileExistsX sap2010:Annotation.AnnotationText="&quot;C:\C드라이브\UIPATH\RE\RPA08_견적서메일발송_차수빈\Data\Input\작업지시서_&quot; + Today.ToString(&quot;yyyyMMdd&quot;) + &quot;.xlsx&quot;" DisplayName="File Exists" Exists="[bl파일확인]" sap:VirtualizedContainerService.HintSize="449.6,226.4" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[&quot;C:\C드라이브\UIPATH\RE\RPA08_견적서메일발송_차수빈\Data\Input\작업지시서_&quot; + Today.ToString(&quot;yyyyMMdd&quot;) + &quot;.xlsx&quot;]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:FileExistsX>
       <If Condition="[bl파일확인]" sap:VirtualizedContainerService.HintSize="449.6,350.4" sap2010:WorkflowViewState.IdRef="If_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -124,7 +133,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="382.4,104" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="Data\Input\작업지시서_2024018.xlsx" />
+            <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="382.4,104" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[&quot;Data\Input\작업지시서_&quot; + Today.ToString(&quot;yyyyMMdd&quot;) + &quot;.xlsx&quot;]" />
           </Sequence>
         </If.Then>
         <If.Else>
@@ -139,13 +148,19 @@
         </If.Else>
       </If>
     </Sequence>
-    <Sequence DisplayName="PDF 결과파일 삭제 ㅣ Sequence" sap:VirtualizedContainerService.HintSize="483.2,608.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <Sequence DisplayName="PDF 결과파일 삭제 ㅣ Sequence" sap:VirtualizedContainerService.HintSize="483.2,668.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:FileExistsX DisplayName="File Exists" Exists="[bl_PDF확인]" sap:VirtualizedContainerService.HintSize="449.6,166.4" sap2010:WorkflowViewState.IdRef="FileExistsX_2" Path="C:\C드라이브\UIPATH\RE\RPA08_견적서메일발송_차수빈\Data\Output\오피스디포 견적서 _240918.pdf" />
+      <ui:FileExistsX sap2010:Annotation.AnnotationText="&quot;C:\C드라이브\UIPATH\RE\RPA08_견적서메일발송_차수빈\Data\Output\오피스디포_견적서_240918.pdf&quot;" DisplayName="File Exists" Exists="[bl_PDF확인]" sap:VirtualizedContainerService.HintSize="449.6,226.4" sap2010:WorkflowViewState.IdRef="FileExistsX_2" Path="C:\C드라이브\UIPATH\RE\RPA08_견적서메일발송_차수빈\Data\Output\오피스디포_견적서_240918.pdf">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:FileExistsX>
       <If Condition="[bl_PDF확인]" sap:VirtualizedContainerService.HintSize="449.6,350.4" sap2010:WorkflowViewState.IdRef="If_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -160,7 +175,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="382.4,104" sap2010:WorkflowViewState.IdRef="DeleteFileX_3" Path="Data\Output\오피스디포 견적서 _240918.pdf" />
+            <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="382.4,104" sap2010:WorkflowViewState.IdRef="DeleteFileX_3" Path="Data\Output\오피스디포_견적서_240918.pdf" />
           </Sequence>
         </If.Then>
         <If.Else>

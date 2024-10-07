@@ -144,7 +144,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="시작 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="{x:Null}" Message="[&quot;14. 메일 발송_시작&quot;]">
+    <ui:LogMessage DisplayName="시작 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;14. 메일 발송_시작&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -152,12 +152,12 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <Assign sap2010:Annotation.AnnotationText="&quot;C:\C드라이브\UIPATH\RE\RPA08_견적서메일발송_차수빈\Data\Output\&quot; + in_strPDF" DisplayName="결과파일 첨부 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+    <Assign sap2010:Annotation.AnnotationText="&quot;C:\C드라이브\UIPATH\RE\RPA08_견적서메일발송_차수빈\&quot; + in_strPDF" DisplayName="결과파일 첨부 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="Assign_6">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[str파일첨부]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">["C:\C드라이브\UIPATH\RE\RPA08_견적서메일발송_차수빈\Data\Output\" + in_strPDF]</InArgument>
+        <InArgument x:TypeArguments="x:String">["C:\C드라이브\UIPATH\RE\RPA08_견적서메일발송_차수빈\" + in_strPDF]</InArgument>
       </Assign.Value>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -167,7 +167,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <ui:GetRobotCredential AssetName="Gmail_login" CacheStrategy="None" DisplayName="Get Credential" FolderPath="rpa.soobin@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="433.6,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[sstrpw]" TimeoutMS="{x:Null}" Username="[strName]">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Gmail_login" CacheStrategy="None" DisplayName="Get Credential" FolderPath="rpa.soobin@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="433.6,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[sstrpw]" Username="[strName]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -175,7 +175,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotCredential>
-    <ui:SendMail sap2010:Annotation.AnnotationText="서버 : &quot;smtp.gmail.com&quot;&#xA;포트 : 587&#xA;본문 HTML임 = True&#xA;&#xA;String.Format(in_Config(&quot;Subject&quot;).ToString.Trim, in_Config(&quot;부서코드&quot;).ToString.Trim,in_Config(&quot;과제명&quot;).ToString.Trim, &quot;성공입니다.&quot;)&#xA;&#xA;String.Format(in_Config(&quot;MailBody&quot;).ToString.Trim,  today.ToString(&quot;yyMMdd&quot;), in_Config(&quot;과제명&quot;).ToString.Trim, String.Join(&quot;, &quot;, in_list성공항목), String.Join(&quot;, &quot;, in_list실패항목), in_intTotalCount, in_intSuccessCount, in_intFailCount, in_strMemo)" AttachmentsCollection="{x:Null}" Bcc="{x:Null}" Body="[String.Format(in_Config(&quot;MailBody&quot;).ToString.Trim,  today.ToString(&quot;yyMMdd&quot;), in_Config(&quot;과제명&quot;).ToString.Trim, String.Join(&quot;, &quot;, in_list성공항목), String.Join(&quot;, &quot;, in_list실패항목), in_intTotalCount, in_intSuccessCount, in_intFailCount, in_strMemo)]" Cc="{x:Null}" ContinueOnError="{x:Null}" DisplayName="파일첨부 이메일 보내기 ㅣ Send SMTP Mail Message" Email="[strName]" EnableSSL="True" From="{x:Null}" sap:VirtualizedContainerService.HintSize="433.6,400.8" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="True" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" Port="587" ReplyTo="{x:Null}" Result="{x:Null}" SecureConnection="Auto" SecurePassword="[sstrpw]" Server="smtp.gmail.com" Subject="[String.Format(in_Config(&quot;Subject&quot;).ToString.Trim, in_Config(&quot;부서코드&quot;).ToString.Trim,in_Config(&quot;과제명&quot;).ToString.Trim, &quot;성공입니다.&quot;)]" TimeoutMS="{x:Null}" To="[in_Config(&quot;MailTo&quot;).ToString.Trim]" UseOAuth="{x:Null}">
+    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="서버 : &quot;smtp.gmail.com&quot;&#xA;포트 : 587&#xA;본문 HTML임 = True&#xA;&#xA;String.Format(in_Config(&quot;Subject&quot;).ToString.Trim, in_Config(&quot;부서코드&quot;).ToString.Trim,in_Config(&quot;과제명&quot;).ToString.Trim, &quot;성공입니다.&quot;)&#xA;&#xA;String.Format(in_Config(&quot;MailBody&quot;).ToString.Trim,  today.ToString(&quot;yyMMdd&quot;), in_Config(&quot;과제명&quot;).ToString.Trim, String.Join(&quot;, &quot;, in_list성공항목), String.Join(&quot;, &quot;, in_list실패항목), in_intTotalCount, in_intSuccessCount, in_intFailCount, in_strMemo)" Body="[String.Format(in_Config(&quot;MailBody&quot;).ToString.Trim,  today.ToString(&quot;yyMMdd&quot;), in_Config(&quot;과제명&quot;).ToString.Trim, String.Join(&quot;, &quot;, in_list성공항목), String.Join(&quot;, &quot;, in_list실패항목), in_intTotalCount, in_intSuccessCount, in_intFailCount, in_strMemo)]" DisplayName="파일첨부 이메일 보내기 ㅣ Send SMTP Mail Message" Email="[strName]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="433.6,400.8" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="True" Port="587" SecureConnection="Auto" SecurePassword="[sstrpw]" Server="smtp.gmail.com" Subject="[String.Format(in_Config(&quot;Subject&quot;).ToString.Trim, in_Config(&quot;부서코드&quot;).ToString.Trim,in_Config(&quot;과제명&quot;).ToString.Trim, &quot;성공입니다.&quot;)]" To="[in_Config(&quot;MailTo&quot;).ToString.Trim]">
       <ui:SendMail.Files>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
           <InArgument x:TypeArguments="x:String">[str파일첨부]</InArgument>
@@ -189,7 +189,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:SendMail>
-    <ui:LogMessage DisplayName="종료 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="433.6,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="{x:Null}" Message="[&quot;14. 메일 발송_종료&quot;]">
+    <ui:LogMessage DisplayName="종료 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="433.6,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;14. 메일 발송_종료&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>

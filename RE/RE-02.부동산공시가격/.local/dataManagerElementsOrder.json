@@ -30,7 +30,6 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "bl_BusinessException&StateMachine_1",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
         "TransactionNumber&StateMachine_1",
@@ -47,6 +46,7 @@
         "TransactionItem&StateMachine_1",
         "dt_TransactionData&StateMachine_1",
         "excelSheet&StateMachine_1",
+        "bl_BusinessException&StateMachine_1",
         "ShouldStop&Sequence_25"
       ],
       "ArgumentsSectionElementsOrder": [

@@ -121,7 +121,7 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="08. 메일 발송" sap:VirtualizedContainerService.HintSize="913.6000000000001,1337.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="08. 메일 발송" sap:VirtualizedContainerService.HintSize="924.0000000000001,1337.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strName" />
       <Variable x:TypeArguments="ss:SecureString" Name="sstrpw" />
@@ -142,7 +142,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="strName&#xA;sstrpw" AssetName="Gmail_login" CacheStrategy="None" DisplayName="Gmail 로그인 에셋 가져오기 ㅣ Get Credential" FolderPath="rpa.soobin@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="433.6,219.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[sstrpw]" Username="[strName]">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="strName&#xA;sstrpw" AssetName="Gmail_login_2" CacheStrategy="None" DisplayName="Gmail 로그인 에셋 가져오기 ㅣ Get Credential" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="433.6,219.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[sstrpw]" Username="[strName]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>

@@ -12,9 +12,6 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "strMemo&State_3",
-        "strMemo&StateMachine_1",
-        "str첨부파일이름&StateMachine_1",
         "TransactionItem&StateMachine_1",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
@@ -39,17 +36,19 @@
         "bl_Init_SystemException&StateMachine_1",
         "str품목코드&StateMachine_1",
         "strPDF&StateMachine_1",
+        "str첨부파일이름&StateMachine_1",
+        "strMemo&StateMachine_1",
         "ShouldStop&Sequence_25"
       ],
       "ArgumentsSectionElementsOrder": [
-        "in_strMemo",
         "in_OrchestratorQueueName",
         "in_OrchestratorQueueFolder",
         "io_intTotalCount",
         "io_intSuccessCount",
         "io_intFailCount",
         "io_list실패항목",
-        "io_list성공항목"
+        "io_list성공항목",
+        "in_strMemo"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -185,18 +184,6 @@
         "out_TransactionField2",
         "out_TransactionID",
         "io_dt_TransactionData"
-      ],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "End/01. 견적서 PDF 생성.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "bl장바구니&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [
-        "in_strPDF"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

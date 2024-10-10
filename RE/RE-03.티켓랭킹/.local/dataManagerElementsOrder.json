@@ -201,32 +201,6 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Init/00. Main_추가.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "arr추출항목&Sequence_1",
-        "dt티켓랭킹&Sequence_1",
-        "dt랭킹_1위&Sequence_1",
-        "str추출항목&Sequence_1",
-        "idx_추출항목&Sequence_1",
-        "dtURL&Sequence_1",
-        "strURL&Sequence_1",
-        "str클릭항목&Sequence_1",
-        "list성공항목&Sequence_1",
-        "list실패항목&Sequence_1",
-        "str시트이름&Sequence_1",
-        "str정보&Sequence_1",
-        "str시작일&Sequence_1",
-        "str종료일_장소&Sequence_1",
-        "str종료일&Sequence_1",
-        "str장소&Sequence_1",
-        "str시트명&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
       "Path": "Process/01. DT 반복문 변수 생성.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],

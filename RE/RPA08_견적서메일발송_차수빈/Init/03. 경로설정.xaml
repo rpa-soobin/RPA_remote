@@ -109,7 +109,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:MultipleAssign sap2010:Annotation.AnnotationText="strTempFile = path.Combine(in_Config(&quot;InputPath&quot;).ToString.trim, in_Config(&quot;템플릿양식명&quot;).Tostring.Trim)&#xA;&#xA;strResultFile = path.Combine(in_Config(&quot;OutputPath&quot;).ToString.Trim, String.Format(in_Config(&quot;결과양식명&quot;).ToString.Trim, Today.ToString(&quot;yyMMdd&quot;)))&#xA;&#xA;strPDF = path.Combine(in_Config(&quot;OutputPath&quot;).ToString.Trim, in_Config(&quot;PDF양식명&quot;).Tostring.Trim)" DisplayName="경로 설정 | Multiple Assign" sap:VirtualizedContainerService.HintSize="480,398.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign sap2010:Annotation.AnnotationText="strTempFile = path.Combine(in_Config(&quot;InputPath&quot;).ToString.trim, in_str첨부파일이름)&#xA;&#xA;strResultFile = path.Combine(in_Config(&quot;OutputPath&quot;).ToString.Trim, String.Format(in_Config(&quot;결과양식명&quot;).ToString.Trim, Today.ToString(&quot;yyMMdd&quot;)))&#xA;&#xA;strPDF = path.Combine(in_Config(&quot;OutputPath&quot;).ToString.Trim, in_Config(&quot;PDF양식명&quot;).Tostring.Trim)" DisplayName="경로 설정 | Multiple Assign" sap:VirtualizedContainerService.HintSize="480,398.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">

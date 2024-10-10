@@ -128,7 +128,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="05. DT 및 변수 생성" sap:VirtualizedContainerService.HintSize="1172,615.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="05. DT 및 변수 생성" sap:VirtualizedContainerService.HintSize="1181.6000000000001,646.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -143,7 +143,7 @@
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
     <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[out_dt_TransactionData]" DisplayName="out_dt_TransactionData l Read Range Workbook" sap:VirtualizedContainerService.HintSize="480,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="오피스디포" WorkbookPath="[in_strResultFile]" />
-    <ui:MultipleAssign DisplayName="변수 생성 ㅣ Multiple Assign" sap:VirtualizedContainerService.HintSize="480,367.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign sap2010:Annotation.AnnotationText="out_strMemo = New System.Text.StringBuilder()" DisplayName="변수 생성 ㅣ Multiple Assign" sap:VirtualizedContainerService.HintSize="480,398.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -212,6 +212,11 @@
           </ui:AssignOperation>
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
     <ui:LogMessage DisplayName="종료 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="480,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;---------- 05. DT 및 변수 생성_종료 &lt;&lt;&lt;&quot;]">
       <sap:WorkflowViewStateService.ViewState>

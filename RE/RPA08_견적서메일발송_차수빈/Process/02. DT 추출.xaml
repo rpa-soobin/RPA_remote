@@ -120,7 +120,7 @@
       <AssemblyReference>System.Text.Encoding.CodePages</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_02__DT_추출" sap:VirtualizedContainerService.HintSize="1728,3713.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_02__DT_추출" sap:VirtualizedContainerService.HintSize="1181.6000000000001,1875.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="bl확인" />
       <Variable x:TypeArguments="x:String" Name="str품목코드_추출" />
@@ -132,7 +132,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1728,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;&gt;&gt;&gt; 품목코드 : &quot; + in_str품목코드 + &quot; 수량 : &quot; + in_str수량 + &quot; 추출 시작 ----------&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="584,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;&gt;&gt;&gt; 품목코드 : &quot; + in_str품목코드 + &quot; 수량 : &quot; + in_str수량 + &quot; 추출 시작 ----------&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -140,43 +140,43 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="&quot;https://www.officedepot.co.kr/main/mainView.do&quot;&#xA;&quot;https://www.officedepot.co.kr/main/searchItemList.do?kw=517751&quot;&#xA;&quot;https://www.officedepot.co.kr/main/searchItemList.do?kw=&quot; + in_str품목코드" AttachMode="ByInstance" CloseMode="Never" DisplayName="오피스디포 검색페이지 이동 ㅣ Use Browser Chrome: 오피스디포 공식쇼핑몰" sap:VirtualizedContainerService.HintSize="1728,3585.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="f6534118-07ee-42ac-a15e-7c81ad225145" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="&quot;https://www.officedepot.co.kr/main/searchItemList.do?kw=&quot; + in_str품목코드" AttachMode="ByInstance" CloseMode="Never" DisplayName="오피스디포 검색페이지 이동 ㅣ Use Browser Chrome: 오피스디포 공식쇼핑몰" sap:VirtualizedContainerService.HintSize="584,1747.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="f6534118-07ee-42ac-a15e-7c81ad225145" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="1694.4,3276.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="550.4,1467.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGoToUrl sap2010:Annotation.AnnotationText="&quot;https://www.officedepot.co.kr/main/searchItemList.do?kw=&quot; + in_str품목코드" DisplayName="페이지 확인용 ㅣ Go To URL" sap:VirtualizedContainerService.HintSize="1660.8,158.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_4" Url="[&quot;https://www.officedepot.co.kr/main/searchItemList.do?kw=&quot; + in_str품목코드]" Version="V4">
+            <uix:NGoToUrl sap2010:Annotation.AnnotationText="&quot;https://www.officedepot.co.kr/main/searchItemList.do?kw=&quot; + in_str품목코드" DisplayName="페이지 확인용 ㅣ Go To URL" sap:VirtualizedContainerService.HintSize="516.8,158.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_4" Url="[&quot;https://www.officedepot.co.kr/main/searchItemList.do?kw=&quot; + in_str품목코드]" Version="V4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NGoToUrl>
-            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt품목코드]" DisplayName="dt품목코드 추출 ㅣ Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='상품정보'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="1660.8,189.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="f6534118-07ee-42ac-a15e-7c81ad225145" Version="V4">
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt품목코드]" DisplayName="dt품목코드 추출 ㅣ Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='상품정보'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="516.8,189.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="f6534118-07ee-42ac-a15e-7c81ad225145" Version="V4">
               <uix:NExtractData.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.officedepot.co.kr/main/searchItemList.do?kw=312891" DesignTimeRectangle="418, 529, 1082, 397" DesignTimeScaleFactor="1" ElementType="List" FullSelectorArgument="&lt;webctrl class='goodsBox' parentid='container' tag='UL' /&gt;" Guid="935dd813-8fac-4300-aa0e-fc1ca9081ee6" InformativeScreenshot="54cf8729b4180be19ec87b848b294144.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='오피스디포 공식쇼핑몰' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
               </uix:NExtractData.Target>
             </uix:NExtractData>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt품목코드]" DisplayName="dt품목코드 반복문 ㅣ For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1660.8,2817.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt품목코드]" DisplayName="dt품목코드 반복문 ㅣ For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="516.8,1008" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="1627.2,2620" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                  <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="483.2,810.4" sap2010:WorkflowViewState.IdRef="Sequence_21">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap2010:Annotation.AnnotationText="CurrentRow(&quot;상품정보&quot;).ToString.Trim&#xA;&#xA;" DisplayName="str상품정보 ㅣ Assign" sap:VirtualizedContainerService.HintSize="1593.6,173.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign sap2010:Annotation.AnnotationText="CurrentRow(&quot;상품정보&quot;).ToString.Trim&#xA;&#xA;" DisplayName="str상품정보 ㅣ Assign" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Assign_2">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[str상품정보]</OutArgument>
                       </Assign.To>
@@ -189,7 +189,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </Assign>
-                    <Assign sap2010:Annotation.AnnotationText="str상품정보.Substring(str상품정보.IndexOf(&quot;(&quot;) + 1, str상품정보.IndexOf(&quot;)&quot;) - str상품정보.IndexOf(&quot;(&quot;) - 1)" DisplayName="str품목코드_추출 ㅣ Assign" sap:VirtualizedContainerService.HintSize="1593.6,157.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign sap2010:Annotation.AnnotationText="str상품정보.Substring(str상품정보.IndexOf(&quot;(&quot;) + 1, str상품정보.IndexOf(&quot;)&quot;) - str상품정보.IndexOf(&quot;(&quot;) - 1)" DisplayName="str품목코드_추출 ㅣ Assign" sap:VirtualizedContainerService.HintSize="449.6,157.6" sap2010:WorkflowViewState.IdRef="Assign_3">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[str품목코드_추출]</OutArgument>
                       </Assign.To>
@@ -202,7 +202,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </Assign>
-                    <If Condition="[in_str품목코드 = str품목코드_추출]" DisplayName="[검증] 품목코드 일치여부 ㅣ If" sap:VirtualizedContainerService.HintSize="1593.6,2228.8" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If Condition="[in_str품목코드 = str품목코드_추출]" DisplayName="[검증] 품목코드 일치여부 ㅣ If" sap:VirtualizedContainerService.HintSize="449.6,419.2" sap2010:WorkflowViewState.IdRef="If_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -210,13 +210,13 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1560,1977.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="Sequence_3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NCheckState sap2010:Annotation.AnnotationText="--- 엄격한 선택기&#xD;&#xA;&lt;webctrl class='soldOut*' parentid='container' tag='DIV' /&gt;" DisplayName="품절여부 확인 ㅣ Check App State 'DIV'" sap:VirtualizedContainerService.HintSize="1526.4,1917.6" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="f6534118-07ee-42ac-a15e-7c81ad225145" Version="V4">
+                          <uix:NCheckState sap2010:Annotation.AnnotationText="--- 엄격한 선택기&#xA;&lt;webctrl class='soldOut*' parentid='container' tag='DIV' /&gt;" DisplayName="품절여부 확인 ㅣ Check App State 'DIV'" sap:VirtualizedContainerService.HintSize="382.4,108" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="f6534118-07ee-42ac-a15e-7c81ad225145" Version="V4">
                             <uix:NCheckState.IfExists>
                               <Sequence DisplayName="타겟이 나타남" sap:VirtualizedContainerService.HintSize="467.2,212.8" sap2010:WorkflowViewState.IdRef="Sequence_32">
                                 <sap:WorkflowViewStateService.ViewState>
@@ -240,7 +240,7 @@
                               </Sequence>
                             </uix:NCheckState.IfExists>
                             <uix:NCheckState.IfNotExists>
-                              <Sequence DisplayName="타겟이 나타나지 않음" sap:VirtualizedContainerService.HintSize="1006.4,1632" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                              <Sequence DisplayName="타겟이 나타나지 않음" sap:VirtualizedContainerService.HintSize="1006.4,1633.6" sap2010:WorkflowViewState.IdRef="Sequence_33">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -350,7 +350,7 @@
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:CommentOut>
                                 <Delay DisplayName=" Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="972.8,122.4" sap2010:WorkflowViewState.IdRef="Delay_4" />
-                                <uix:NCheckState sap2010:Annotation.AnnotationText="--- 엄격한 선택기 &#xA;&lt;ctrl name='www.officedepot.co.kr 내용:' role='dialog' /&gt;&#xA;&lt;ctrl name='[*품절] 상품은 장바구니에 담을 수 없습니다.' role='text' /&gt;&#xA;" DisplayName="[검증] 품절여부 확인 ㅣ Check App State '[일시품절] 상품은 장바구니에 담을 수 없…'" sap:VirtualizedContainerService.HintSize="972.8,792.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="f6534118-07ee-42ac-a15e-7c81ad225145" Version="V4">
+                                <uix:NCheckState sap2010:Annotation.AnnotationText="--- 엄격한 선택기 &#xA;&lt;ctrl name='www.officedepot.co.kr 내용:' role='dialog' /&gt;&#xA;&lt;ctrl name='[*품절] 상품은 장바구니에 담을 수 없습니다.' role='text' /&gt;&#xA;" DisplayName="[검증] 품절여부 확인 ㅣ Check App State '[일시품절] 상품은 장바구니에 담을 수 없…'" sap:VirtualizedContainerService.HintSize="972.8,794.4" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="f6534118-07ee-42ac-a15e-7c81ad225145" Version="V4">
                                   <uix:NCheckState.IfExists>
                                     <Sequence DisplayName="타겟이 나타남" sap:VirtualizedContainerService.HintSize="449.6,372" sap2010:WorkflowViewState.IdRef="Sequence_30">
                                       <sap:WorkflowViewStateService.ViewState>
@@ -387,7 +387,7 @@
                                     </Sequence>
                                   </uix:NCheckState.IfExists>
                                   <uix:NCheckState.IfNotExists>
-                                    <Sequence DisplayName="타겟이 나타나지 않음" sap:VirtualizedContainerService.HintSize="470.4,473.6" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                    <Sequence DisplayName="타겟이 나타나지 않음" sap:VirtualizedContainerService.HintSize="470.4,475.2" sap2010:WorkflowViewState.IdRef="Sequence_31">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -451,7 +451,7 @@
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
@@ -478,7 +478,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ForEachRow>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1660.8,49.6" sap2010:WorkflowViewState.IdRef="CommentOut_17">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="516.8,49.6" sap2010:WorkflowViewState.IdRef="CommentOut_17">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="467.2,398.4" sap2010:WorkflowViewState.IdRef="Sequence_29">
                   <sap:WorkflowViewStateService.ViewState>
@@ -533,7 +533,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1728,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;---------- 품목코드 : &quot; + in_str품목코드 + &quot; 수량 : &quot; + in_str수량 + &quot; 추출 시작 &lt;&lt;&lt;&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="584,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;---------- 품목코드 : &quot; + in_str품목코드 + &quot; 수량 : &quot; + in_str수량 + &quot; 추출 시작 &lt;&lt;&lt;&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>

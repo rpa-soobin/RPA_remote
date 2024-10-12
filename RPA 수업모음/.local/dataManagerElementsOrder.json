@@ -473,14 +473,14 @@
       "Path": "Mail/02. CreateHTML.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "arr파일첨부&Sequence_1",
-        "str제목&Sequence_1",
-        "str본문&Sequence_1",
-        "str파일첨부&Sequence_1",
-        "sstrpw&Sequence_1",
-        "strName&Sequence_1",
+        "dtResult&Sequence_1",
         "strHTML&Sequence_1",
-        "dtResult&Sequence_1"
+        "strName&Sequence_1",
+        "sstrpw&Sequence_1",
+        "str파일첨부&Sequence_1",
+        "str본문&Sequence_1",
+        "str제목&Sequence_1",
+        "arr파일첨부&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],

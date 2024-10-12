@@ -231,6 +231,16 @@
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "네이버쇼핑/01. 폴더확인.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bl폴더확인&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }

@@ -123,7 +123,7 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_02__DT_추출" sap:VirtualizedContainerService.HintSize="1181.6000000000001,3892.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_02__DT_추출" sap:VirtualizedContainerService.HintSize="1181.6000000000001,3852.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="bl팝업창" />
       <Variable x:TypeArguments="x:String" Name="str월" />
@@ -141,13 +141,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="외교부 페이지 이동 ㅣ Use Browser Chrome: 월별세입징수현황 | 세입세출예산운용상황 외교부" sap:VirtualizedContainerService.HintSize="702.4,3764.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="96d2117e-b772-4fb8-b3be-b29d4c12cb18" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="외교부 페이지 이동 ㅣ Use Browser Chrome: 월별세입징수현황 | 세입세출예산운용상황 외교부" sap:VirtualizedContainerService.HintSize="702.4,3724.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="96d2117e-b772-4fb8-b3be-b29d4c12cb18" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="668.8,3516" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="668.8,3476" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd1:Rectangle" Name="positionBefore" />
               <Variable x:TypeArguments="sd1:Rectangle" Name="positionAfter" />
@@ -254,7 +254,7 @@
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <If Condition="[bl팝업창 = True]" DisplayName="월별 지출집행현황 데이터가 없다면 ㅣ If" sap:VirtualizedContainerService.HintSize="635.2,2362.4" sap2010:WorkflowViewState.IdRef="If_4">
+            <If Condition="[bl팝업창 = True]" DisplayName="월별 지출집행현황 데이터가 없다면 ㅣ If" sap:VirtualizedContainerService.HintSize="635.2,2322.4" sap2010:WorkflowViewState.IdRef="If_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -262,7 +262,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="601.6,1958.4" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="601.6,1918.4" sap2010:WorkflowViewState.IdRef="Sequence_20">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -282,7 +282,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </Assign>
-                  <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="시트 삭제 ㅣ Excel Process Scope" sap:VirtualizedContainerService.HintSize="568,708" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_4">
+                  <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="시트 삭제 ㅣ Excel Process Scope" sap:VirtualizedContainerService.HintSize="568,668" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_4">
                     <ueab:ExcelProcessScopeX.Body>
                       <ActivityAction x:TypeArguments="ui:IExcelProcess">
                         <ActivityAction.Argument>

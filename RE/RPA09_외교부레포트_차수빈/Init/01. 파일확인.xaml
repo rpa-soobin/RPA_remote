@@ -80,7 +80,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="01. 파일확인" sap:VirtualizedContainerService.HintSize="924.0000000000001,710.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="01. 파일확인" sap:VirtualizedContainerService.HintSize="1181.6000000000001,757.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="bl파일확인" />
       <Variable x:TypeArguments="x:Boolean" Name="bl_PDF확인" />
@@ -98,8 +98,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:FileExistsX DisplayName="File Exists" Exists="[bl파일확인]" sap:VirtualizedContainerService.HintSize="449.6,166.4" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[&quot;C:\C드라이브\UIPATH\RE\RPA09_외교부레포트_차수빈\Data\Output\Result_&quot; + Today.ToString(&quot;yyyyMMdd&quot;) + &quot;.xlsx&quot;]" />
-    <If Condition="[bl파일확인]" sap:VirtualizedContainerService.HintSize="449.6,359.2" sap2010:WorkflowViewState.IdRef="If_1">
+    <ui:FileExistsX sap2010:Annotation.AnnotationText="&quot;C:\C드라이브\UIPATH\RE\RPA09_외교부레포트_차수빈\Data\Output\Result_&quot; + Today.ToString(&quot;yyyyMMdd&quot;) + &quot;.xlsx&quot;" DisplayName="File Exists" Exists="[bl파일확인]" sap:VirtualizedContainerService.HintSize="449.6,226.4" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[&quot;C:\C드라이브\UIPATH\RE\RPA09_외교부레포트_차수빈\Data\Output\Result_&quot; + Today.ToString(&quot;yyyyMMdd&quot;) + &quot;.xlsx&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:FileExistsX>
+    <If Condition="[bl파일확인]" sap:VirtualizedContainerService.HintSize="449.6,403.2" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -107,13 +113,19 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,164" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,208" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="382.4,104" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[&quot;Data\Input\Result_&quot; + Today.ToString(&quot;yyyyMMdd&quot;) + &quot;.xlsx&quot;]" />
+          <ui:DeleteFileX sap2010:Annotation.AnnotationText="&quot;Data\Input\Result_&quot; + Today.ToString(&quot;yyyyMMdd&quot;) + &quot;.xlsx&quot;" DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="382.4,148" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[&quot;Data\Input\Result_&quot; + Today.ToString(&quot;yyyyMMdd&quot;) + &quot;.xlsx&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:DeleteFileX>
         </Sequence>
       </If.Then>
       <If.Else>
@@ -127,24 +139,6 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="416,217.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:CreateFile ContinueOnError="{x:Null}" Name="{x:Null}" Output="{x:Null}" DisplayName="Create File" sap:VirtualizedContainerService.HintSize="382.4,157.6" sap2010:WorkflowViewState.IdRef="CreateFile_1" Path="[in_strTempFile]" />
-        </Sequence>
-      </ui:CommentOut.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:CommentOut>
     <ui:LogMessage DisplayName="종료 ㅣ Log Message" sap:VirtualizedContainerService.HintSize="449.6,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;---------- 01. 파일확인_종료 &lt;&lt;&lt;&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">

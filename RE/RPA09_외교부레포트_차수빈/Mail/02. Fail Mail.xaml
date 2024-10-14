@@ -111,9 +111,10 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Text.Encoding.CodePages</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_01__Success_Mail" sap:VirtualizedContainerService.HintSize="924.0000000000001,826.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_01__Success_Mail" sap:VirtualizedContainerService.HintSize="1181.6000000000001,1134.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strHTML" />
       <Variable x:TypeArguments="x:String" Name="str파일첨부" />
@@ -133,7 +134,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <Assign DisplayName="strHTML l Assign" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap2010:Annotation.AnnotationText="in_dt당월집행액0원.ToHtmlTable&#xD;&#xA;----- 가져오기 - &quot;UiPath.DataTableUtilies&quot;" DisplayName="strHTML l Assign" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[strHTML]</OutArgument>
       </Assign.To>
@@ -144,10 +145,11 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <Assign DisplayName="strHTML 형식 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,115.2" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap2010:Annotation.AnnotationText="strHTML.Replace(&quot;&lt;table&gt;&lt;tr&gt;&quot;,&#xD;&#xA;    &quot;&lt;table class='table' style='width: 100%; border-collapse: collapse; table-layout: auto;' border='1'&gt;&quot; +&#xD;&#xA;    &quot;&lt;tr style='background-color: #E7DEFF; text-align: center; font-size: 16px; font-weight: bold;'&gt;&quot;).Replace(&quot;&lt;td&gt;&quot;, &quot;&lt;td style='text-align: center;'&gt;&quot;)" DisplayName="strHTML 형식 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,223.2" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[strHTML]</OutArgument>
       </Assign.To>
@@ -160,6 +162,7 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
@@ -185,7 +188,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotCredential>
-    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="[String.Format(in_Config(&quot;MailBody&quot;).ToString.Trim, String.Join(&quot;, &quot;, in_list성공항목), String.Join(&quot;, &quot;, in_list실패항목), strHTML, in_intTotalCount, in_intSuccessCount, in_intFailCount, in_strMemo)]" DisplayName="파일첨부 이메일 보내기 ㅣ Send SMTP Mail Message" Email="[strName]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="433.6,180.8" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="True" Port="587" SecureConnection="Auto" SecurePassword="[sstrpw]" Server="smtp.gmail.com" Subject="[String.Format(in_Config(&quot;Subject&quot;).ToString.Trim, in_Config(&quot;과제명&quot;).ToString.Trim)]" To="[in_Config(&quot;MailTo&quot;).ToString.Trim]">
+    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="---------- 제목 &#xD;&#xA;String.Format(in_Config(&quot;Subject&quot;).ToString.Trim, in_Config(&quot;과제명&quot;).ToString.Trim)&#xD;&#xA;&#xD;&#xA;---------- 본문&#xD;&#xA;String.Format(in_Config(&quot;MailBody&quot;).ToString.Trim, String.Join(&quot;, &quot;, in_list성공항목), String.Join(&quot;, &quot;, in_list실패항목), strHTML, in_intTotalCount, in_intSuccessCount, in_intFailCount, in_strMemo)" Body="[String.Format(in_Config(&quot;MailBody&quot;).ToString.Trim, String.Join(&quot;, &quot;, in_list성공항목), String.Join(&quot;, &quot;, in_list실패항목), strHTML, in_intTotalCount, in_intSuccessCount, in_intFailCount, in_strMemo)]" DisplayName="파일첨부 이메일 보내기 ㅣ Send SMTP Mail Message" Email="[strName]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="433.6,336.8" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="True" Port="587" SecureConnection="Auto" SecurePassword="[sstrpw]" Server="smtp.gmail.com" Subject="[String.Format(in_Config(&quot;Subject&quot;).ToString.Trim, in_Config(&quot;과제명&quot;).ToString.Trim)]" To="[in_Config(&quot;MailTo&quot;).ToString.Trim]">
       <ui:SendMail.Files>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
           <InArgument x:TypeArguments="x:String">[str파일첨부]</InArgument>
@@ -195,6 +198,7 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:SendMail>

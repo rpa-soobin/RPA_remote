@@ -93,7 +93,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="02. 경로설정" sap:VirtualizedContainerService.HintSize="940.8000000000001,560.44" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="02. 경로설정" sap:VirtualizedContainerService.HintSize="1198.4,562.84" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -107,7 +107,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:MultipleAssign DisplayName="경로 설정 | Multiple Assign" sap:VirtualizedContainerService.HintSize="480,212" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign sap2010:Annotation.AnnotationText="out_strTempFile = path.Combine(in_Config(&quot;InputPath&quot;).ToString.trim, in_Config(&quot;템플릿양식명&quot;).ToString.Trim)&#xD;&#xA;&#xD;&#xA;out_strResultFile = path.Combine(in_Config(&quot;OutputPath&quot;).ToString.Trim, String.Format(in_Config(&quot;결과양식명&quot;).ToString.Trim, Today.ToString(&quot;yyMMdd&quot;)))&#xD;&#xA;&#xD;&#xA;out_strURL = in_Config(&quot;URL&quot;).ToString.Trim" DisplayName="경로 설정 | Multiple Assign" sap:VirtualizedContainerService.HintSize="480,352" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -140,6 +140,7 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>

@@ -100,13 +100,13 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_01__월별집행액_총합계_계산" sap:VirtualizedContainerService.HintSize="1181.6000000000001,1226.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_01__월별집행액_총합계_기록" sap:VirtualizedContainerService.HintSize="1181.6000000000001,1226.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="568,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;&gt;&gt;&gt; End : 월별집행액_총합계_계산_시작 ---------- &quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="568,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;&gt;&gt;&gt; End : 월별집행액_총합계_기록_시작 ---------- &quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -189,7 +189,7 @@
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
     <ui:WriteRange AddHeaders="True" DataTable="[in_dt_월별집행액]" DisplayName="dt_월별집행액 저장 ㅣ Write Range Workbook" sap:VirtualizedContainerService.HintSize="568,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="종합" StartingCell="A2" WorkbookPath="[in_strResultFile]" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="568,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;---------- End : 월별집행액_총합계_계산_종료 &lt;&lt;&lt; &quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="568,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;---------- End : 월별집행액_총합계_기록_종료 &lt;&lt;&lt; &quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>

@@ -113,7 +113,7 @@
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="04. 월별 당월집행액 총계" sap:VirtualizedContainerService.HintSize="1181.6000000000001,728.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="04. 월별집행액 및 총합계 계산" sap:VirtualizedContainerService.HintSize="1181.6000000000001,728.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strToday" />
       <Variable x:TypeArguments="x:Decimal" Name="sum_당월집행액" />
@@ -124,7 +124,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;&gt;&gt;&gt; 05. 월별 당월집행액_총계_시작 ----------&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;&gt;&gt;&gt; 04. 월별집행액 및 총합계 계산_시작 ----------&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -144,7 +144,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap2010:Annotation.AnnotationText="sum_당월집행액 + Convert.ToDecimal(CurrentRow(&quot;당월집행액(원)&quot;).ToString)&#xD;&#xA;----------- 변수 형식 : Decimal" DisplayName="sum_당월집행액 계산 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,173.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap2010:Annotation.AnnotationText="sum_당월집행액 + Convert.ToDecimal(CurrentRow(&quot;당월집행액(원)&quot;).ToString)&#xA;----------- 변수 형식 : Decimal" DisplayName="sum_당월집행액 계산 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,173.6" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Decimal">[sum_당월집행액]</OutArgument>
               </Assign.To>
@@ -157,7 +157,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <Assign sap2010:Annotation.AnnotationText="sum_당월집행액.ToString(&quot;#,##0&quot;) + &quot;원&quot;&#xD;&#xA;------------ 변수 형식 : String" DisplayName="sum_당월집행액_최종 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,148.8" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign sap2010:Annotation.AnnotationText="sum_당월집행액.ToString(&quot;#,##0&quot;) + &quot;원&quot;&#xA;------------ 변수 형식 : String" DisplayName="sum_당월집행액_최종 ㅣ Assign" sap:VirtualizedContainerService.HintSize="433.6,148.8" sap2010:WorkflowViewState.IdRef="Assign_4">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[sum_당월집행액_최종]</OutArgument>
               </Assign.To>
@@ -180,7 +180,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="[기간,집행액&#xD;&#xA;yyyy년 MM월,&#xD;&#xA;yyyy년 MM월,&#xD;&#xA;yyyy년 MM월,&#xD;&#xA;yyyy년 MM월,&#xD;&#xA;yyyy년 MM월,&#xD;&#xA;yyyy년 MM월,&#xD;&#xA;yyyy년 MM월,&#xD;&#xA;합계,&#xD;&#xA;]" DataTable="[io_dt_월별집행액]" DisplayName="dt_월별집행액 반복문 ㅣ For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="433.6,228.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="[기간,집행액&#xA;yyyy년 MM월,&#xA;yyyy년 MM월,&#xA;yyyy년 MM월,&#xA;yyyy년 MM월,&#xA;yyyy년 MM월,&#xA;yyyy년 MM월,&#xA;yyyy년 MM월,&#xA;합계,&#xA;]" DataTable="[io_dt_월별집행액]" DisplayName="dt_월별집행액 반복문 ㅣ For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="433.6,228.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
@@ -287,7 +287,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </WriteLine>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;---------- 05. 월별 당월집행액_총계_종료 &lt;&lt;&lt;&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;---------- 04. 월별집행액 및 총합계 계산_종료 &lt;&lt;&lt;&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>

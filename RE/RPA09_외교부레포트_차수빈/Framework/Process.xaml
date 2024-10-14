@@ -155,7 +155,7 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="04. 월별 당월집행액 총계 - 워크플로우 파일 호출 (Process\04. 월별 당월집행액 총계.xaml)" sap:VirtualizedContainerService.HintSize="416,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Process\04. 월별 당월집행액 총계.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="04. 월별집행액 및 총합계 계산 - 워크플로우 파일 호출 (Process\04. 월별집행액 및 총합계 계산.xaml)" sap:VirtualizedContainerService.HintSize="416,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Process\04. 월별집행액 및 총합계 계산.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_월별세출집행현황">[dt_월별세출집행현황]</InOutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_strResultFile">[in_strResultFile]</InArgument>
